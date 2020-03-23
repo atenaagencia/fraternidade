@@ -1,7 +1,7 @@
 @extends('layouts.sb-admin')
 
 @section('header')
-<div class="page-header pb-10 page-header-dark bg-gradient-primary-to-secondary">
+<div class="page-header pb-10 page-header-dark bg-gradient-primary-to-secondary" style="background: url(https://pcbx.us/bexy.jpg);">
     <div class="container-fluid">
         <div class="page-header-content">
             <h1 class="page-header-title">
@@ -13,6 +13,7 @@
     </div>
 </div>
 @endsection
+
 @section('content')
 <div class="container-fluid mt-n10">
     <div class="row">

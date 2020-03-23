@@ -17,9 +17,16 @@
         <!-- <link href="{{ asset('css/styles.css') }}" rel="stylesheet"> -->
 
     </head>
-    <body class="bg-fraternidade" style="background: url(https://pcbx.us/bexy.jpg);">
+    <body class="bg-fraternidade">
         <section class="flex-center position-ref full-height">
-            <div class="top-right links"></div>
+            @if (Route::has('login'))
+                <div class="top-right links font-montserrat font-weight-bold clearfix">
+                    @auth
+                    @else
+                        <a href="{{ route('login') }}" class="text-light lead p-4">Login</a>
+                    @endauth
+                </div>
+            @endif
 
             <div class="content">
                 <div class="title m-b-md font-montserrat">
@@ -34,12 +41,16 @@
                         Ir para Início
                         </a>
                     @else
+                    <!-- <div class="col-lg-6 m-0">
                         <a href="{{ route('login') }}" class="action-button shadow animate blue">
                         Fazer Login
                         </a>
+                    </div> -->
+                    <div class="">
                         @if (Route::has('register'))
-                            <a href="{{ route('login') }}" class="action-button shadow animate green">Registre-se</a>
+                            <a href="{{ route('login') }}" class="action-button shadow-lg animate green btn-block">Filie-se agora</a>
                         @endif
+                    </div>
                     @endauth
                 </div>
                 @endif
@@ -52,7 +63,7 @@
                     <p class="text-light text-justify col-lg-8 col-sm-12">Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae totam hic facere numquam quae praesentium, atque aspernatur cumque suscipit ratione vitae dolorum sit consectetur, sint iusto placeat cum quia a?</p>
 
                     <div class="links row justify-content-left ml-4 mt-5">
-                        <a href="#" class="action-button shadow animate green">Lorem Ipsum</a>
+                        <a href="#" class="action-button shadow animate green">Filie-se agora</a>
                     </div>
                 </div>
                 <div class="col-md-5 mx-auto text-center py-auto py-5">

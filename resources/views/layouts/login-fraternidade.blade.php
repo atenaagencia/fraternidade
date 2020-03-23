@@ -29,7 +29,7 @@
 </head>
 <body style="background: url(https://pcbx.us/bexy.jpg); !important">
     <div id="app">
-        <nav class="navbar navbar-expand-md navbar-light bg-transparent shadow-sm">
+        {{-- <nav class="navbar navbar-expand-md navbar-light bg-transparent shadow-sm">
             <div class="container">
                 <a class="navbar-brand font-montserrat font-weight-bold h3 text-light" href="{{ url('/') }}">
                     <i class="fas fa-handshake text-light shadow-sm border mr-3"></i>Fraternidade
@@ -78,7 +78,7 @@
                     </ul>
                 </div>
             </div>
-        </nav>
+        </nav> --}}
 
         <main class="py-4">
             @yield('content')

@@ -1,6 +1,7 @@
 @extends('layouts.login-fraternidade')
 
 <link href="{{ asset('css/login-page.css') }}" rel="stylesheet">
+
 @section('content')
 
 <div class="font-montserrat text-center py-3">
@@ -73,7 +74,7 @@
 <footer class="footer shadow-lg">
 <div class="links text-center row justify-content-center clearfix" id="footer">
         <a href="#" class="">Lorem Ipsum</a>
-        <a href="#" class="">Lorem Ipsum</a>
+        <a href="/" class="text-light font-weight-bold" style="color: white !important">INICIO</a>
         <a href="#" class="">Lorem Ipsum</a>
     </div>
     <div class="text-right">
