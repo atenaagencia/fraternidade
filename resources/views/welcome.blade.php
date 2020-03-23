@@ -41,11 +41,11 @@
                 @endif
             </div>
         </section>
-        <div class="section p-5 bg-light text-dark font-montserrat">
+        <div class="section p-5 bg-dark text-white font-montserrat">
             <div class="row">
                 <div class="col-md-7">
-                    <h3 class="display-4 lead text-secondary py-4 ml-2">Lorem Ipsum</h3>
-                    <p class="text-secondary text-justify col-lg-8 col-sm-12">Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae totam hic facere numquam quae praesentium, atque aspernatur cumque suscipit ratione vitae dolorum sit consectetur, sint iusto placeat cum quia a?</p>
+                    <h3 class="display-4 lead text-light py-4 ml-2">Lorem Ipsum</h3>
+                    <p class="text-light text-justify col-lg-8 col-sm-12">Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae totam hic facere numquam quae praesentium, atque aspernatur cumque suscipit ratione vitae dolorum sit consectetur, sint iusto placeat cum quia a?</p>
 
                     <div class="links row justify-content-left ml-4 mt-5">
                         <a href="#" class="action-button shadow animate green">Lorem Ipsum</a>
