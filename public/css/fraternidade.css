@@ -1,0 +1,106 @@
+
+/* .bg-fraternidade{
+    background-color: #  !important; 
+}*/
+
+.font-montserrat{
+    font-family: 'Montserrat', sans-serif;
+}
+
+.green
+{
+	background-color: rgb(81, 163, 22);
+	border-bottom: 5px solid #3d681e;
+	text-shadow: 0px -2px #669644;
+}
+
+.blue
+{
+	background-color: #0080DE;
+	border-bottom: 5px solid rgb(27, 109, 163);
+	text-shadow: 0px -2px #2980B9;
+}
+
+
+.action-button:active
+{
+	transform: translate(0px,5px);
+   -webkit-transform: translate(0px,5px);
+	border-bottom: 1px solid;
+}
+
+.animate
+{
+	transition: all 0.1s;
+	-webkit-transition: all 0.1s;
+}
+
+.action-button
+{
+	position: relative;
+	padding: 10px 40px;
+    margin: 0px 10px 10px 0px;
+	border-radius: 10px;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 22px;
+	color: #FFF;
+	text-decoration: none;	
+}
+
+.action-button:hover
+{
+	color: #FFF;
+	text-decoration: none !important;	
+}
+
+html, body {
+    /* background-color: #029F55 !important;             */
+    color: white !important;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 200;
+    height: 100vh;
+    margin: 0;
+}
+
+.full-height {
+    height: 100vh;
+}
+
+.flex-center {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.position-ref {
+    position: relative;
+}
+
+.top-right {
+    position: absolute;
+    right: 10px;
+    top: 18px;
+}
+
+.content {
+    text-align: center;
+}
+
+.title {
+    font-size: 84px;
+}
+
+.links#footer > a {
+    color: black !important;
+    padding: 0 25px;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: .1rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bolder;
+}
+
+.m-b-md {
+    margin-bottom: 30px;
+}
