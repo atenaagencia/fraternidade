@@ -14,6 +14,7 @@
         <!-- Styles -->
         <link href="{{ asset('css/fraternidade.css') }}" rel="stylesheet">
         <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+        <!-- <link href="{{ asset('css/styles.css') }}" rel="stylesheet"> -->
 
     </head>
     <body class="bg-fraternidade" style="background: url(https://pcbx.us/bexy.jpg);">
@@ -29,12 +30,15 @@
                 @if (Route::has('login'))
                 <div class="links text-center row justify-content-center mt-5 py-4">
                     @auth
+                        <a href="{{ route('home') }}" class="action-button shadow animate blue">
+                        Ir para Início
+                        </a>
                     @else
                         <a href="{{ route('login') }}" class="action-button shadow animate blue">
                         Fazer Login
                         </a>
                         @if (Route::has('register'))
-                            <a href="{{ route('register') }}" class="action-button shadow animate green">Registre-se</a>
+                            <a href="{{ route('login') }}" class="action-button shadow animate green">Registre-se</a>
                         @endif
                     @endauth
                 </div>

@@ -89,3 +89,12 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;      
 }
+
+.footer{
+  position: fixed !important;
+  bottom: 0 !important;
+  width: 100% !important;
+  height: 60px !important;
+  line-height: 60px !important;
+  background-color: transparent !important;
+}

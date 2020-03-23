@@ -4,7 +4,7 @@
 @section('content')
 
 <div class="font-montserrat text-center py-3">
-    <h1><i class="fas fa-handshake text-shadow shadow-sm border"></i>Login</h1>
+    <h1><i class="fas fa-handshake text-light mr-4"></i>Login</h1>
 </div>
 
 <div class="login-page">
@@ -68,6 +68,33 @@
     </form>
   </div>
 </div>
+
+
+<footer class="footer shadow-lg">
+<div class="links text-center row justify-content-center clearfix" id="footer">
+        <a href="#" class="">Lorem Ipsum</a>
+        <a href="#" class="">Lorem Ipsum</a>
+        <a href="#" class="">Lorem Ipsum</a>
+    </div>
+    <div class="text-right">
+        <i class="fas fa-handshake fa-2x text-shadow shadow-sm border border-dark"></i>
+    </div>
+    <div class="clearfix"></div>
+</footer>
+
+
+<!-- <footer class="footer border-top border-dark p-5 bg-light text-dark font-montserrat">
+    <div class="links text-center row justify-content-center clearfix" id="footer">
+        <a href="#" class="">Lorem Ipsum</a>
+        <a href="#" class="">Lorem Ipsum</a>
+        <a href="#" class="">Lorem Ipsum</a>
+    </div>
+    <div class="text-right">
+        <i class="fas fa-handshake fa-2x text-shadow shadow-sm border border-dark"></i>
+    </div>
+    <div class="clearfix"></div>
+</footer> -->
+
 
 <script>
     $('.message a').click(function(){
