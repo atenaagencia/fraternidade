@@ -2,6 +2,9 @@
 /* .bg-fraternidade{
     background-color: #  !important; 
 }*/
+.card-login{
+    background-color: transparent !important;
+}
 
 .font-montserrat{
     font-family: 'Montserrat', sans-serif;
