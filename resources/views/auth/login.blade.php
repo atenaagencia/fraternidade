@@ -13,7 +13,7 @@
     <form class="register-form" method="POST" action="{{ route('register') }}">
     @csrf
 
-    <input id="name" type="text" class="@error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus placeholder="Nome">
+    <input id="name" type="text" class="@error('name') is-invalid @enderror" name="nome" value="{{ old('nome') }}" required autocomplete="nome" autofocus placeholder="Nome">
     @error('name')
         <span class="invalid-feedback" role="alert">
             <strong>{{ $message }}</strong>
