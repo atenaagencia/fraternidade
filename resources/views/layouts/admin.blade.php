@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta name="description" content />
     <meta name="author" content />
-    <title>Dashboard - SB Admin Pro</title>
+    <title>WinHappy</title>
     <link href="{{asset('css/styles.css')}}" rel="stylesheet" />
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:600&display=swap" rel="stylesheet">
@@ -18,7 +18,7 @@
 </head>
 <body class="nav-fixed" style="font-family: 'Montserrat', sans-serif !important">
     <nav class="topnav navbar navbar-expand shadow navbar-light bg-white" id="sidenavAccordion">
-        <a class="navbar-brand d-none d-sm-block" href="/"><i class="fas fa-handshake text-dark mr-3"></i>Fraternidade</a>
+        <a class="navbar-brand d-none d-sm-block" href="/"><i class="fas fa-handshake text-dark mr-3"></i><b>WIN!</b> Happy</a>
         <button class="btn btn-icon btn-transparent-dark order-1 order-lg-0 mr-lg-2" id="sidebarToggle" href="#">
             <i data-feather="menu"></i>
         </button>

@@ -1,4 +1,4 @@
-@extends('layouts.sb-admin')
+@extends('layouts.admin')
 
 @section('header')
 <div class="page-header pb-10 page-header-dark bg-gradient-primary-to-secondary" style="background: url(https://pcbx.us/bexy.jpg);">
@@ -8,7 +8,7 @@
                 <div class="page-header-icon"><i data-feather="activity"></i></div>
                 <span>Início</span>
             </h1>
-            <div class="page-header-subtitle">Example dashboard overview and content summary</div>
+            <div class="page-header-subtitle">NADA DISSO</div>
         </div>
     </div>
 </div>
