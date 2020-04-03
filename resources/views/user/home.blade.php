@@ -60,35 +60,78 @@
             </div>
             <div class="col-md-7">
                 <div class="container-fluid">
-                    <div class="card mb-4">
-                        <div class="card-header">DataTable Example</div>
+                    <div class="card border-0 mb-4">
+                        <div class="card-header bg-success">
+                            <h1 class="text-light">Depósitos</h1>
+                        </div>
                         <div class="card-body">
-                            <div class="datatable table-responsive">
+                            <div class="table-responsive">
                                 <table class="table table-bordered table-hover" id="dataTable" width="100%" cellspacing="0">
                                     <thead>
                                         <tr>
-                                            <th>Name</th>
-                                            <th>Position</th>
-                                            <th>Office</th>
-                                            <th>Age</th>
-                                            <th>Start date</th>
-                                            <th>Salary</th>
+                                            <th>Posição</th>
+                                            <th>Nome | User</th>
+                                            <th>Doação</th>
+                                            <th>Comprovantes Bancários</th>
                                             <th>Status</th>
-                                            <th>Actions</th>
                                         </tr>
                                     </thead>
                                     <tbody>
                                         <tr>
-                                            <td>Tiger Nixon</td>
-                                            <td>System Architect</td>
-                                            <td>Edinburgh</td>
-                                            <td>61</td>
-                                            <td>2011/04/25</td>
-                                            <td>$320,800</td>
-                                            <td><div class="badge badge-primary badge-pill">Full-time</div></td>
+                                            <td>1</td>
+                                            <td>Philip | <span class="badge badge-dark">philldeveloper</span></td>
+                                            <td><div class="btn btn-sm btn-outline-dark"><i class="fas fa-hand-holding-usd mr-3"></i>Depositar</div></td>
                                             <td>
-                                                <button class="btn btn-datatable btn-icon btn-transparent-dark mr-2"><i data-feather="more-vertical"></i></button><button class="btn btn-datatable btn-icon btn-transparent-dark"><i data-feather="trash-2"></i></button>
+                                                <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
+                                                    <div class="btn-group mr-2" role="group" aria-label="First group">
+                                                        <button type="button" class="btn btn-outline-dark btn-sm m-1"><i class="fa fa-eye mr-4"></i>Ver</button>
+                                                        <button type="button" class="btn btn-outline-dark btn-sm m-1"><i class="far fa-share-square mr-4"></i> Enviar</button>
+                                                    </div>
+                                                </div>
                                             </td>
+                                            <td><div class="badge badge-success">Liberado</div></td>
+                                        </tr>
+                                        <tr>
+                                            <td>2</td>
+                                            <td>Herbet | <span class="badge badge-dark">Chefinho</span></td>
+                                            <td><div class="btn btn-sm btn-outline-dark"><i class="fas fa-hand-holding-usd mr-3"></i>Depositar</div></td>
+                                            <td>
+                                                <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
+                                                    <div class="btn-group mr-2" role="group" aria-label="First group">
+                                                        <button type="button" class="btn btn-outline-dark btn-sm m-1"><i class="fa fa-eye mr-4"></i>Ver</button>
+                                                        <button type="button" class="btn btn-outline-dark btn-sm m-1"><i class="far fa-share-square mr-4"></i> Enviar</button>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td><div class="badge badge-danger">Bloqueado</div></td>
+                                        </tr>
+                                        <tr>
+                                            <td>3</td>
+                                            <td>Italia | <span class="badge badge-dark">Chefinha</span></td>
+                                            <td><div class="btn btn-sm btn-outline-dark"><i class="fas fa-hand-holding-usd mr-3"></i>Depositar</div></td>
+                                            <td>
+                                                <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
+                                                    <div class="btn-group mr-2" role="group" aria-label="First group">
+                                                        <button type="button" class="btn btn-outline-dark btn-sm m-1"><i class="fa fa-eye mr-4"></i>Ver</button>
+                                                        <button type="button" class="btn btn-outline-dark btn-sm m-1"><i class="far fa-share-square mr-4"></i> Enviar</button>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td><div class="badge badge-danger">Bloqueado</div></td>
+                                        </tr>
+                                        <tr>
+                                            <td>4</td>
+                                            <td>Jeferson | <span class="badge badge-dark">Comercial</span></td>
+                                            <td><div class="btn btn-sm btn-outline-dark"><i class="fas fa-hand-holding-usd mr-3"></i>Depositar</div></td>
+                                            <td>
+                                                <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
+                                                    <div class="btn-group mr-2" role="group" aria-label="First group">
+                                                        <button type="button" class="btn btn-outline-dark btn-sm m-1"><i class="fa fa-eye mr-4"></i>Ver</button>
+                                                        <button type="button" class="btn btn-outline-dark btn-sm m-1"><i class="far fa-share-square mr-4"></i> Enviar</button>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td><div class="badge badge-success">Liberado</div></td>
                                         </tr>
                                     </tbody>
                                 </table>
@@ -113,7 +156,7 @@
                             <div class="progress-bar bg-success" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">25%</div>
                         </div>
                         </div>
-                        <div class="btn btn-primary col-8 offset-2 py-3 mt-4 btn-block font-weight-bold">Ver Depósitos</div>
+                        <div class="btn btn-primary col-8 offset-2 py-3 mt-4 btn-block font-weight-bold">Mais Detalhes</div>
                     </div>
                 </div>
             </div>
