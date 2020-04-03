@@ -3,6 +3,11 @@
     color: white;
 }
 
+.bg-user-secondary{
+    background-color: #676768 !important;
+    color: white;
+}
+
 .border-user-info{
     border-color: #0A4486 !important;
 }
