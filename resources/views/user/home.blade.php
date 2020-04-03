@@ -1,8 +1,9 @@
 @extends('layouts.user')
 
 @section('header')
+
 <!-- <div class="page-header pb-10 page-header-dark bg-gradient-primary-to-secondary" style="background: url(https://pcbx.us/bexy.jpg);"> -->
-<div class="page-header pb-10 page-header-dark bg-gradient-primary-to-secondary">
+<div class="page-header pb-10 page-header-dark bg-dark mb-3" style="background: url(https://pcbx.us/bexy.jpg);">
     <div class="container-fluid">
         <div class="page-header-content row">
             <div class="col-lg-9">
@@ -16,29 +17,58 @@
             <div class="col-lg-3 row justify-content-right ml-auto">
                 <h2 class="mr-3 text-light">Saldo Disponível:</h2>
                 <div class="page-header-subtitle">
-                    <span class=" badge badge-success"><h4 class="font-weight-bold text-light">R$ 199.000,00</h4></span>
+                    <span class=" badge badge-success"><h4 class="font-weight-bold text-light">R$ 0.000,00</h4></span>
                 </div>
             </div>
         </div>
     </div>
+    @include('user.features.aviso_ativacao')
 </div>
 @endsection
 
 @section('content')
 
-@include('user.features.aviso_ativacao')
+
 
 <div class="container-fluid mt-n10">
     <div class="row">
-        <div class="col-md-12">
+        <div class="col-md-4">
+            <div class="card border-0 mb-4">
+                <div class="card-header bg-user-info">
+                    <h1 class="text-light">Instruções</h1>
+                </div>
+                <div class="card-body">
+                    <h1 class="font-weight-bold pb-3 text-left">Como Participar:</h1><hr>
+                    <ul class="list-group">
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            <i class="fa fa-star"></i>Primeiro Passo: Lorem Ipsum
+                            <span class="badge badge-primary badge-pill">1</span>
+                        </li>
+                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                        <i class="fa fa-star"></i>Segundo Passo: Lorem Ipsum
+                            <span class="badge badge-primary badge-pill">2</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            <i class="fa fa-star"></i>Terceiro Passo: Lorem Ipsum
+                            <span class="badge badge-primary badge-pill">3</span>
+                        </li>
+                    </ul>
+                    <div class="btn btn-success col-8 offset-2 py-3 mt-4 btn-block font-weight-bold">Começar agora</div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-8">
             <div class="card mb-4">
-                <div class="card-header">Area Chart Example</div>
+                <div class="card-header bg-transparent">Area Chart Example</div>
                 <div class="card-body">
                     <!-- <div class="chart-area"><canvas id="myAreaChart" width="100%" height="30"></canvas></div> -->
                 </div>
             </div>
         </div>
     </div>
+</div>
+
+<div class="container-fluid">
     <div class="card mb-4">
         <div class="card-header">DataTable Example</div>
         <div class="card-body">
