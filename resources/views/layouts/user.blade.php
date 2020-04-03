@@ -9,6 +9,7 @@
     <meta name="author" content />
     <title>WinHappy</title>
     <link href="{{asset('css/styles.css')}}" rel="stylesheet" />
+    <link href="{{asset('css/user.css')}}" rel="stylesheet" />
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:600&display=swap" rel="stylesheet">
     <link href="https://cdn.datatables.net/1.10.20/css/dataTables.bootstrap4.min.css" rel="stylesheet" crossorigin="anonymous" />
@@ -18,7 +19,7 @@
 </head>
 <body class="nav-fixed" style="font-family: 'Montserrat', sans-serif !important">
     <nav class="topnav navbar navbar-expand shadow navbar-light bg-white" id="sidenavAccordion">
-        <a class="navbar-brand d-none d-sm-block" href="/"><i class="fas fa-handshake text-dark mr-3"></i>Fraternidade</a>
+        <a class="navbar-brand d-none d-sm-block" href="/"><i class="fas fa-handshake text-dark mr-3"></i><b>WIN!</b> Happy</a>
         <button class="btn btn-icon btn-transparent-dark order-1 order-lg-0 mr-lg-2" id="sidebarToggle" href="#">
             <i data-feather="menu"></i>
         </button>
@@ -27,15 +28,15 @@
         <ul class="navbar-nav align-items-center ml-auto">
             <li class="nav-item dropdown no-caret mr-3">
                 <a class="nav-link dropdown-toggle" id="navbarDropdownDocs" href="javascript:void(0);" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    <div class="d-none d-md-inline font-weight-500">Como WinHappy funciona</div>
+                    <div class="d-none d-md-inline font-weight-500">Lorem Ipsum</div>
                     <i class="fas fa-chevron-right dropdown-arrow"></i>
                 </a>
                 <div class="dropdown-menu dropdown-menu-right py-0 o-hidden mr-n15 mr-lg-0 animated--fade-in-up" aria-labelledby="navbarDropdownDocs">
                     <a class="dropdown-item py-3" href="" target="_blank">
                     <div class="icon-stack bg-primary-soft text-primary mr-4"><i data-feather="book"></i></div>
                         <div>
-                            <div class="small text-gray-500">Guia de Instruções</div>
-                           Meus Primeiros passo no WinHappy
+                            <div class="small text-gray-500">Lorem Ipsum</div>
+                            Usage instructions and reference
                         </div>
                     </a>
                 </div>
@@ -96,7 +97,7 @@
                     <h6 class="dropdown-header d-flex align-items-center">
                         <img class="dropdown-user-img" src="https://picsum.photos/200/300" />
                         <div class="dropdown-user-details">
-                            <div class="dropdown-user-details-name">{{ Auth::user()->nome }}</div>
+                            <div class="dropdown-user-details-name">{{ Auth::user()->name }}</div>
                             <div class="dropdown-user-details-email">{{ Auth::user()->email }}</div>
                         </div>
                     </h6>
@@ -170,8 +171,8 @@
                 </div>
                 <div class="sidenav-footer">
                     <div class="sidenav-footer-content">
-                        <div class="sidenav-footer-subtitle">Logoda como :</div>
-                        <div class="sidenav-footer-title">{!! auth::user()->nome !!}</div>
+                        <div class="sidenav-footer-subtitle">Logged in as:</div>
+                        <div class="sidenav-footer-title">{!! auth::user()->name !!}</div>
                     </div>
                 </div>
             </nav>

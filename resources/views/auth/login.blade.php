@@ -1,4 +1,4 @@
-@extends('layouts.login-fraternidade')
+@extends('layouts.win-happy')
 
 <link href="{{ asset('css/login-page.css') }}" rel="stylesheet">
 

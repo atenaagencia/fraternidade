@@ -31,7 +31,7 @@
             <div class="content">
                 <div class="title m-b-md font-montserrat">
                 <i class="fas fa-handshake text-shadow shadow-sm border"></i>
-                    Fraternidade
+                    <b>WIN!</b> Happy
                     <p class="lead">Lorem ipsum dolor sit amet consectetur, adipisicing elit. </p>
                 </div>
                 @if (Route::has('login'))
@@ -54,7 +54,7 @@
                     @endauth
                 </div>
                 <div class="text-center">
-                    <h3 class="font-montserrat bg-warning text-dark p-2 mb-3">Quero saber como participar da Fraternidade.</h3>
+                    <h3 class="font-montserrat bg-warning text-dark p-2 mb-3">Quero saber como participar da WIN! Happy.</h3>
                     <a href="#teste" class="btn btn-outline-light"><i class="fas fa-2x fa-arrow-down"></i></a>
                 </div>
                 @endif
@@ -62,15 +62,15 @@
         </section>
         <div class="section p-5 bg-dark text-white font-montserrat" id="teste">
             <div class="row">
-                <div class="col-md-7">
-                    <h4 class="display-4 lead text-light py-4 ml-2">Ganhe dinheiro com o sistema de ajuda mútua.</h4>
+                <div class="col-md-12 col-sm-12 col-lg-7">
+                    <h4 class="display-4 lead text-light py-4 ml-2 col-lg-10">Ganhe dinheiro com o sistema de ajuda mútua.</h4>
                     <p class="text-light text-justify col-lg-8 col-sm-12">Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae totam hic facere numquam quae praesentium, atque aspernatur cumque suscipit ratione vitae dolorum sit consectetur, sint iusto placeat cum quia a?</p>
 
                     <div class="links row justify-content-center ml-4 mt-5">
                         <a href="#" class="action-button shadow animate green">Filie-se agora</a>
                     </div>
                 </div>
-                <div class="col-md-5 mx-auto text-center py-auto py-5">
+                <div class="col-md-12 col-sm-12 col-lg-5 mx-auto text-center py-auto py-5">
                     <video width="100%" controls class="border shadow p-4 py-4">
                         <source src="#" type="video/mp4">
                     </video>
