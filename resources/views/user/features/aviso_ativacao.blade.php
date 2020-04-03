@@ -2,8 +2,11 @@
     .bg-aviso{
         background-color: #dc3545!important;
     }
+    a{
+        text-transform: none !important;
+    }
 </style>
 
-<div class="container-fluid">
-    <p class="py-2 card bg-aviso shadow-sm p-2 border-0 text-light">Você ainda não é um usuário ativo. Para liberar seu cadastro você precisa efetuar uma doação de R$ 10,00, em cada uma das contas listadas abaixo, após efetuar o depósito informe os dados do comprovante e clique em enviar, um de cada vez. Seus uplines irão confirmar sua doação dentro de 48 horas.</p>
+<div class="container-fluid m-2">
+    <a class="nav-link" href="#"><span class="border-0 text-light bg-aviso p-2">Você ainda não é um usuário ativo. Para liberar seu cadastro, clique aqui.</span></a>
 </div>
