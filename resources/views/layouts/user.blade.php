@@ -26,9 +26,12 @@
 
         <!-- <form class="form-inline mr-auto d-none d-lg-block"><input class="form-control form-control-solid mr-sm-2" type="search" placeholder="Search" aria-label="Search" /></form> -->
         <ul class="navbar-nav align-items-center ml-auto">
-            <li class="nav-item dropdown no-caret mr-3">
+            <li class="nav-item no-caret mr-3">
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">Instruções</button>
+            </li>
+            <!-- <li class="nav-item dropdown no-caret mr-3">
                 <a class="nav-link dropdown-toggle" id="navbarDropdownDocs" href="javascript:void(0);" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    <div class="d-none d-md-inline font-weight-500">Lorem Ipsum</div>
+                    <div class="d-none d-md-inline font-weight-500"><i class="badge badge-primary p-2">Instruções</i></div>
                     <i class="fas fa-chevron-right dropdown-arrow"></i>
                 </a>
                 <div class="dropdown-menu dropdown-menu-right py-0 o-hidden mr-n15 mr-lg-0 animated--fade-in-up" aria-labelledby="navbarDropdownDocs">
@@ -40,7 +43,7 @@
                         </div>
                     </a>
                 </div>
-            </li>
+            </li> -->
             <li class="nav-item dropdown no-caret mr-3 dropdown-user">
                 <a class="btn btn-icon btn-transparent-dark dropdown-toggle" id="navbarDropdownUserImage" href="javascript:void(0);" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img class="img-fluid" src="https://picsum.photos/200/300"/></a>
                 <div class="dropdown-menu dropdown-menu-right border-0 shadow animated--fade-in-up" aria-labelledby="navbarDropdownUserImage">
@@ -168,5 +171,7 @@
 
     <script src="{{asset('js/sb-customizer.js')}}"></script>
     <sb-customizer project="sb-admin-pro"></sb-customizer>
+
+    @include('user.features.modal_instrucoes')
 </body>
 </html>
