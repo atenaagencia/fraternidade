@@ -12,13 +12,14 @@
                 </h1>
                 <div class="page-header-subtitle">
                     <div class="badge badge-warning font-weight-bold text-dark">Afiliado gold</div>
+                    <div class="badge badge-success font-weight-bold text-light">{{Auth::user()->status}}</div>
                 </div>
             </div>
             <div class="col-lg-3 row justify-content-right ml-auto">
                 <h2 class="mr-3 text-light">Saldo Disponível:</h2>
                 <div class="page-header-subtitle">
                     <span class=" badge badge-success">
-                        <h4 class="font-weight-bold text-light">R$ 0.000,00</h4>
+                        <h4 class="font-weight-bold text-light">R$ {{Auth::user()->saldo}}</h4>
                     </span>
                 </div>
             </div>
@@ -65,31 +66,6 @@
 <div class="container-fluid mt-n10">
     <div class="col-12">
         <div class="row">
-            <!-- <div class="col-md-4">
-                <div class="card border-0 mb-4">
-                    <div class="card-header bg-user-info">
-                        <h1 class="text-light">Instruções</h1>
-                    </div>
-                    <div class="card-body">
-                        <h1 class="font-weight-bold pb-3 text-left">Como Participar:</h1><hr>
-                        <ul class="list-group">
-                            <li class="list-group-item d-flex justify-content-between align-items-center">
-                                <i class="fa fa-star"></i>Primeiro Passo: Lorem Ipsum
-                                <span class="badge badge-primary badge-pill">1</span>
-                            </li>
-                                <li class="list-group-item d-flex justify-content-between align-items-center">
-                            <i class="fa fa-star"></i>Segundo Passo: Lorem Ipsum
-                                <span class="badge badge-primary badge-pill">2</span>
-                            </li>
-                            <li class="list-group-item d-flex justify-content-between align-items-center">
-                                <i class="fa fa-star"></i>Terceiro Passo: Lorem Ipsum
-                                <span class="badge badge-primary badge-pill">3</span>
-                            </li>
-                        </ul>
-                        <div class="btn btn-success col-8 offset-2 py-3 mt-4 btn-block font-weight-bold">Começar agora</div>
-                    </div>
-                </div>
-            </div> -->
             <div class="col-md-12">
                 <div class="container-fluid">
                     <div class="card border-0 mb-4">
@@ -107,6 +83,7 @@
                                             <th>Doação</th>
                                             <th>Comprovantes Bancários</th>
                                             <th>Status</th>
+                                            <th>Ações</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -114,88 +91,108 @@
                                             <td>1</td>
                                             <td>Philip | <span class="badge badge-dark">philldeveloper</span></td>
                                             <td>
-                                                <div class="btn btn-sm btn-outline-dark"><i
-                                                        class="fas fa-hand-holding-usd mr-3"></i>Depositar</div>
+                                                <button class="btn btn-sm btn-outline-dark" disabled><i class="fas fa-hand-holding-usd mr-3"></i>Depositar</button>
                                             </td>
                                             <td>
-                                                <div class="btn-toolbar" role="toolbar"
-                                                    aria-label="Toolbar with button groups">
+                                                <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
                                                     <div class="btn-group mr-2" role="group" aria-label="First group">
-                                                        <button type="button" class="btn btn-outline-dark btn-sm m-1"><i
-                                                                class="fa fa-eye mr-4"></i>Ver</button>
-                                                        <button type="button" class="btn btn-outline-dark btn-sm m-1"><i
-                                                                class="far fa-share-square mr-4"></i> Enviar</button>
+                                                        <button type="button" class="btn btn-outline-dark btn-sm m-1"><i class="fa fa-eye mr-4"></i>Ver</button>
+                                                        <button type="button" class="btn btn-outline-dark btn-sm m-1"><i class="far fa-share-square mr-4"></i> Enviar</button>
                                                     </div>
                                                 </div>
                                             </td>
                                             <td>
                                                 <div class="badge badge-success">Liberado</div>
+                                            </td>
+                                            <td>
+                                                <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
+                                                    <div class="btn-group" role="group" aria-label="First group">
+                                                        <a class="btn btn-success text-light" data-toggle="modal" data-target="#exampleWhatsapp"><i class="fab fa-whatsapp"></i></a>
+                                                        <a class="btn btn-primary" href="mailto:{{Auth::user()->email}}?subject= WINHAPPY - LoremIpsum&body=Caro {{Auth::user()->nome}}," target="blank"><i class="far fa-paper-plane"></i></a>
+                                                        <a class="btn btn-primary" href="#" data-toggle="modal" data-target="#exampleContato"><i class="fas fa-phone"></i></a>
+                                                    </div>
+                                                </div>
                                             </td>
                                         </tr>
                                         <tr>
                                             <td>2</td>
                                             <td>Herbet | <span class="badge badge-dark">Chefinho</span></td>
                                             <td>
-                                                <div class="btn btn-sm btn-outline-dark"><i
-                                                        class="fas fa-hand-holding-usd mr-3"></i>Depositar</div>
+                                                <button class="btn btn-sm btn-primary"><i class="fas fa-hand-holding-usd mr-3"></i>Depositar</button>
                                             </td>
                                             <td>
-                                                <div class="btn-toolbar" role="toolbar"
-                                                    aria-label="Toolbar with button groups">
+                                                <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
                                                     <div class="btn-group mr-2" role="group" aria-label="First group">
-                                                        <button type="button" class="btn btn-outline-dark btn-sm m-1"><i
-                                                                class="fa fa-eye mr-4"></i>Ver</button>
-                                                        <button type="button" class="btn btn-outline-dark btn-sm m-1"><i
-                                                                class="far fa-share-square mr-4"></i> Enviar</button>
+                                                        <button type="button" class="btn btn-outline-dark btn-sm m-1"><i class="fa fa-eye mr-4"></i>Ver</button>
+                                                        <button type="button" class="btn btn-outline-dark btn-sm m-1"><i class="far fa-share-square mr-4"></i> Enviar</button>
                                                     </div>
                                                 </div>
                                             </td>
                                             <td>
                                                 <div class="badge badge-danger">Bloqueado</div>
+                                            </td>
+                                            <td>
+                                                <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
+                                                    <div class="btn-group" role="group" aria-label="First group">
+                                                        <a class="btn btn-success text-light" data-toggle="modal" data-target="#exampleWhatsapp"><i class="fab fa-whatsapp"></i></a>
+                                                        <a class="btn btn-primary" href="mailto:{{Auth::user()->email}}?subject= WINHAPPY - LoremIpsum&body=Caro {{Auth::user()->nome}}," target="blank"><i class="far fa-paper-plane"></i></a>
+                                                        <a class="btn btn-primary" href="#" data-toggle="modal" data-target="#exampleContato"><i class="fas fa-phone"></i></a>
+                                                    </div>
+                                                </div>
                                             </td>
                                         </tr>
                                         <tr>
                                             <td>3</td>
-                                            <td>Italia | <span class="badge badge-dark">Chefinha</span></td>
+                                            <td>Itala | <span class="badge badge-dark">Chefinha</span></td>
                                             <td>
-                                                <div class="btn btn-sm btn-outline-dark"><i
-                                                        class="fas fa-hand-holding-usd mr-3"></i>Depositar</div>
+                                                <button class="btn btn-sm btn-primary"><i class="fas fa-hand-holding-usd mr-3"></i>Depositar</button>
                                             </td>
                                             <td>
-                                                <div class="btn-toolbar" role="toolbar"
-                                                    aria-label="Toolbar with button groups">
+                                                <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
                                                     <div class="btn-group mr-2" role="group" aria-label="First group">
-                                                        <button type="button" class="btn btn-outline-dark btn-sm m-1"><i
-                                                                class="fa fa-eye mr-4"></i>Ver</button>
-                                                        <button type="button" class="btn btn-outline-dark btn-sm m-1"><i
-                                                                class="far fa-share-square mr-4"></i> Enviar</button>
+                                                        <button type="button" class="btn btn-outline-dark btn-sm m-1"><i class="fa fa-eye mr-4"></i>Ver</button>
+                                                        <button type="button" class="btn btn-outline-dark btn-sm m-1"><i class="far fa-share-square mr-4"></i> Enviar</button>
                                                     </div>
                                                 </div>
                                             </td>
                                             <td>
                                                 <div class="badge badge-danger">Bloqueado</div>
+                                            </td>
+                                            <td>
+                                                <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
+                                                    <div class="btn-group" role="group" aria-label="First group">
+                                                        <a class="btn btn-success text-light" data-toggle="modal" data-target="#exampleWhatsapp"><i class="fab fa-whatsapp"></i></a>
+                                                        <a class="btn btn-primary" href="mailto:{{Auth::user()->email}}?subject= WINHAPPY - LoremIpsum&body=Caro {{Auth::user()->nome}}," target="blank"><i class="far fa-paper-plane"></i></a>
+                                                        <a class="btn btn-primary" href="#" data-toggle="modal" data-target="#exampleContato"><i class="fas fa-phone"></i></a>
+                                                    </div>
+                                                </div>
                                             </td>
                                         </tr>
                                         <tr>
                                             <td>4</td>
                                             <td>Jeferson | <span class="badge badge-dark">Comercial</span></td>
                                             <td>
-                                                <div class="btn btn-sm btn-outline-dark"><i
-                                                        class="fas fa-hand-holding-usd mr-3"></i>Depositar</div>
+                                                <button class="btn btn-sm btn-outline-dark" disabled><i class="fas fa-hand-holding-usd mr-3"></i>Depositar</button>
                                             </td>
                                             <td>
-                                                <div class="btn-toolbar" role="toolbar"
-                                                    aria-label="Toolbar with button groups">
+                                                <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
                                                     <div class="btn-group mr-2" role="group" aria-label="First group">
-                                                        <button type="button" class="btn btn-outline-dark btn-sm m-1"><i
-                                                                class="fa fa-eye mr-4"></i>Ver</button>
-                                                        <button type="button" class="btn btn-outline-dark btn-sm m-1"><i
-                                                                class="far fa-share-square mr-4"></i> Enviar</button>
+                                                        <button type="button" class="btn btn-outline-dark btn-sm m-1"><i class="fa fa-eye mr-4"></i>Ver</button>
+                                                        <button type="button" class="btn btn-outline-dark btn-sm m-1"><i class="far fa-share-square mr-4"></i> Enviar</button>
                                                     </div>
                                                 </div>
                                             </td>
                                             <td>
                                                 <div class="badge badge-success">Liberado</div>
+                                            </td>
+                                            <td>
+                                                <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
+                                                    <div class="btn-group" role="group" aria-label="First group">
+                                                        <a class="btn btn-success text-light" data-toggle="modal" data-target="#exampleWhatsapp"><i class="fab fa-whatsapp"></i></a>
+                                                        <a class="btn btn-primary" href="mailto:{{Auth::user()->email}}?subject= WINHAPPY - LoremIpsum&body=Caro {{Auth::user()->nome}}," target="blank"><i class="far fa-paper-plane"></i></a>
+                                                        <a class="btn btn-primary" href="#" data-toggle="modal" data-target="#exampleContato"><i class="fas fa-phone"></i></a>
+                                                    </div>
+                                                </div>
                                             </td>
                                         </tr>
                                     </tbody>

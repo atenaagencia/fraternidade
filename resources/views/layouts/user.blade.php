@@ -178,5 +178,7 @@
     <sb-customizer project="sb-admin-pro"></sb-customizer>
 
     @include('user.features.modal_instrucoes')
+    @include('user.features.modal_contato')
+    @include('user.features.modal_whatsapp')
 </body>
 </html>
