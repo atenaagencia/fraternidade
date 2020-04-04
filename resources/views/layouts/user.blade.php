@@ -92,6 +92,11 @@
                         </div>
                         <div class="collapse" id="collapseDashboards" data-parent="#accordionSidenav">
                             <nav class="sidenav-menu-nested nav accordion" id="accordionSidenavPages">
+                                <a class="nav-link" href="">Dados Bancários</span></a>
+                            </nav>
+                        </div>
+                        <div class="collapse" id="collapseDashboards" data-parent="#accordionSidenav">
+                            <nav class="sidenav-menu-nested nav accordion" id="accordionSidenavPages">
                                 <a class="nav-link" href="">Sorteios</span></a>
                             </nav>
                         </div>
