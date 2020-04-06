@@ -17,7 +17,7 @@ class UserController extends Controller
     public function banco_create(Request $request)
     {
         $query = DadosBancario::create($request->all());
-        return back();
+        return redirect('/home');
     }
 
     public function banco_update(Request $request, $id)
