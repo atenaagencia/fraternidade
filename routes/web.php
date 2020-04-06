@@ -23,8 +23,12 @@ Route::get('/teste', function () {
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
-
-Route::get('/banco', function () {
-    return 'cadastre banco';
+Route::group(['middleware' => ['winhappy']], function () {
+    Route::get('/home', 'HomeController@index')->name('home');
 });
+
+Route::get('/banco', 'UserController@banco_index')->name('banco');
+    Route::post('/banco', 'UserController@banco_create')->name('banco_create');
+    Route::post('/banco/{id}', 'UserController@banco_update')->name('banco_update');
+    
+

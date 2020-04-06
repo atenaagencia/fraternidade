@@ -10,9 +10,14 @@
                 <h1 class="page-header-title">
                     <span>Bem vindo, <b class="text-uppercase">{{Auth::user()->nome}}</b></span>
                 </h1>
+
                 <div class="page-header-subtitle">
                     <div class="badge badge-warning font-weight-bold text-dark">Afiliado gold</div>
+                    @if(Auth::user()->status == "pendente" || Auth::user()->status == "inativo")
+                    <div class="badge badge-danger font-weight-bold text-light">{{Auth::user()->status}}</div>
+                    @else
                     <div class="badge badge-success font-weight-bold text-light">{{Auth::user()->status}}</div>
+                    @endif
                 </div>
             </div>
             <div class="col-lg-3 row justify-content-right ml-auto">
@@ -24,10 +29,13 @@
                 </div>
             </div>
         </div>
-        <!-- <div class="container-fluid mx-auto text-center">
+        @if(Auth::user()->status == "pendente")
+        <div class="container-fluid mx-auto text-center">
             @include('user.features.aviso_ativacao')
-        </div> -->
-
+        </div> 
+        @endif
+        
+        @if(Auth::user()->status == "ativo")
         <div class="container-fluid">
             <div class="col-md-12">
                 <h1 class="font-weight-bold display-4 text-center text-light">Você está na fila: 1</h1>
@@ -54,6 +62,8 @@
                 </div>
             </div>
         </div>
+        @endif
+        
     </div>
 
 </div>
@@ -61,7 +71,7 @@
 
 @section('content')
 
-
+@if(Auth::user()->status == "ativo")
 
 <div class="container-fluid mt-n10">
     <div class="col-12">
@@ -206,6 +216,7 @@
         <!--col--12-->
     </div>
 </div>
+@endif
 
 
 @endsection

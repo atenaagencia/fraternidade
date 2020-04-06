@@ -17,8 +17,10 @@ class CreateUsersTable extends Migration
             $table->id();
             $table->string('nome');
             $table->string('email');
-            $table->float('saldo', 10,2)->nullable();
-            $table->enum('status', ['inativo', 'ativo'])->nullable()->default('ativo');
+            $table->string('telefone')->nullable();
+            $table->string('whatsapp')->nullable();
+            $table->float('saldo', 10,2)->nullable()->default(0.00);
+            $table->enum('status', ['pendente','inativo', 'ativo'])->nullable()->default('pendente');
             $table->string('password');
             $table->timestamps();
         });
