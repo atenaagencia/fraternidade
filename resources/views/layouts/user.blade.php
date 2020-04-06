@@ -92,7 +92,7 @@
                         </div>
                         <div class="collapse" id="collapseDashboards" data-parent="#accordionSidenav">
                             <nav class="sidenav-menu-nested nav accordion" id="accordionSidenavPages">
-                                <a class="nav-link" href="/banco">Dados Bancários</span></a>
+                                <a class="nav-link" href="{{route('banco')}}">Dados Bancários</span></a>
                             </nav>
                         </div>
                         <div class="collapse" id="collapseDashboards" data-parent="#accordionSidenav">

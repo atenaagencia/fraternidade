@@ -11,6 +11,7 @@
                             <h1 class="text-light">Dados Bancarios</h1>
                         </div>
                         <div class="card-body">
+                          
                             @if (!empty(old('mensagem')) )
                             <div class="alert alert-danger">
                                 {{old('mensagem')}}
