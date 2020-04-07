@@ -81,7 +81,15 @@ class FilaController extends Controller
      */
     public function destroy(Fila $fila)
     {
-       
+        $pos_atual = $fila->posicao;
+        $lista = Fila::where('posicao','>',$pos_atual)->get();
+        $query = $fila->delete();
+        if ($query) {
+            foreach ($lista as $pos) {                
+                $pos->posicao = $pos->posicao - 1;
+                $pos->save();
+            }
+        }
         return redirect('filas');
     }
 }

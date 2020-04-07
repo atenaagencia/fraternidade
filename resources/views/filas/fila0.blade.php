@@ -29,7 +29,7 @@
                                         <td>{{$filiado->user->nome}}</td>
                                             <td>
                                                 <button class="btn btn-sm btn-outline-dark" disabled><i
-                                                class="fas fa-hand-holding-usd mr-3"></i>Depositar <a href="{{route('filas.destroy',$filiado->id)}}"> Del</a></button>
+                                                class="fas fa-hand-holding-usd mr-3"></i>Depositar</button>
                                             </td>
                                             <td>
                                                 <div class="btn-toolbar" role="toolbar"
@@ -60,6 +60,13 @@
                                                                 class="fas fa-phone"></i></a>
                                                     </div>
                                                 </div>
+                                            </td>
+                                            <td>
+                                            <form  action="{{route('filas.destroy',$filiado->id)}}" method="POST">
+                                                @csrf
+                                                @method('DELETE')
+                                            <button type="submit">Deletar</button>
+                                            </form>
                                             </td>
                                         </tr>
                                       @endforeach
