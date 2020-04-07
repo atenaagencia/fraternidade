@@ -14,8 +14,7 @@ class CreateNivelsTable extends Migration
     public function up()
     {
         Schema::create('nivels', function (Blueprint $table) {
-            $table->BigInteger('id');
-            $table->primary('id');
+            $table->id();
             $table->float('valor_deposito');
             $table->integer('quantidade');
             $table->timestamps();

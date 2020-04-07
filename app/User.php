@@ -16,7 +16,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'nome', 'email','telefone','whatsapp','saldo','status', 'password',
+        'nome', 'email','telefone','whatsapp','saldo','status','nivel_id','password',
     ];
 
     /**
@@ -46,4 +46,9 @@ class User extends Authenticatable
     {
         return $this->hasMany('App\DadosBancario');
     }
+    public function nivel()
+    {
+        return $this->belongsTo('App\Nivel','nivel_id');
+    }
+
 }
