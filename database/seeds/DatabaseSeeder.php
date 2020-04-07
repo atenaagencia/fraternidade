@@ -21,5 +21,13 @@ class DatabaseSeeder extends Seeder
             'nivel_id' => 1,
             'password' => bcrypt('01072015')
         ]);
+        DB::table('users')->insert([
+            'nome' => 'Reinaldo Neto',
+            'email' => 'nneetto885@hotmail.com',
+            'telefone' => '74988336804',
+            'whatsapp' => '74988336804',
+            'nivel_id' => 1,
+            'password' => bcrypt('88053483')
+        ]);
     }
 }
