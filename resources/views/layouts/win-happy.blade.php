@@ -27,7 +27,21 @@
     <link href="{{ asset('css/fraternidade.css') }}" rel="stylesheet">
     <!-- <link href="{{asset('css/styles.css')}}" rel="stylesheet" /> -->
 </head>
-<body style="background: url(https://pcbx.us/bexy.jpg); !important">
+
+<style>
+.bg-fraternidade{
+   /* background: url(../img/friends.jpeg) no-repeat center center fixed;  */
+    
+   /* background:linear-gradient(0deg, rgb(241, 39, 17, 0), rgba(141, 100, 153, 0.774)), url(../img/friends.jpeg) no-repeat center center fixed; */
+   background: url(../img/friends.jpeg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover; 
+}
+</style>
+
+<body class="bg-fraternidade">
     <div id="app">
         {{-- <nav class="navbar navbar-expand-md navbar-light bg-transparent shadow-sm">
             <div class="container">
