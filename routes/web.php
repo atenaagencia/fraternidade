@@ -25,6 +25,7 @@ Auth::routes();
 
 Route::group(['middleware' => ['winhappy']], function () {
     Route::get('/home', 'HomeController@index')->name('home');
+    Route::resource('filas', 'FilaController');
 });
 
 Route::get('/banco', 'UserController@banco_index')->name('banco');
