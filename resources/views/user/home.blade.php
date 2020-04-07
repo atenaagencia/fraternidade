@@ -74,7 +74,7 @@
 
 @if(Auth::user()->status == "pendente")
 
-@include('user.features.fila0')
+@include('filas.fila0')
 @endif
 
 

@@ -69,6 +69,7 @@ class RegisterController extends Controller
             'email' => $data['email'],
             'telefone' => $data['telefone'],
             'whatsapp' => $data['whatsapp'],
+            'nivel_id' => 1,
             'password' => Hash::make($data['password']),
         ]);
     }
