@@ -23,7 +23,8 @@ Route::get('/teste', function () {
 
 Auth::routes();
 
-Route::group(['middleware' => ['winhappy']], function () {
+Route::middleware(['auth', 'winhappy'])->group(function () {
+
     Route::get('/home', 'HomeController@index')->name('home');
     Route::resource('filas', 'FilaController');
 });

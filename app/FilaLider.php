@@ -10,5 +10,10 @@ class FilaLider extends Model
         'user_id',
         'posicao',
         'status',
-    ];   
+    ];
+
+    public function user()
+    {
+        return $this->belongsTo('App\User', 'user_id');
+    }
 }

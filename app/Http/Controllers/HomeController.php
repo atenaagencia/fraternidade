@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use Auth;
+use App\FilaLider;
 
 class HomeController extends Controller
 {
@@ -25,6 +26,8 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('user.home');
+        $fila = FilaLider::where('status','dentro')->orderBy('posicao','asc')->get();
+
+        return view('user.home')->with(compact('fila'));
     }
 }
