@@ -27,6 +27,7 @@ Route::middleware(['auth', 'winhappy'])->group(function () {
 
     Route::get('/home', 'HomeController@index')->name('home');
     Route::resource('filas', 'FilaController');
+    Route::resource('filalideres', 'FilaLiderController');
 
     
 });

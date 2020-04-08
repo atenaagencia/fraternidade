@@ -16,8 +16,8 @@ class ValidaBanco
      */
     public function handle($request, Closure $next)
     {
-        $banco = count(Auth::user()->dados_banco);
-        if($banco == 0){
+        $banco = Auth::user()->dados_banco;
+        if($banco == null){
             return redirect('/banco')->withInput([
                 'mensagem' => "Informe seus dados bancários antes de continuar!"
             ]);

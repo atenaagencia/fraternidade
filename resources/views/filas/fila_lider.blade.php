@@ -5,7 +5,7 @@
                 <div class="container-fluid">
                     <div class="card border-0 mb-4">
                         <div class="card-header bg-user-secondary">
-                            <h1 class="text-light">Doações Iniciais</h1>
+                            <h1 class="text-light">Fila Lideres</h1>
                         </div>
                         <div class="card-body">
                             <div class="table-responsive">
@@ -28,7 +28,7 @@
                                         <td>{{$filiado->posicao}}</td>
                                         <td>{{$filiado->user->nome}}</td>
                                             <td>
-                                                <button class="btn btn-sm btn-outline-dark" {{($filiado->posicao ==1) ? '' : 'disabled'}} data-toggle="modal" data-target="#exampleBanco{{$filiado->id}}"><i
+                                                <button class="btn btn-sm btn-outline-dark" ><i
                                                 class="fas fa-hand-holding-usd mr-3"></i>Depositar</button>
                                             </td>
                                             <td>
@@ -61,15 +61,8 @@
                                                     </div>
                                                 </div>
                                             </td>
-                                            <td>
-                                            <form  action="{{route('filas.destroy',$filiado->id)}}" method="POST">
-                                                @csrf
-                                                @method('DELETE')
-                                            <button type="submit">Deletar</button>
-                                            </form>
-                                            </td>
+                                           
                                         </tr>
-                                        @include('user.features.modal_banco')
                                       @endforeach
                                     </tbody>
                                 </table>
