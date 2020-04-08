@@ -14,7 +14,8 @@ class FilaLiderController extends Controller
      */
     public function index()
     {
-        //
+        $fila = FilaLider::where('status','dentro')->orderBy('posicao', 'asc')->get();
+        return view('filas.pages.lideres')->with(compact('fila'));
     }
 
     /**

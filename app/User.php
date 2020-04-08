@@ -44,7 +44,7 @@ class User extends Authenticatable
 
     public function dados_banco()
     {
-        return $this->hasMany('App\DadosBancario');
+        return $this->hasOne('App\DadosBancario');
     }
     public function nivel()
     {
