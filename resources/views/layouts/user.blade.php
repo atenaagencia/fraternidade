@@ -145,7 +145,12 @@
                         </a>
                         <div class="collapse" id="collapseDashboards2" data-parent="#accordionSidenav">
                             <nav class="sidenav-menu-nested nav accordion" id="accordionSidenavPages">
-                                <a class="nav-link" href="">Filas</span></a>
+                            <a class="nav-link" href="{{route('filas.index')}}">Filas</span></a>
+                            </nav>
+                        </div>
+                        <div class="collapse" id="collapseDashboards2" data-parent="#accordionSidenav">
+                            <nav class="sidenav-menu-nested nav accordion" id="accordionSidenavPages">
+                                <a class="nav-link" href="{{route('filalideres.index')}}">Filas Lideres</span></a>
                             </nav>
                         </div>
                        
