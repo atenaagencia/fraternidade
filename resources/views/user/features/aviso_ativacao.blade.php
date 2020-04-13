@@ -120,20 +120,17 @@
 
 </style>
 
-<!-- <div class="alert alert-danger m-3">Você ainda não é um usuário ativo. Para liberar seu cadastro, e entrar na fila 01, realize seu primeiro deposito de R$20,00 para o primeiro da lista abaixo:
-</div> -->
-
 <div class="square_box box_three"></div>
-  <div class="square_box box_four"></div>
-  <div class="container mt-5">
-    <div class="row">
+<div class="square_box box_four"></div>
+<div class="container mt-5">
+  <div class="row">
 
-      <div class="col-sm-12">
-        <div class="alert fade alert-simple alert-danger alert-dismissible text-center font__family-montserrat font__size-16 font__weight-light brk-library-rendered rendered show" role="alert" data-brk-library="component__alert">
-          <i class="start-icon far fa-times-circle faa-pulse animated"></i>
-          <strong class="font__weight-semibold">Você ainda não é um usuário ativo.</strong> Para liberar seu cadastro, e entrar na fila 01, realize seu primeiro deposito de R$20,00 para o primeiro da lista abaixo:
-        </div>
+    <div class="col-sm-12">
+      <div class="alert fade alert-simple alert-danger alert-dismissible text-center font__family-montserrat font__size-16 font__weight-light brk-library-rendered rendered show" role="alert" data-brk-library="component__alert">
+        <i class="start-icon far fa-times-circle faa-pulse animated"></i>
+        <strong class="font__weight-semibold">Você ainda não é um usuário ativo.</strong> Para liberar seu cadastro, e entrar na fila 01, realize seu primeiro deposito de R$20,00 para o primeiro da lista abaixo:
       </div>
-
     </div>
+
   </div>
+</div>

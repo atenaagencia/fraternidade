@@ -1,8 +1,8 @@
 @extends('layouts.user')
 
-<link rel="stylesheet" type="text/css" href="{{asset('css/alerts.css')}}">
-
 @section('header')
+
+<link rel="stylesheet" type="text/css" href="{{asset('css/alerts.css')}}">
 
 <!-- <div class="page-header pb-10 page-header-dark bg-gradient-primary-to-secondary" style="background: url(https://pcbx.us/bexy.jpg);"> -->
 <div class="page-header pb-10 page-header-dark bg-dark mb-3" style="background: url(https://pcbx.us/bexy.jpg);">
@@ -39,12 +39,14 @@
                     </span>
                 </div> -->
             </div>
+
+            @if(Auth::user()->status == "inativo")
+            <div class="container-fluid mx-auto text-center">
+                @include('user.features.aviso_ativacao')
+            </div> 
+            @endif
+
         </div>
-        @if(Auth::user()->status == "inativo")
-        <div class="container-fluid mx-auto text-center">
-            @include('user.features.aviso_ativacao')
-        </div> 
-        @endif
         
         @if(Auth::user()->status == "ativo")
         <div class="container-fluid">
