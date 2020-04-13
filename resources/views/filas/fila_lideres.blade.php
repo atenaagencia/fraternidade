@@ -69,7 +69,7 @@
                                             </form>
                                             </td>
                                         </tr>
-                                        @include('user.features.modal_banco')
+                                        {{-- @include('user.features.modal_banco') --}}
                                       @endforeach
                                     </tbody>
                                 </table>

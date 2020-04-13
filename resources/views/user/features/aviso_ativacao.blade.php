@@ -120,6 +120,7 @@
 
 </style>
 
+
 <!-- <div class="alert alert-danger m-3">Você ainda não é um usuário ativo. Para liberar seu cadastro, e entrar na fila 01, realize seu primeiro deposito de R$20,00 para o primeiro da lista abaixo:
 </div> -->
 

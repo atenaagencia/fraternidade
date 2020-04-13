@@ -15,6 +15,7 @@ class DatabaseSeeder extends Seeder
 
         DB::table('users')->insert([
             'nome' => 'Herbet Junior',
+            'usuario'=>'herbetjr',
             'email' => 'herbetjr@gmail.com',
             'telefone' => '74988114876',
             'whatsapp' => '74988114876',
@@ -23,6 +24,7 @@ class DatabaseSeeder extends Seeder
         ]);
         DB::table('users')->insert([
             'nome' => 'Reinaldo Neto',
+            'usuario' => 'nneetto885',
             'email' => 'nneetto885@hotmail.com',
             'telefone' => '74988336804',
             'whatsapp' => '74988336804',
