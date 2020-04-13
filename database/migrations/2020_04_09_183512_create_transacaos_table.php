@@ -15,14 +15,14 @@ class CreateTransacaosTable extends Migration
     {
         Schema::create('transacaos', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('remetente_id');
-            $table->foreign('remetente_id')->references('user_id')->on('users');
+            $table->unsignedBigInteger('remetente_id'); // aqui o campo é criado
+            $table->foreign('remetente_id')->references('id')->on('users');
             $table->unsignedBigInteger('destinatario_id');
-            $table->foreign('destinatario_id')->references('user_id')->on('users');
+            $table->foreign('destinatario_id')->references('id')->on('users');
             $table->integer('origem_id');
             $table->float('valor',10,2);
             $table->string('arquivo');
-            $table->enum('status', ['aguardando','pendente', 'liberado'])->nullable()->default(['aguardando']);
+            $table->enum('status', ['aguardando','pendente', 'liberado'])->nullable()->default('aguardando');
             $table->timestamps();
         });
     }

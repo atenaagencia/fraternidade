@@ -30,7 +30,7 @@
                 </div>
             </div>
         </div>
-        @if(Auth::user()->status == "pendente")
+        @if(Auth::user()->status == "inativo")
         <div class="container-fluid mx-auto text-center">
             @include('user.features.aviso_ativacao')
         </div> 

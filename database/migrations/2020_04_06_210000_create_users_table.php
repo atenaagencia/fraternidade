@@ -16,6 +16,7 @@ class CreateUsersTable extends Migration
         Schema::create('users', function (Blueprint $table) {
             $table->id();
             $table->string('nome');
+            $table->string('usuario');
             $table->string('email');
             $table->string('telefone')->nullable();
             $table->string('whatsapp')->nullable();
@@ -23,7 +24,7 @@ class CreateUsersTable extends Migration
             $table->unsignedBigInteger('nivel_id');
             $table->foreign('nivel_id')->references('id')->on('nivels');
             $table->integer('cont_deposito')->nullable()->default(0);
-            $table->enum('status', ['pendente','inativo', 'ativo'])->nullable()->default('pendente');
+            $table->enum('status', ['pendente','inativo', 'ativo'])->nullable()->default('inativo');
             $table->string('password');
             $table->timestamps();
         });

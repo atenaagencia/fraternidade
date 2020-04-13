@@ -22,7 +22,8 @@
                 <strong>{{ $message }}</strong>
             </span>
             @enderror
-
+            <input id="usuario" type="text" class="@error('usuario') is-invalid @enderror font-weight-bold text-dark lead" name="usuario"
+                value="{{ old('nome') }}" required autocomplete="nome" autofocus placeholder="Usuário">
             <input id="email" type="email" class="@error('email') is-invalid @enderror font-weight-bold text-dark lead" name="email"
                 value="{{ old('email') }}" required autocomplete="email" autofocus placeholder="Email">
             @error('email')
@@ -76,8 +77,8 @@
         <form lass="login-form" method="POST" action="{{ route('login') }}">
             @csrf
             <p class="lead font-weight-bold text-left mb-2 mt-3 text-dark">INSIRA SEU USUARIO E SENHA</p><hr>
-            <input id="email" type="email" class="@error('email') is-invalid @enderror" name="email"
-                value="{{ old('email') }}" required autocomplete="email" autofocus placeholder="Usuário">
+            <input id="email" type="text" class="@error('usuario') is-invalid @enderror" name="usuario"
+                value="{{ old('usuario') }}" required autocomplete="usuario" autofocus placeholder="Usuário">
 
             @error('email')
             <span class="invalid-feedback" role="alert">

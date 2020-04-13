@@ -18,6 +18,12 @@ class LoginController extends Controller
     | to conveniently provide its functionality to your applications.
     |
     */
+    protected $username = 'usuario';
+    
+    public function username()
+    {
+        return 'usuario';
+    }
 
     use AuthenticatesUsers;
 
@@ -33,6 +39,8 @@ class LoginController extends Controller
      *
      * @return void
      */
+
+  
 
     public function __construct()
     {
