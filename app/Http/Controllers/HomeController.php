@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 
 use Auth;
 use App\FilaLider;
+use App\Transacao;
 
 class HomeController extends Controller
 {
@@ -26,8 +27,10 @@ class HomeController extends Controller
      */
     public function index()
     {
+       
         $fila = FilaLider::where('status','dentro')->orderBy('posicao','asc')->get();
 
         return view('user.home')->with(compact('fila'));
+
     }
 }

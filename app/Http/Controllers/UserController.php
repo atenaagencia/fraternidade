@@ -10,7 +10,7 @@ class UserController extends Controller
 {
     public function banco_index(){
 
-        $banco = Auth::user()->dados_banco()->first();
+        $banco = Auth::user()->dados_banco;
         return view('user.pages.banco')->with(compact('banco'));
     }
 
