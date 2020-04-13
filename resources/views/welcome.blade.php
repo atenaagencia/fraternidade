@@ -32,7 +32,7 @@
                 <div class="title m-b-md font-montserrat">
                 <i class="fas fa-handshake text-shadow shadow-sm border"></i>
                     <b>WIN!</b> Happy
-                    <p class="lead">Lorem ipsum dolor sit amet consectetur, adipisicing elit. </p>
+                    <p class="lead">Sistema Inteligente de Incentivo a Doação Esponânea. </p>
                 </div>
                 @if (Route::has('login'))
                 <div class="links text-center row justify-content-center  py-5">
@@ -87,7 +87,7 @@
 
                             <div class="box-part text-center" id="box-part-primary">
                                 <div class="text">
-                                    <span>Lorem ipsum dolor sit amet, id quo eruditi eloquentiam. Assum decore te sed. Elitr scripta ocurreret qui ad.</span>
+                                    <span>Cadastre-se, crie seu usuário e senha .</span>
                                 </div>
                             </div>
                        </div>
@@ -100,7 +100,7 @@
 
                             <div class="box-part text-center" id="box-part-primary">
                                 <div class="text">
-                                    <span>Lorem ipsum dolor sit amet, id quo eruditi eloquentiam. Assum decore te sed. Elitr scripta ocurreret qui ad.</span>
+                                    <span>Deposite para começar a receber.</span>
                                 </div>
                             </div>
                         </div>
@@ -114,7 +114,7 @@
 
                             <div class="box-part text-center" id="box-part-purple">
                                 <div class="text">
-                                    <span>Lorem ipsum dolor sit amet, id quo eruditi eloquentiam. Assum decore te sed. Elitr scripta ocurreret qui ad.</span>
+                                    <span>Indique amigos para receberem juntos.</span>
                                 </div>
                             </div>
                         </div>
@@ -128,7 +128,7 @@
 
                             <div class="box-part text-center" id="box-part-success">
                                 <div class="text">
-                                    <span>Lorem ipsum dolor sit amet, id quo eruditi eloquentiam. Assum decore te sed. Elitr scripta ocurreret qui ad.</span>
+                                    <span>Receba tudo em sua conta bancária.</span>
                                 </div>
                             </div>
                         </div>
@@ -136,7 +136,7 @@
                 </div>
             </div>
 
-            <h3 class="font-weight-bold text-center mx-auto font-montserrat">Lorem Ipsum?</h3>
+            <h3 class="font-weight-bold text-center mx-auto font-montserrat">Ainda Não é Um Filiado ?</h3>
 
             <div class="links row justify-content-center ml-4 mt-5">
                 <a href="{{route('login')}}" class="action-button btn-block col-lg-4 text-center animate green">Filie-se agora</a>
@@ -147,7 +147,7 @@
 
         <footer class="footer border-top border-dark p-5 bg-light text-dark font-montserrat">
             <div class="links text-center row justify-content-center clearfix" id="footer">
-                <a href="#" class="">Developed by Lorem Ipsum <i class="fa fa-registered"></i></a>
+                <p class="">Todos os Direitos Reservados por WinHappy | Desenvolvido por<a href="https://atenaagencia.com"> Atena Agência</a> <i class="fa fa-registered"></i></p>
             </div>
             <div class="text-right">
                 <i class="fas fa-handshake fa-2x"></i>
