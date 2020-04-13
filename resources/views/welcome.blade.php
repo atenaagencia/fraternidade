@@ -147,7 +147,7 @@
 
         <footer class="footer border-top border-dark p-5 bg-light text-dark font-montserrat">
             <div class="links text-center row justify-content-center clearfix" id="footer">
-                <p class="">Todos os Direitos Reservados por WinHappy | Desenvolvido por<a href="https://atenaagencia.com"> Atena Agência</a> <i class="fa fa-registered"></i></p>
+                <p class="">Todos os Direitos Reservados por WinHappy | Desenvolvido por<a href="https://atenaagencia.com" target="_blank"> Atena Agência</a> <i class="fa fa-registered"></i></p>
             </div>
             <div class="text-right">
                 <i class="fas fa-handshake fa-2x"></i>
