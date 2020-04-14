@@ -2,6 +2,22 @@
 
 <link href="{{ asset('css/login-page.css') }}" rel="stylesheet">
 
+<style>
+.form-check {
+    position: relative !important;
+    display: block !important;
+    padding-left: 1.25rem !important;
+}
+input[type=checkbox], input[type=radio] {
+    box-sizing: border-box !important;
+    padding: 0 !important;
+}
+.form-check-input {
+    position: absolute !important;
+    margin-top: .3rem !important;
+    margin-left: -1.25rem !important;
+}
+</style>
 @section('content')
 <br><br>
 
@@ -68,6 +84,13 @@
             </span>
             @enderror
 
+            <div class="form-check text-dark text-left">
+                <input class="form-check-input" type="checkbox" value="" id="defaultCheck1" style="width: 15 !important">
+                <label class="form-check-label lead" for="defaultCheck1">
+                    Eu aceito os Termos de Usuário. <a href="#" data-toggle="modal" data-target="#termo_user_modal">Ver aqui</a>
+                </label>
+            </div>
+
             <button type="submit" class="action-button animate blue btn-block mt-3">{{ __('Cadastrar') }}</button>
             <p class="message text-dark">Já é filiado? <a href="#">Faça Login.</a></p>
         </form>
@@ -132,4 +155,7 @@
     $('form').animate({height: "toggle", opacity: "toggle"}, "slow");
 });
 </script>
+
+@include('user.features.modal_termo_user')
+
 @endsection
