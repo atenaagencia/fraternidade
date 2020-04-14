@@ -41,21 +41,15 @@
                         Ir para Início
                         </a>
                     @else
-                    <!-- <div class="col-lg-6 m-0">
-                        <a href="{{ route('login') }}" class="action-button shadow animate blue">
-                        Fazer Login
-                        </a>
-                    </div> -->
-                    <div class="">
+                    <div class="m-2">
+                        <a href="#teste" class="action-button shadow-lg animate blue btn-block">Ver mais</a>
+                    </div>
+                    <div class="m-2">
                         @if (Route::has('register'))
                             <a href="{{ route('login') }}" class="action-button shadow-lg animate green btn-block">Filie-se agora</a>
                         @endif
                     </div>
                     @endauth
-                </div>
-                <div class="text-center">
-                    <h3 class="font-montserrat bg-warning text-dark p-2 mb-3">Quero saber como participar da WIN! Happy.</h3>
-                    <a href="#teste" class="btn btn-outline-light"><i class="fas fa-2x fa-arrow-down"></i></a>
                 </div>
                 @endif
             </div>
