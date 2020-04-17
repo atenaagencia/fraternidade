@@ -32,7 +32,7 @@
                 <div class="title m-b-md font-montserrat">
                 <i class="fas fa-handshake text-shadow shadow-sm border"></i>
                     <b>WIN!</b> Happy
-                    <p class="lead">Lorem ipsum dolor sit amet consectetur, adipisicing elit. </p>
+                    <p class="lead">Sistema Inteligente de Incentivo a Doação Esponânea. </p>
                 </div>
                 @if (Route::has('login'))
                 <div class="links text-center row justify-content-center  py-5">
@@ -41,21 +41,15 @@
                         Ir para Início
                         </a>
                     @else
-                    <!-- <div class="col-lg-6 m-0">
-                        <a href="{{ route('login') }}" class="action-button shadow animate blue">
-                        Fazer Login
-                        </a>
-                    </div> -->
-                    <div class="">
+                    <div class="m-2">
+                        <a href="#teste" class="action-button shadow-lg animate blue btn-block">Ver mais</a>
+                    </div>
+                    <div class="m-2">
                         @if (Route::has('register'))
                             <a href="{{ route('login') }}" class="action-button shadow-lg animate green btn-block">Filie-se agora</a>
                         @endif
                     </div>
                     @endauth
-                </div>
-                <div class="text-center">
-                    <h3 class="font-montserrat bg-warning text-dark p-2 mb-3">Quero saber como participar da WIN! Happy.</h3>
-                    <a href="#teste" class="btn btn-outline-light"><i class="fas fa-2x fa-arrow-down"></i></a>
                 </div>
                 @endif
             </div>
@@ -78,7 +72,7 @@
             <div class="box">
                 <div class="container">
                     <div class="row">
-                        <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12" id="box-primary">
+                        <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12" id="box-primary">
                             <h2 class="display-4 font-weight-bold font-montserrat justify-content-center mx-auto text-center row">1</h2>
 
                             <div class="title text-center mt-3 mb-3">
@@ -87,11 +81,11 @@
 
                             <div class="box-part text-center" id="box-part-primary">
                                 <div class="text">
-                                    <span>Lorem ipsum dolor sit amet, id quo eruditi eloquentiam. Assum decore te sed. Elitr scripta ocurreret qui ad.</span>
+                                    <span class="lead font-weight-bold">Cadastre-se, crie seu usuário e senha .</span>
                                 </div>
                             </div>
                        </div>
-                       <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12" id="box-primary">
+                       <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12" id="box-primary">
                             <h2 class="display-4 font-weight-bold font-montserrat justify-content-center mx-auto text-center row">2</h2>
 
                             <div class="title text-center mt-3 mb-3">
@@ -100,11 +94,11 @@
 
                             <div class="box-part text-center" id="box-part-primary">
                                 <div class="text">
-                                    <span>Lorem ipsum dolor sit amet, id quo eruditi eloquentiam. Assum decore te sed. Elitr scripta ocurreret qui ad.</span>
+                                    <span class="lead font-weight-bold">Deposite para começar a receber.</span>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12" id="box-purple">
+                        <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12" id="box-purple">
 
                             <h2 class="display-4 font-weight-bold font-montserrat justify-content-center mx-auto text-center row">3</h2>
                             
@@ -114,11 +108,11 @@
 
                             <div class="box-part text-center" id="box-part-purple">
                                 <div class="text">
-                                    <span>Lorem ipsum dolor sit amet, id quo eruditi eloquentiam. Assum decore te sed. Elitr scripta ocurreret qui ad.</span>
+                                    <span class="lead font-weight-bold">Indique amigos para receberem juntos.</span>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12" id="box-success">
+                        <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12" id="box-success">
 
                             <h2 class="display-4 font-weight-bold font-montserrat justify-content-center mx-auto text-center row">4</h2>
                             
@@ -128,7 +122,7 @@
 
                             <div class="box-part text-center" id="box-part-success">
                                 <div class="text">
-                                    <span>Lorem ipsum dolor sit amet, id quo eruditi eloquentiam. Assum decore te sed. Elitr scripta ocurreret qui ad.</span>
+                                    <span class="lead font-weight-bold">Receba tudo em sua conta bancária.</span>
                                 </div>
                             </div>
                         </div>
@@ -136,7 +130,7 @@
                 </div>
             </div>
 
-            <h3 class="font-weight-bold text-center mx-auto font-montserrat">Lorem Ipsum?</h3>
+            <h3 class="font-weight-bold text-center mx-auto font-montserrat">Ainda Não é Um Filiado ?</h3>
 
             <div class="links row justify-content-center ml-4 mt-5">
                 <a href="{{route('login')}}" class="action-button btn-block col-lg-4 text-center animate green">Filie-se agora</a>
@@ -147,7 +141,7 @@
 
         <footer class="footer border-top border-dark p-5 bg-light text-dark font-montserrat">
             <div class="links text-center row justify-content-center clearfix" id="footer">
-                <a href="#" class="">Developed by Lorem Ipsum <i class="fa fa-registered"></i></a>
+                <p class="">Todos os Direitos Reservados por WinHappy | Desenvolvido por<a href="https://atenaagencia.com" target="_blank"> Atena Agência</a> <i class="fa fa-registered"></i></p>
             </div>
             <div class="text-right">
                 <i class="fas fa-handshake fa-2x"></i>
