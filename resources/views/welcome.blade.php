@@ -72,7 +72,7 @@
             <div class="box">
                 <div class="container">
                     <div class="row">
-                        <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12" id="box-primary">
+                        <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12" id="box-primary">
                             <h2 class="display-4 font-weight-bold font-montserrat justify-content-center mx-auto text-center row">1</h2>
 
                             <div class="title text-center mt-3 mb-3">
@@ -81,11 +81,11 @@
 
                             <div class="box-part text-center" id="box-part-primary">
                                 <div class="text">
-                                    <span>Cadastre-se, crie seu usuário e senha .</span>
+                                    <span class="lead font-weight-bold">Cadastre-se, crie seu usuário e senha .</span>
                                 </div>
                             </div>
                        </div>
-                       <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12" id="box-primary">
+                       <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12" id="box-primary">
                             <h2 class="display-4 font-weight-bold font-montserrat justify-content-center mx-auto text-center row">2</h2>
 
                             <div class="title text-center mt-3 mb-3">
@@ -94,11 +94,11 @@
 
                             <div class="box-part text-center" id="box-part-primary">
                                 <div class="text">
-                                    <span>Deposite para começar a receber.</span>
+                                    <span class="lead font-weight-bold">Deposite para começar a receber.</span>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12" id="box-purple">
+                        <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12" id="box-purple">
 
                             <h2 class="display-4 font-weight-bold font-montserrat justify-content-center mx-auto text-center row">3</h2>
                             
@@ -108,11 +108,11 @@
 
                             <div class="box-part text-center" id="box-part-purple">
                                 <div class="text">
-                                    <span>Indique amigos para receberem juntos.</span>
+                                    <span class="lead font-weight-bold">Indique amigos para receberem juntos.</span>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12" id="box-success">
+                        <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12" id="box-success">
 
                             <h2 class="display-4 font-weight-bold font-montserrat justify-content-center mx-auto text-center row">4</h2>
                             
@@ -122,7 +122,7 @@
 
                             <div class="box-part text-center" id="box-part-success">
                                 <div class="text">
-                                    <span>Receba tudo em sua conta bancária.</span>
+                                    <span class="lead font-weight-bold">Receba tudo em sua conta bancária.</span>
                                 </div>
                             </div>
                         </div>
