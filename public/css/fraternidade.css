@@ -179,3 +179,27 @@ html, body {
     background: #9561e2;
     color: white !important;
 }
+
+#box-warning:hover{
+    color: #ffed4a !important;
+}
+
+#box-part-warning:hover{
+    border: 2px solid #ffed4a !important;
+    background: #ffed4a;
+    color: black !important;
+}
+
+.bg-o-dark{
+    background: linear-gradient(to bottom,#161616 0,rgba(22,22,22,.9) 75%,rgba(22,22,22,.8) 100%);
+}
+
+hr.divider {
+    max-width: 6.25rem;
+    border-width: 0.2rem;
+    border-color: rgb(81, 163, 22);
+}
+
+.page-section {
+    padding: 8rem 0;
+}

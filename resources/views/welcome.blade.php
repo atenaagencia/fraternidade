@@ -11,14 +11,17 @@
         <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Montserrat:600&display=swap" rel="stylesheet">
 
+        <!-- Third party plugin CSS-->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css" rel="stylesheet" />
+
         <!-- Styles -->
         <link href="{{ asset('css/fraternidade.css') }}" rel="stylesheet">
         <link href="{{ asset('css/app.css') }}" rel="stylesheet">
         <!-- <link href="{{ asset('css/styles.css') }}" rel="stylesheet"> -->
 
     </head>
-    <body class="bg-fraternidade">
-        <section class="flex-center position-ref full-height">
+    <body class="">
+        <section class="flex-center position-ref full-height bg-fraternidade">
             @if (Route::has('login'))
                 <div class="top-right links font-montserrat font-weight-bold clearfix">
                     @auth
@@ -42,7 +45,7 @@
                         </a>
                     @else
                     <div class="m-2">
-                        <a href="#teste" class="action-button shadow-lg animate blue btn-block">Ver mais</a>
+                        <a class="action-button shadow-lg animate blue btn-block js-scroll-trigger" href="#about">Ver Mais</a>
                     </div>
                     <div class="m-2">
                         @if (Route::has('register'))
@@ -54,90 +57,86 @@
                 @endif
             </div>
         </section>
-        <section class="bg-light text-dark col-12 p-5" id="teste" style="min-height: 500px">
-            <h4 class="display-3 py-4 ml-2 col-lg-7 py-3 font-montserrat text-center mx-auto">O que é a <span class="title m-b-md font-montserrat">Win Happy?</span></h4><hr width="35%"><br>
-            <p class="text-justify lead col-lg-6 col-sm-12 font-weight-bold text-center mx-auto" style="font-size: 1.29rem;">Somos um Sistema de Doação Espontânia Diferenciado, com objetivo de ajudar a distribuir renda entre os cadastrados. Trata-se de uma ação entre amigos, através da doação entre todos do grupo, assim conseguimos fazer com que todos recebam um valor consideravelmente bom de doação, não somos empresa de mmn e não possuimos CNPJ. </p>
-        </section>
-        <section class="bg-section-friends col-12 p-5" id="teste" style="min-height: 600px">
-            <h4 class="display-4 font-montserrat text-light py-4 ml-2 col-lg-6">Ganhe dinheiro com o sistema de Ajuda Mútua</h4>
-            <p class="text-light text-justify col-lg-6 col-sm-12" style="font-size: 1.29rem;">A ideia da Win Happy é muito simples, após se cadastrar no sistema, você fará uma doação num valor especifico para um donatário e tambem trará tres amigos para tambem fazer uma doação, entrando assim em uma fila única para receber doações.</p>
-
-            <div class="links row justify-content-left ml-4 mt-5">
-                <a href="#" class="action-button shadow animate green">Filie-se agora</a>
+        <section class="bg-light text-dark col-12 p-5" id="about" style="min-height: 500px">
+            <h4 class="display-4 py-4 ml-2 col-lg-7 py-3 font-montserrat text-center mx-auto">O que é a <span class="font-montserrat">Win Happy?</span></h4><hr class="divider my-4"><br>
+            <p class="text-justify lead col-lg-6 col-sm-12 font-weight-bold text-center mx-auto" style="font-size: 1.29rem;">Somos um Sistema de Doação Espontânia Diferenciado, com objetivo de ajudar a distribuir renda entre os cadastrados. Trata-se de uma ação entre amigos, através da doação entre todos do grupo, assim conseguimos fazer com que todos recebam um valor consideravelmente bom de doação, <b class="font-weight-bold">não somos empresa de mmn e não possuimos CNPJ.</b> </p>
+            <div class="text-center py-4">
+                <a class="btn btn-dark rounded-circle js-scroll-trigger" href="#teste"><i class="fa fa-arrow-down"></i></a>
             </div>
         </section>
-        <section class="bg-light text-dark col-12 p-5" id="teste" style="min-height: 500px">
-            <h4 class="display-3 py-4 ml-2 col-lg-7 py-3 font-montserrat text-center mx-auto">Como Funciona?</h4><hr width="35%">
+        <section class="bg-section-friends col-12 p-5" id="teste" style="min-height: 600px">
+            <h4 class="display-4 font-montserrat text-success py-4 ml-2 col-lg-6">Ganhe dinheiro com o sistema de <span class="text-light">Ajuda Mútua.</span></h4><br>
+            <p class="text-light text-justify col-lg-6 col-md-12 col-sm-12" style="font-size: 1.29rem;">A ideia da Win Happy é muito simples, após se cadastrar no sistema, você fará uma doação num valor especifico para um donatário e tambem trará tres amigos para tambem fazer uma doação, entrando assim em uma fila única para receber doações.</p>
             
-            <div class="box">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12" id="box-primary">
-                            <h2 class="display-4 font-weight-bold font-montserrat justify-content-center mx-auto text-center row">1</h2>
+            <div class="links row justify-content-left ml-4 mt-5">
+                <a href="#howto" class="action-button shadow animate blue js-scroll-trigger">Ver Mais</a>
+                <a href="#about" class="action-button shadow animate green js-scroll-trigger">Filie-se agora</a>
+            </div>
+        </section>
 
-                            <div class="title text-center mt-3 mb-3">
-                                <h2 class="font-weight-bold font-montserrat">Cadastre-se</h2>
-                            </div>
+        <!-- Services-->
+        <section class="bg-light text-dark col-12 p-5" id="howto" style="min-height: 500px">
 
-                            <div class="box-part text-center" id="box-part-primary">
-                                <div class="text">
-                                    <span class="lead font-weight-bold">Cadastre-se, crie seu usuário e senha .</span>
-                                </div>
-                            </div>
-                       </div>
-                       <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12" id="box-primary">
-                            <h2 class="display-4 font-weight-bold font-montserrat justify-content-center mx-auto text-center row">2</h2>
+            <h4 class="display-4 py-4 ml-2 col-lg-7 py-3 font-montserrat text-dark text-center mx-auto">Como Funciona?</h4>
+            <hr class="divider my-4">
 
-                            <div class="title text-center mt-3 mb-3">
-                                <h2 class="font-weight-bold font-montserrat">Deposite.</h2>
-                            </div>
-
-                            <div class="box-part text-center" id="box-part-primary">
-                                <div class="text">
-                                    <span class="lead font-weight-bold">Deposite para começar a receber.</span>
-                                </div>
-                            </div>
+            <div class="container">
+                
+                <div class="row">
+                    <div class="col-lg-3 col-md-6 text-center">
+                        <div class="mt-5">
+                            <i class="fas fa-4x fa-user-plus text-dark mb-4"></i>
+                            <h2 class="mb-2 h3 font-weight-bold font-montserrat">1. Cadastre-se.</h2>
+                            <p class="lead mb-0">Cadastre-se, crie seu usuário e senha.</p>
                         </div>
-                        <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12" id="box-purple">
-
-                            <h2 class="display-4 font-weight-bold font-montserrat justify-content-center mx-auto text-center row">3</h2>
-                            
-                            <div class="title text-center mt-3 mb-3">
-                                <h2 class="font-weight-bold font-montserrat">Indique Amigos.</h2>
-                            </div>
-
-                            <div class="box-part text-center" id="box-part-purple">
-                                <div class="text">
-                                    <span class="lead font-weight-bold">Indique amigos para receberem juntos.</span>
-                                </div>
-                            </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 text-center">
+                        <div class="mt-5">
+                            <i class="fas fa-4x fa-hand-holding-usd text-dark mb-4"></i>
+                            <h2 class="mb-2 h3 font-weight-bold font-montserrat">2. Deposite.</h2>
+                            <p class="lead mb-0">Deposite para começar a receber.</p>
                         </div>
-                        <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12" id="box-success">
-
-                            <h2 class="display-4 font-weight-bold font-montserrat justify-content-center mx-auto text-center row">4</h2>
-                            
-                            <div class="title text-center mt-3 mb-3">
-                                <h3 class="font-weight-bold font-montserrat">Receba na conta.</h3>
-                            </div>
-
-                            <div class="box-part text-center" id="box-part-success">
-                                <div class="text">
-                                    <span class="lead font-weight-bold">Receba tudo em sua conta bancária.</span>
-                                </div>
-                            </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 text-center">
+                        <div class="mt-5">
+                            <i class="fas fa-4x fa-user-friends text-dark mb-4"></i>
+                            <h2 class="mb-2 h3 font-weight-bold font-montserrat">3. Indique amigos.</h2>
+                            <p class="lead mb-0">Indique amigos para receberem juntos.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 text-center">
+                        <div class="mt-5">
+                            <i class="fas fa-4x fa-wallet text-dark mb-4"></i>
+                            <h2 class="mb-2 h3 font-weight-bold font-montserrat">4. Receba na conta.</h2>
+                            <p class="lead mb-0">Receba tudo em sua conta bancária.</p>
                         </div>
                     </div>
                 </div>
+
             </div>
-
-            <h3 class="font-weight-bold text-center mx-auto font-montserrat">Ainda Não é Um Filiado ?</h3>
-
-            <div class="links row justify-content-center ml-4 mt-5">
-                <a href="{{route('login')}}" class="action-button btn-block col-lg-4 text-center animate green">Filie-se agora</a>
-            </div>
-
+            
         </section>
 
+        <!-- Call to action-->
+        <section class="p-5 bg-dark text-white" id="about">
+            <div class="container text-center p-5">
+                <h4 class="mb-4 display-4 font-montserrat text-center mx-auto">Contate-nos:</h4>
+                <hr class="divider my-4" />
+                <p class="text-light mb-5">Ready to start your next project with us? Give us a call or send us an email and we will get back to you as soon as possible!</p>
+                <div class="row">
+                    <div class="col-lg-4 ml-auto text-center mb-5 mb-lg-0">
+                        <i class="fas fa-phone fa-3x mb-3 text-light"></i>
+                        <div>(87) 9 0000-0000</div>
+                    </div>
+                    <div class="col-lg-4 mr-auto text-center">
+                        <i class="fas fa-envelope fa-3x mb-3 text-light"></i><a class="d-block text-light" href="mailto:contact@yourwebsite.com">contact@yourwebsite.com</a>
+                    </div>
+                </div>
+                <!-- <div class="links row justify-content-center ml-4 mt-5">
+                    <a href="{{route('login')}}" class="action-button btn-block col-lg-4 text-center animate green">Filie-se agora</a>
+                </div> -->
+            </div>
+        </section>
 
         <footer class="footer border-top border-dark p-5 bg-light text-dark font-montserrat">
             <div class="links text-center row justify-content-center clearfix" id="footer">
@@ -148,5 +147,14 @@
             </div>
             <div class="clearfix"></div>
         </footer>
+
+       <!-- Bootstrap core JS-->
+       <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+        <!-- Third party plugin JS-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="{{asset('js/scripts-welcome.js')}}"></script>
     </body>
 </html>
