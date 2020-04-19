@@ -203,3 +203,94 @@ hr.divider {
 .page-section {
     padding: 8rem 0;
 }
+
+
+.profile-photo-1 {
+    display: flex;
+    justify-content: center;
+    height: 400px !important;
+    overflow: hidden;
+    object-fit: cover;
+    border-radius: .50rem;
+    /* margin-bottom: 10px; */
+
+    background: 
+    /* top, transparent red */ 
+    linear-gradient(
+      rgb(0, 0, 0, 0), 
+      rgba(0, 70, 87, 0.568)
+    ),
+    /* bottom, image */
+    url('../img/register_2.jpg') no-repeat center center;
+    background-size: cover; 
+}
+
+.profile-photo-2 {
+    display: flex;
+    justify-content: center;
+    height: 400px !important;
+    overflow: hidden;
+    object-fit: cover;
+    border-radius: .50rem;
+    /* margin-bottom: 10px; */
+
+    background: 
+    /* top, transparent red */ 
+    linear-gradient(
+      rgb(0, 0, 0, 0), 
+      rgba(134, 33, 87, 0.568)
+    ),
+    /* bottom, image */
+    url('../img/credit_card.jpg') no-repeat center center;
+    background-size: cover; 
+}
+
+.profile-photo-3 {
+    display: flex;
+    justify-content: center;
+    height: 400px !important;
+    overflow: hidden;
+    object-fit: cover;
+    border-radius: .50rem;
+    /* margin-bottom: 10px; */
+
+    background: 
+    /* top, transparent red */ 
+    linear-gradient(
+      rgb(0, 0, 0, 0), 
+      rgba(0, 87, 46, 0.568)
+    ),
+    /* bottom, image */
+    url('../img/sharing.jpeg') no-repeat center center;
+    background-size: cover; 
+}
+.profile-photo-4 {
+    display: flex;
+    justify-content: center;
+    height: 400px !important;
+    overflow: hidden;
+    object-fit: cover;
+    border-radius: .50rem;
+    /* margin-bottom: 10px; */
+
+    background: 
+    /* top, transparent red */ 
+    linear-gradient(
+      rgb(0, 0, 0, 0), 
+      rgba(117, 119, 2, 0.568)
+    ),
+    /* bottom, image */
+    url('../img/recieve.jpg') no-repeat center center;
+    background-size: cover; 
+}
+
+.profile-label{
+    position: relative;
+    top: -300px;
+    color: white !important;
+    justify-content: center;
+    object-fit: center;
+    align-items: center !important;
+    text-align: center;
+    font-weight: bold;
+}

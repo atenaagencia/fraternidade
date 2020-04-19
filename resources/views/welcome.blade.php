@@ -78,9 +78,43 @@
         <section class="bg-light text-dark col-12 p-5" id="howto" style="min-height: 500px">
 
             <h4 class="display-4 py-4 ml-2 col-lg-7 py-3 font-montserrat text-dark text-center mx-auto">Como Funciona?</h4>
+            <h3 class="text-center mx-auto py-3">Veja como é simples ganhar na Winhappy em 4 passos:</h3>
             <hr class="divider my-4">
 
-            <div class="container">
+            <div class="container pt-5">
+                <div class="row mx-auto h-100">
+                    <div class="col-lg-3 col-md-3 col-sm-12">
+                        <div class="profile-photo-1 py-4">
+                            <!-- <img src="{{asset('img/register.jpeg')}}" alt="" height="400px"> -->
+                        </div>
+                        <div class="profile-label">
+                            <h1>Cadastre-se.</h1>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-sm-12">
+                        <div class="profile-photo-2 py-4">
+                            <!-- <img src="{{asset('img/credit_card.jpg')}}" alt="" height="400px"> -->
+                        </div>
+                        <div class="profile-label"><h1>Faça um Depósito.</h1></div>
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-sm-12">
+                        <div class="profile-photo-3 py-4">
+                            <!-- <img src="{{asset('img/sharing.jpeg')}}" alt="" height="400px"> -->
+                        </div>
+                        <div class="profile-label"><h1>Indique seus amigos.</h1></div>
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-sm-12">
+                        <div class="profile-photo-4 py-4">
+                            <!-- <img src="{{asset('img/recieve.jpg')}}" alt="" height="400px"> -->
+                        </div>
+                        <div class="profile-label"><h1>Receba em Conta.</h1></div>
+                    </div>
+                </div>
+            </div>
+
+            <h3 class="text-center mx-auto py-3">Lorem Ipsum Dormo</h3>
+
+            <!-- <div class="container">
                 
                 <div class="row">
                     <div class="col-lg-3 col-md-6 text-center">
@@ -113,7 +147,7 @@
                     </div>
                 </div>
 
-            </div>
+            </div> -->
             
         </section>
 
