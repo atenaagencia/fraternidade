@@ -112,7 +112,7 @@
                 </div>
             </div>
 
-            <h3 class="text-center mx-auto py-3">Lorem Ipsum Dormo</h3>
+            {{-- <h3 class="text-center mx-auto py-3">Lorem Ipsum Dormo</h3> --}}
 
             <!-- <div class="container">
                 
