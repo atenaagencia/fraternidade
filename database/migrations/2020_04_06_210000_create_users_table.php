@@ -25,6 +25,7 @@ class CreateUsersTable extends Migration
             $table->foreign('nivel_id')->references('id')->on('nivels');
             $table->integer('cont_deposito')->nullable()->default(0);
             $table->enum('status', ['pendente','inativo', 'ativo'])->nullable()->default('inativo');
+            $table->string('termo')->nullable()->default('aceito');
             $table->string('password');
             $table->timestamps();
         });

@@ -38,8 +38,10 @@ input[type=checkbox], input[type=radio] {
                 <strong>{{ $message }}</strong>
             </span>
             @enderror
+            <small class="text-dark text-left">Sem espaçamento, somente letras minusculas</small>
             <input id="usuario" type="text" class="@error('usuario') is-invalid @enderror font-weight-bold text-dark lead" name="usuario"
                 value="{{ old('nome') }}" required autocomplete="nome" autofocus placeholder="Usuário">
+               
             <input id="email" type="email" class="@error('email') is-invalid @enderror font-weight-bold text-dark lead" name="email"
                 value="{{ old('email') }}" required autocomplete="email" autofocus placeholder="Email">
             @error('email')
@@ -85,7 +87,7 @@ input[type=checkbox], input[type=radio] {
             @enderror
 
             <div class="form-check text-dark text-left">
-                <input class="form-check-input" type="checkbox" value="" id="defaultCheck1" style="width: 15 !important">
+                <input class="form-check-input" type="checkbox" value="" id="defaultCheck1" style="width: 15 !important" required="">
                 <label class="form-check-label lead" for="defaultCheck1">
                     Eu aceito os Termos de Usuário. <a href="#" data-toggle="modal" data-target="#termo_user_modal">Ver aqui</a>
                 </label>
@@ -101,7 +103,7 @@ input[type=checkbox], input[type=radio] {
             @csrf
             <p class="lead font-weight-bold text-left mb-2 mt-3 text-dark">INSIRA SEU USUARIO E SENHA</p><hr>
             <input id="email" type="text" class="@error('usuario') is-invalid @enderror" name="usuario"
-                value="{{ old('usuario') }}" required autocomplete="usuario" autofocus placeholder="Usuário">
+                value="{{ old('usuario') }}" required autocomplete="usuario" autofocus placeholder="Usuário.">
 
             @error('email')
             <span class="invalid-feedback" role="alert">

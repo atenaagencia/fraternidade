@@ -81,7 +81,7 @@
                                         <tr>
                                             <th>Posição</th>
                                             <th>Nome</th>
-                                            <th>Doação</th>
+                                            <th>Inf. Bancos</th>
                                             <th>Comprovantes Bancários</th>
                                             <th>Status</th>
                                             <th>Ações</th>
@@ -101,15 +101,15 @@
                                                 <div class="btn-toolbar" role="toolbar"
                                                     aria-label="Toolbar with button groups">
                                                     <div class="btn-group mr-2" role="group" aria-label="First group">
-                                                        <button type="button" class="btn btn-outline-dark btn-sm m-1"><i
+                                                        <button type="button" class="btn btn-outline-dark btn-sm m-1" disabled><i
                                                                 class="fa fa-eye mr-4"></i>Ver</button>
-                                                        <button type="button" class="btn btn-outline-dark btn-sm m-1"><i
+                                                        <button type="button" class="btn btn-outline-dark btn-sm m-1" data-toggle="modal" data-target="#exampleArquivo{{$filiado->id}}"><i
                                                                 class="far fa-share-square mr-4"></i> Enviar</button>
                                                     </div>
                                                 </div>
                                             </td>
                                             <td>
-                                                <div class="badge badge-success">Liberado</div>
+                                                <div class="badge badge-danger">pendente</div>
                                             </td>
                                             <td>
                                                 <div class="btn-toolbar" role="toolbar"
@@ -135,7 +135,8 @@
                                             </form>
                                             </td>
                                         </tr>
-                                        {{-- @include('user.features.modal_banco') --}}
+                                         @include('user.features.modal_banco')
+                                         @include('user.features.modal_arquivo')
                                       @endforeach
                                     </tbody>
                                 </table>
