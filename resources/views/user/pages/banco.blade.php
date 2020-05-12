@@ -1,10 +1,16 @@
 @extends('layouts.user')
 
+<style>
+.page-header .page-header-content {
+    padding-top: 2rem !important;
+    padding-bottom: 2rem !important;
+}
+</style>
 @section('header')
 
 <link rel="stylesheet" type="text/css" href="{{asset('css/alerts.css')}}">
 
-<!-- <div class="page-header pb-10 page-header-dark bg-gradient-primary-to-secondary" style="background: url(https://pcbx.us/bexy.jpg);"> -->
+
 <div class="page-header page-header-dark" style="background: url(https://pcbx.us/bexy.jpg);">
     <div class="container-fluid">
         <div class="page-header-content row">
@@ -24,14 +30,17 @@
                 </div>
             </div>
 
-            @if(Auth::user()->status == "inativo")
-            <div class="container-fluid mx-auto text-center">
-                @include('user.features.aviso_ativacao')
-            </div> 
-            @endif
+            {{--
+                @if(Auth::user()->status == "inativo")
+                <div class="container-fluid mx-auto text-center">
+                    @include('user.features.aviso_ativacao')
+                </div> 
+                @endif
+            --}}
         
         </div>
 
+        {{--
         @if(Auth::user()->status == "ativo")
         <div class="container-fluid">
             <div class="col-md-12">
@@ -60,6 +69,7 @@
             </div>
         </div>
         @endif
+        --}}
         
     </div>
 

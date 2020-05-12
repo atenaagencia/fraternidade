@@ -1,3 +1,10 @@
+<style>
+.page-header .page-header-content {
+    padding-top: 2rem !important;
+    padding-bottom: 2rem !important;
+}
+</style>
+
 @section('header')
 
 <link rel="stylesheet" type="text/css" href="{{asset('css/alerts.css')}}">
@@ -22,11 +29,11 @@
                 </div>
             </div>
 
-            @if(Auth::user()->status == "inativo")
+            {{--@if(Auth::user()->status == "inativo")
             <div class="container-fluid mx-auto text-center">
                 @include('user.features.aviso_ativacao')
             </div> 
-            @endif
+            @endif--}}
         
         </div>
 
