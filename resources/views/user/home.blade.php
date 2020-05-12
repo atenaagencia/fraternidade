@@ -1,16 +1,23 @@
 @extends('layouts.user')
 
+<style>
+.page-header .page-header-content {
+    padding-top: 2rem !important;
+    padding-bottom: 2rem !important;
+}
+</style>
+
 @section('header')
 
 <link rel="stylesheet" type="text/css" href="{{asset('css/alerts.css')}}">
 
 <!-- <div class="page-header pb-10 page-header-dark bg-gradient-primary-to-secondary" style="background: url(https://pcbx.us/bexy.jpg);"> -->
-<div class="page-header pb-10 page-header-dark bg-dark mb-3" style="background: url(https://pcbx.us/bexy.jpg);">
+<div class="page-header pb-10 page-header-dark bg-dark mb-2" style="background: url(https://pcbx.us/bexy.jpg);">
     <div class="container-fluid">
         <div class="page-header-content row">
-            <div class="col-lg-4 m-3">
-                <h1 class="page-header-title">
-                    <span>Bem vindo, <b class="text-uppercase">{{Auth::user()->nome}}</b></span>
+            <div class="col-lg-4 m-2">
+                <h1 class="text-light">
+                    <span>Bem vindo, <b class="text-uppercase font-weight-bold">{{Auth::user()->nome}}</b></span>
                 </h1>
 
                 <div class="page-header-subtitle">
