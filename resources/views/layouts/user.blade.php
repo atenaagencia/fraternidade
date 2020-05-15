@@ -55,6 +55,10 @@
                         </div>
                     </h6>
                     <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="{{ route('perfil.show', Auth::user()->id) }}">
+                        <i data-feather="user"></i>
+                        {{ __('Meu Perfil') }}
+                    </a>
                     <a class="dropdown-item" href="{{ route('logout') }}"
                         onclick="event.preventDefault();
                         document.getElementById('logout-form').submit();">
@@ -92,14 +96,14 @@
                         </div>
                         <div class="collapse" id="collapseDashboards" data-parent="#accordionSidenav">
                             <nav class="sidenav-menu-nested nav accordion" id="accordionSidenavPages">
-                                <a class="nav-link" href="{{route('banco')}}">Dados Bancários</span></a>
+                                <a class="nav-link" href="{{route('banco.index')}}">Dados Bancários</span></a>
                             </nav>
                         </div>
-                        <div class="collapse" id="collapseDashboards" data-parent="#accordionSidenav">
+                        {{-- <div class="collapse" id="collapseDashboards" data-parent="#accordionSidenav">
                             <nav class="sidenav-menu-nested nav accordion" id="accordionSidenavPages">
                                 <a class="nav-link" href="">Sorteios</span></a>
                             </nav>
-                        </div>
+                        </div> --}}
                         
                         <div class="collapse" id="collapsePages" data-parent="#accordionSidenav">
                             <nav class="sidenav-menu-nested nav accordion" id="accordionSidenavPagesMenu">

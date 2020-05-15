@@ -67,6 +67,14 @@ input[type=checkbox], input[type=radio] {
                 <strong>{{ $message }}</strong>
             </span>
             @enderror
+            <input id="email" type="text" class="font-weight-bold text-dark lead" name="picpay" value="{{ old('picpay') }}"
+                required autocomplete="picpay" autofocus placeholder="Conta PicPay">
+            
+            @error('picpay')
+            <span class="invalid-feedback" role="alert">
+                <strong>{{ $message }}</strong>
+            </span>
+            @enderror
 
             <p class="lead font-weight-bold text-left mb-2 mt-3 text-dark">CREDENCIAIS DE ACESSO</p><hr>
 

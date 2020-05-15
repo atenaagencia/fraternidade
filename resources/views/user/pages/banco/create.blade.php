@@ -80,7 +80,7 @@
 
 <div class="container-fluid mx-auto text-center mt-5">
 <h1 class="page-header-title text-dark">
-    <span>Insira ou edite seus dados abaixo.</span>
+    <span>Insira seus dados abaixo.</span>
 </h1>
 </div>
 
@@ -95,45 +95,19 @@
                         </div> -->
                         <div class="card-body">
                           
-                            @if (!empty(old('mensagem')) )
-                            <div class="alert alert-danger">
-                                {{old('mensagem')}}
-                            </div>
-
-                            @endif
-                         <table class="table table-bordered table-hover" id="dataTable" width="100%" cellspacing="0">
-                            <thead>
-                                <tr>
-                                    <th>Titular</th>
-                                    <th>Cpf</th>
-                                    <th>Banco</th>
-                                    <th>Agência</th>
-                                    <th>Conta</th>
-                                    <th>Tipo</th>
-                                   
-                                </tr>
-                            </thead>
-                            <tbody>
-                                @foreach ($banco as $info)
-                        
-                                <tr>
-                                    <td>{{$info->nome_completo}}</td>                                   
-                                    <td>{{$info->cpf}}</td>
-                                    <td>{{$info->banco}}</td>
-                                    <td>{{$info->agencia}}</td>
-                                    <td>{{$info->conta}}</td>
-                                    <td>{{$info->tipo_conta}}</td>
-                                </tr>
-                                @endforeach
-                            </tbody>
-                        </table>
+                          @include('user.forms.form_banco')
+                       
                         </div>
+                        
                     </div>
+                   
                 </div>
             </div>
+          
         </div>
         <!--col--12-->
     </div>
 </div>
+
 
 @endsection

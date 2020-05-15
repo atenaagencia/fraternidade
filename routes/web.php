@@ -28,16 +28,17 @@ Route::middleware(['auth', 'winhappy'])->group(function () {
     Route::get('/home', 'HomeController@index')->name('home');
     Route::resource('filas', 'FilaController');
     Route::resource('filalideres', 'FilaLiderController');
+    Route::resource('perfil', 'UserController');
 
     
 });
 
-Route::get('/banco', 'UserController@banco_index')->name('banco');
-    Route::post('/banco', 'UserController@banco_create')->name('banco_create');
-    Route::post('/banco/{id}', 'UserController@banco_update')->name('banco_update');
+Route::resource('banco', 'BancoController');
+
+// Route::get('/banco', 'UserController@banco_index')->name('banco');
+// Route::post('/banco', 'UserController@banco_create')->name('banco_create');
+// Route::post('/banco/{id}', 'UserController@banco_update')->name('banco_update');
 
     
-Route::get('/banco', 'UserController@banco_index')->name('banco');
-Route::post('/banco', 'UserController@banco_create')->name('banco_create');
-Route::post('/banco/{id}', 'UserController@banco_update')->name('banco_update');
+
 

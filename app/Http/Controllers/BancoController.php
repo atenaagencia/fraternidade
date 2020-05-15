@@ -2,10 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\User;
+use App\DadosBancario;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
-class UserController extends Controller
+class BancoController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,7 +15,9 @@ class UserController extends Controller
      */
     public function index()
     {
-        //
+
+        $banco = Auth::user()->dados_banco;
+        return view('user.pages.banco.index')->with(compact('banco'));
     }
 
     /**
@@ -24,7 +27,8 @@ class UserController extends Controller
      */
     public function create()
     {
-        //
+        
+        return view('user.pages.banco.create');
     }
 
     /**
@@ -35,16 +39,17 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $query = DadosBancario::create($request->all());
+        return redirect(route('banco.index'));
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\User  $user
+     * @param  \App\DadosBancario  $dadosBancario
      * @return \Illuminate\Http\Response
      */
-    public function show(User $user)
+    public function show(DadosBancario $dadosBancario)
     {
         //
     }
@@ -52,34 +57,40 @@ class UserController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\User  $user
+     * @param  \App\DadosBancario  $dadosBancario
      * @return \Illuminate\Http\Response
      */
-    public function edit(User $user)
+    public function edit( $id)
     {
-        //
+        $dadosBancario = DadosBancario::find($id);
+        return view('user.pages.banco.edit')->with(compact('dadosBancario'));
     }
 
     /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\User  $user
+     * @param  \App\DadosBancario  $dadosBancario
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, User $user)
+    public function update(Request $request, $id)
     {
-        //
+        $dadosBancario = DadosBancario::find($id);
+        $dadosBancario->update($request->all());
+
+        return redirect()->route('banco.index');
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\User  $user
+     * @param  \App\DadosBancario  $dadosBancario
      * @return \Illuminate\Http\Response
      */
-    public function destroy(User $user)
+    public function destroy($id)
     {
-        //
+        $banco = DadosBancario::find($id);
+        $banco->delete();
+        return redirect()->route('banco.index');
     }
 }

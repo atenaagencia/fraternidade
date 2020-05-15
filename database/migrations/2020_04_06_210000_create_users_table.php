@@ -20,6 +20,7 @@ class CreateUsersTable extends Migration
             $table->string('email');
             $table->string('telefone')->nullable();
             $table->string('whatsapp')->nullable();
+            $table->string('picpay')->nullable();
             $table->float('saldo', 10,2)->nullable()->default(0.00);
             $table->unsignedBigInteger('nivel_id');
             $table->foreign('nivel_id')->references('id')->on('nivels');
