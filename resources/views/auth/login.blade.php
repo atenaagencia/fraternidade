@@ -137,8 +137,8 @@ input[type=checkbox], input[type=radio] {
 <footer class="footer shadow-lg border-top border-light">
     <div class="links text-right row justify-content-right clearfix" id="footer">
         <a href="/" class="text-light font-weight-bold" style="color: white !important">VOLTAR PARA O SITE</a>
-        <a href="#" class="">Lorem Ipsum</a>
-        <a href="#" class="">Lorem Ipsum</a>
+        {{-- <a href="#" class="">Lorem Ipsum</a>
+        <a href="#" class="">Lorem Ipsum</a> --}}
     </div>
     <div class="text-right">
         <i class="fas fa-handshake fa-2x text-shadow shadow-sm border border-dark"></i>
