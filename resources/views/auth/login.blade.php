@@ -1,6 +1,6 @@
 @extends('layouts.win-happy')
 
-<link href="{{ asset('/css/login-page.css') }}" rel="stylesheet">
+<link href="{{ asset('css/login-page.css') }}" rel="stylesheet">
 
 <style>
 .form-check {
