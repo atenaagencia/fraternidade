@@ -50,6 +50,12 @@ class User extends Authenticatable
     {
         return $this->belongsTo('App\Nivel','nivel_id');
     }
+
+    public function fila()
+    {
+        return $this->hasOne('App\Fila', 'user_id');
+    }
+   
    
 
 }

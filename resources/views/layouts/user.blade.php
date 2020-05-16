@@ -157,6 +157,11 @@
                                 <a class="nav-link" href="{{route('filalideres.index')}}">Filas Lideres</span></a>
                             </nav>
                         </div>
+                        <div class="collapse" id="collapseDashboards2" data-parent="#accordionSidenav">
+                            <nav class="sidenav-menu-nested nav accordion" id="accordionSidenavPages">
+                                <a class="nav-link" href="{{route('filalideres.index')}}">Dados Bancários sistema</span></a>
+                            </nav>
+                        </div>
                        
                         
                     
@@ -202,7 +207,7 @@
                 </div>
                 <div class="sidenav-footer">
                     <div class="sidenav-footer-content">
-                        <div class="sidenav-footer-subtitle">Logged in as:</div>
+                        <div class="sidenav-footer-subtitle">Logado como:</div>
                         <div class="sidenav-footer-title">{!! auth::user()->nome !!}</div>
                     </div>
                 </div>
@@ -216,7 +221,7 @@
             <footer class="footer mt-auto footer-light">
                 <div class="container-fluid">
                     <div class="row">
-                        <div class="col-md-6 small">Copyright &#xA9; Your Website 2020</div>
+                        <div class="col-md-6 small">Copyright &#xA9; WinHappy 2020</div>
                         <div class="col-md-6 text-md-right small">
                             <a href="#!">Privacy Policy</a>
                             &#xB7;
