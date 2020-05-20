@@ -14,7 +14,7 @@ class FilaController extends Controller
      */
     public function index()
     {
-        $fila = Fila::where('tipo', 1)->orderBy('posicao', 'asc')->get();
+        $fila = Fila::where('tipo', 1)->orderBy('posicao', 'asc')->paginate(50);
         return view('filas.pages.index')->with(compact('fila'));
     }
 

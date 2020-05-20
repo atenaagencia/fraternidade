@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class Fila extends Model
 {
     protected $fillable =[
-        'posicao', 'user_id','tipo'
+        'posicao', 'user_id','tipo','contador','cont_receber'
     ];
 
     public function user()

@@ -800,7 +800,7 @@
     </div>
     <div class="col-sm-6 mt-1">
         {!! Form::label('', 'CPF do Titular*:', ['']) !!}
-        {!! Form::text('cpf', $value=null, ['class'=> ['form-control','form-control-user'],'required']) !!}
+        {!! Form::text('cpf', ($value=null), ['class'=> ['form-control','form-control-user'],'required','maxlength'=>'11']) !!}
     </div>
     <div class="container-fluid font-weight-bold mt-5">
         <h1>Dados Bancários</h1><hr>

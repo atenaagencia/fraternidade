@@ -129,7 +129,7 @@
             <div class="alert fade alert-simple alert-danger alert-dismissible text-center font__family-montserrat font__size-16 font__weight-light brk-library-rendered rendered show"
                 role="alert" data-brk-library="component__alert">
                 <i class="start-icon far fa-times-circle faa-pulse animated"></i>
-                <strong class="font__weight-semibold">Você ainda não está em uma fila</strong> Para entrar na Fila 01 realize um deposito de R$ 20,00
+                <strong class="font__weight-semibold">Você ainda não está em uma fila.</strong> Para entrar na Fila {{niveis(Auth::user()->nivel_id)->id}} realize um deposito de R$ {{niveis(Auth::user()->nivel_id)->valor_deposito}} <br>
             </div>
         </div>
 

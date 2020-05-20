@@ -9,10 +9,14 @@
         </button>
       </div>
       <div class="modal-body">
-        <h1 class="font-weight-bold pb-3 text-left modal-title" id="exampleContatoLabel">{{$filiado->user->nome}}</h1>
+        <h1 class="font-weight-bold pb-3 text-left modal-title" id="exampleContatoLabel">{{$filiado->destinatario->nome}}</h1>
 
-        {!! Form::open() !!}
-        {!! Form::file('arquivo', ['form-control']) !!}
+        {!! Form::open(['url'=>'set_arquivo', 'files' => true]) !!}
+        {!! Form::hidden('t_id', $filiado->id, []) !!}
+        {!! Form::label('Valor:', []) !!}
+        {!! Form::number('valor', niveis(Auth::user()->nivel_id)->valor_deposito, ['class'=>'form-control', 'readonly']) !!}
+        {!! Form::file('arquivo', ['class'=>['form-control','mt-2'],'required']) !!}
+        {!! Form::submit('Enviar', ['class'=>['btn', 'btn-success','btn-block','mt-2']]) !!}
         {!! Form::close() !!}        
       </div>
     </div>

@@ -19,9 +19,9 @@ class CreateTransacaosTable extends Migration
             $table->foreign('remetente_id')->references('id')->on('users');
             $table->unsignedBigInteger('destinatario_id');
             $table->foreign('destinatario_id')->references('id')->on('users');
-            $table->integer('origem_id');
-            $table->float('valor',10,2);
-            $table->string('arquivo');
+            $table->integer('origem_id')->nullable();
+            $table->float('valor',10,2)->nullable();
+            $table->string('arquivo')->nullable();
             $table->enum('status', ['aguardando','pendente', 'liberado'])->nullable()->default('aguardando');
             $table->timestamps();
         });

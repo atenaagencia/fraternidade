@@ -79,6 +79,11 @@
                 <div class="sidenav-menu">
                     <div class="nav accordion" id="accordionSidenav">
                         <div class="sidenav-menu-heading">MENU PRINCIPAL</div>
+                     
+                            <nav class="sidenav-menu-nested nav accordion" id="accordionSidenavPages">
+                                <a class="nav-link" href="{{route('home')}}">Início</span></a>
+                            </nav>
+                      
                         <a class="nav-link collapsed" href="javascript:void(0);" data-toggle="collapse" data-target="#collapseDashboards" aria-expanded="false" aria-controls="collapseDashboards"
                             ><div class="nav-link-icon"><i data-feather="activity"></i></div>
                             Painel
@@ -86,12 +91,12 @@
                         ></a>
                         <div class="collapse" id="collapseDashboards" data-parent="#accordionSidenav">
                             <nav class="sidenav-menu-nested nav accordion" id="accordionSidenavPages">
-                                <a class="nav-link" href="{{route('home')}}">Início</span></a>
+                            <a class="nav-link" href="{{route('trecebidas')}}">Transações Recebidas</span></a>
                             </nav>
                         </div>
                         <div class="collapse" id="collapseDashboards" data-parent="#accordionSidenav">
                             <nav class="sidenav-menu-nested nav accordion" id="accordionSidenavPages">
-                                <a class="nav-link" href="">Minhas Transações</span></a>
+                                <a class="nav-link" href="{{route('tefetuadas')}}">Transações Efuadas</span></a>
                             </nav>
                         </div>
                         <div class="collapse" id="collapseDashboards" data-parent="#accordionSidenav">
@@ -141,6 +146,7 @@
                         </div>
                     </div>
                     <div class="nav accordion" id="accordionSidenav">
+                        @if(Auth::user()->perfil == 'adm')
                         <a class="nav-link collapsed" href="javascript:void(0);" data-toggle="collapse" data-target="#collapseDashboards2"
                             aria-expanded="false" aria-controls="collapseDashboards">
                             <div class="nav-link-icon"><i data-feather="activity"></i></div>
@@ -162,6 +168,7 @@
                                 <a class="nav-link" href="{{route('filalideres.index')}}">Dados Bancários sistema</span></a>
                             </nav>
                         </div>
+                        @endif
                        
                         
                     
@@ -246,7 +253,6 @@
     <sb-customizer project="sb-admin-pro"></sb-customizer>
 
     @include('user.features.modal_instrucoes')
-    @include('user.features.modal_contato')
-    @include('user.features.modal_whatsapp')
+  
 </body>
 </html>

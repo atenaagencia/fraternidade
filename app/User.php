@@ -16,7 +16,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'nome','usuario','email','telefone','whatsapp','picpay','saldo','status','nivel_id','password',
+        'nome','usuario','email','telefone','whatsapp','picpay','saldo','status','perfil','nivel_id','password',
     ];
 
     /**
@@ -37,10 +37,10 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
-    public function getSaldoAttribute($value)
-    {
-        return number_format($value, 2, ",", ".");
-    }
+    // public function getSaldoAttribute($value)
+    // {
+    //     return number_format($value, 2, ",", ".");
+    // }
 
     public function dados_banco()
     {

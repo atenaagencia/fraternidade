@@ -37,7 +37,7 @@
                     <div
                         class="alert fade alert-simple alert-success alert-dismissible text-left font__family-montserrat font__size-16 font__weight-light brk-library-rendered rendered show">
                         <i class="start-icon far fa-check-circle faa-tada animated"></i>
-                        <strong class="font-weight-bold">Saldo Disponível:</strong> <b>R$ {{Auth::user()->saldo}}</b>.
+                        <strong class="font-weight-bold">Saldo Disponível:</strong> <b>R$ {{number_format(Auth::user()->saldo,2,',','.')}}</b>
                     </div>
                 </div>
 
@@ -53,7 +53,7 @@
                 @include('user.features.aviso_ativacao')
             </div> 
             @endif --}}
-            @if(Auth::user()->status == "ativo")
+            @if(Auth::user()->status == "pendente")
             <div class="container-fluid mx-auto text-center">
                 @include('user.features.aviso_fila')
             </div>
@@ -99,9 +99,12 @@
 @endsection
 
 @section('content')
-@if(Auth::user()->status == "ativo")
 @if(Auth::user()->nivel_id == 1)
-    @include('user.features.fila1') 
+
+    @if(Auth::user()->status == "pendente")    
+         @include('user.features.transacao.d01') 
+    @elseif(Auth::user()->status == "ativo")
+        @include('user.features.transacao.r01')
     @endif
 @endif
 @endsection

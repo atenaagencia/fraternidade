@@ -13,15 +13,15 @@ class NivelSeeder extends Seeder
     {
         DB::table('nivels')->insert([
             'valor_deposito' => 20.00,
-            'quantidade' => 3,
+            'quantidade' => 2,
         ]);
         DB::table('nivels')->insert([
             'valor_deposito' => 40.00,
-            'quantidade' => 9,
+            'quantidade' => 3,
         ]);
         DB::table('nivels')->insert([
-            'valor_deposito' => 60.00,
-            'quantidade' => 27,
+            'valor_deposito' => 100.00,
+            'quantidade' => 3,
         ]);
     }
 }

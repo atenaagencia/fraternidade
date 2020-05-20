@@ -18,6 +18,8 @@ class CreateFilasTable extends Migration
             $table->foreignId('user_id')->constrained();
             $table->integer('posicao');
             $table->integer('tipo');
+            $table->integer('contador')->default(0);
+            $table->integer('cont_receber')->default(0);
             $table->enum('status', ['dentro', 'fora'])->nullable()->default('dentro');
             $table->timestamps();
         });
