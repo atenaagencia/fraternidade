@@ -14,7 +14,7 @@ class UserController extends Controller
      */
     public function index()
     {
-        $usuario = User::paginate(15);
+        $usuario = User::orderby('id', 'desc')->paginate(15);
         return view('user.pages.cadastro.index')->with(compact('usuario'));
     }
 
