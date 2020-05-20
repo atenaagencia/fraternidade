@@ -156,14 +156,14 @@
             <div class="container text-center p-5">
                 <h4 class="mb-4 display-4 font-montserrat text-center mx-auto">Contate-nos:</h4>
                 <hr class="divider my-4" />
-                <p class="text-light mb-5">Ready to start your next project with us? Give us a call or send us an email and we will get back to you as soon as possible!</p>
+                <p class="text-light mb-5">Com apenas R$20,00 você inicia, fazendo o bem.</p>
                 <div class="row">
                     <div class="col-lg-4 ml-auto text-center mb-5 mb-lg-0">
                         <i class="fas fa-phone fa-3x mb-3 text-light"></i>
-                        <div>(87) 9 0000-0000</div>
+                        <div>(71) 9 8256-5951</div>
                     </div>
                     <div class="col-lg-4 mr-auto text-center">
-                        <i class="fas fa-envelope fa-3x mb-3 text-light"></i><a class="d-block text-light" href="mailto:contact@yourwebsite.com">contact@yourwebsite.com</a>
+                        <i class="fas fa-envelope fa-3x mb-3 text-light"></i><a class="d-block text-light" href="mailto:contact@yourwebsite.com">suporte@winhappy.net</a>
                     </div>
                 </div>
                 <!-- <div class="links row justify-content-center ml-4 mt-5">

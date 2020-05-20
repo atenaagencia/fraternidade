@@ -68,7 +68,8 @@ input[type=checkbox], input[type=radio] {
             </span>
             @enderror
             <input id="email" type="text" class="font-weight-bold text-dark lead" name="picpay" value="{{ old('picpay') }}"
-                required autocomplete="picpay" autofocus placeholder="Conta PicPay">
+                required autocomplete="picpay" autofocus placeholder="Conta PicPay" required>
+                <small class="text-dark"> Se você não tem cadastrado PicPay <a href="http://www.picpay.com/convite?@XAFO" target="_blank"> Clique Aqui</a></small>
             
             @error('picpay')
             <span class="invalid-feedback" role="alert">
