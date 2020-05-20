@@ -1,5 +1,5 @@
 RewriteEngine on
-RewriteCond %{HTTP_HOST} ^winhappy.atenaagencia.com$ [NC,OR]
-RewriteCond %{HTTP_HOST} ^wwww.winhappy.atenaagencia.com$
+RewriteCond %{HTTP_HOST} ^winhappy.net$ [NC,OR]
+RewriteCond %{HTTP_HOST} ^wwww.winhappy.net$
 RewriteCond %{REQUEST_URI} !public/
 RewriteRule (.*) /public/$1 [L]
