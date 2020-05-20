@@ -14,7 +14,8 @@ class UserController extends Controller
      */
     public function index()
     {
-        //
+        $usuario = User::paginate(15);
+        return view('user.pages.cadastro.index')->with(compact('usuario'));
     }
 
     /**
@@ -35,7 +36,9 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        User::create($request->all());
+        
+        return back();
     }
 
     /**

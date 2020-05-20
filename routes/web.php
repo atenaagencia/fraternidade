@@ -28,7 +28,7 @@ Route::middleware(['auth', 'winhappy'])->group(function () {
     Route::get('/home', 'HomeController@index')->name('home');
     Route::resource('filas', 'FilaController')->middleware('v_perfil');
     Route::resource('filalideres', 'FilaLiderController')->middleware('v_perfil');
-    Route::resource('perfil', 'UserController');
+    Route::resource('cadastro', 'UserController');
     Route::get('iniciar','TransacaoController@t_inicial');
     Route::post('set_arquivo', 'TransacaoController@set_comprovante');
     Route::get('arquivo-{id}','TransacaoController@download')->name('download');

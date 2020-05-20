@@ -55,7 +55,7 @@
                         </div>
                     </h6>
                     <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="{{ route('perfil.show', Auth::user()->id) }}">
+                    <a class="dropdown-item" href="{{ route('cadastro.show', Auth::user()->id) }}">
                         <i data-feather="user"></i>
                         {{ __('Meu Perfil') }}
                     </a>
@@ -170,7 +170,7 @@
                         </div>
                         <div class="collapse" id="collapseDashboards2" data-parent="#accordionSidenav">
                             <nav class="sidenav-menu-nested nav accordion" id="accordionSidenavPages">
-                                <a class="nav-link" href="#">Cadastro de Usuarios</span></a>
+                            <a class="nav-link" href="{{route('cadastro.index')}}">Cadastro de Usuarios</span></a>
                             </nav>
                         </div>
                         @endif
