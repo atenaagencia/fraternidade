@@ -51,6 +51,11 @@
                             <h1 class="text-light">Lista Usuários</h1>
                         </div>
                         <div class="card-body">
+                            @if(old('m_reset'))
+                            <div class="alert alert-success">
+                                {{old('m_reset')}}
+                            </div>
+                            @endif
                             <div class="mb-3">
                                 <a href="" data-toggle="modal" data-target="#cadastro" class="btn btn-success"><i class="fa fa-user-plus"></i></a>
                             </div>
@@ -87,8 +92,11 @@
                                         <i class="fa fa-edit"></i>
                                         </a>
                                     <a href="{{route('cadastro.show',$filiado->id)}}" class="btn btn-dark" style="font-size: 10px"><i class="fa fa-eye"></i></a>
+                                    <a href="#" data-toggle="modal" data-target="#altSenha{{$filiado->id}}"class="btn btn-dark" style="font-size: 10px"><i
+                                            class="fa fa-key"></i></a>
                                     </td>
                                     </tr>  
+                                    @include('user.features.modal_resetarsenha')
                                     @endforeach
                                 </tbody>
                             </table>

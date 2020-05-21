@@ -84,6 +84,11 @@ class UserController extends Controller
     public function update2(Request $request, $id)
     {
         $user = User::find($id);
+        if($request->resetar == 1){
+            $user->password = bcrypt($request->password);
+            $user->save();
+            return back()->withInput(['m_reset' => 'Senha de '.$user->nome.' resetada']);
+        }
    
         if ($request->password == $request->c_password) {
             $user->password = bcrypt($request->password);
