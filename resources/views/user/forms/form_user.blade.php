@@ -20,7 +20,7 @@
     </div>
     <div class="col-sm-6 mt-1">
         {!! Form::label('', 'E-mail:', ['']) !!}
-        {!! Form::text('email', $value=null, ['class'=> ['form-control','form-control-user'],'required']) !!}
+        {!! Form::email('email', $value=null, ['class'=> ['form-control','form-control-user'],'required']) !!}
     </div>
     <div class="col-sm-6 mt-1">
         {!! Form::label('', 'Telefone:', ['']) !!}

@@ -52,20 +52,24 @@
                         </div>
                         <div class="card-body">
                             <div class="mb-3">
+                              @if(Auth::user()->perfil == 'adm')
                             <a href="{{route('cadastro.index')}}"  class="btn btn-success"><i class="fa fa-arrow-left"></i></a>
                             </div>
+                            @endif
 
                          
                             <div>
                                
                             {!! Form::model($user,['class'=>'user','route' => ['cadastro.update',$user->id]]) !!}
-                            @method('PUT')                            
+                            @method('PUT')
+                            
                             <div class="form-group row">
                                 {!! Form::hidden('user_id', Auth::user()->id, ['']) !!}
                                 <div class="container-fluid font-weight-bold">
                                     <h1>Informações Pessoais</h1>
                                     <hr>
                                 </div>
+                                @if(Auth::user()->perfil == 'adm')
                                 <div class="col-sm-6 mt-1">
                                     {!! Form::label('', 'Nome Completo:', ['']) !!}
                                     {!! Form::text('nome', $value=null, ['class'=> ['form-control','form-control-user'],'required']) !!}
@@ -74,6 +78,7 @@
                                     {!! Form::label('', 'Usuário:', ['']) !!}
                                     {!! Form::text('usuario', $value=null, ['class'=> ['form-control','form-control-user'],'required']) !!}
                                 </div>
+                                @endif
                                 <div class="col-sm-6 mt-1">
                                     {!! Form::label('', 'E-mail:', ['']) !!}
                                     {!! Form::text('email', $value=null, ['class'=> ['form-control','form-control-user'],'required']) !!}
@@ -90,6 +95,7 @@
                                     {!! Form::label('', 'Conta Picpay:', ['']) !!}
                                     {!! Form::text('picpay', $value=null, ['class'=> ['form-control','form-control-user'],'required']) !!}
                                 </div>
+                                @if(Auth::user()->perfil == 'adm')
                                 <div class="col-sm-6 mt-1">
                                     {!! Form::label('', 'Saldo :', ['']) !!}
                                     {!! Form::text('saldo', $value=null, ['class'=> ['form-control','form-control-user'],'required']) !!}
@@ -108,6 +114,15 @@
                                     {!! Form::select('status', [''=> '---','pendente'=>'pendente','ativo'=>'ativo'], $value=null, ['class'=>
                                     ['form-control','form-control-user'],'required']) !!}
                                 </div>
+                                @endif
+                                @if(Auth::user()->perfil == "user")
+                                <div class="col-sm-6 mt-1">
+                                {!! Form::label('', 'Nova senha:', ['']) !!}
+                                {!! Form::password('password', $value=null, ['class'=> ['form-control']]) !!}
+                                </div>
+                                @endif
+                            
+                            
                             
                             </div>
                             
