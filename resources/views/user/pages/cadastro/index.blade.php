@@ -82,7 +82,12 @@
                                     <td>{{$filiado->nivel_id}}</td>
                                     <td>{{$filiado->cont_deposito}}</td>
                                     <td>{{$filiado->status}}</td>
-                                    <td><button class="btn btn-dark" style="font-size: 10px">Ver Mais</button></td>
+                                    <td>
+                                    <a href="{{route('cadastro.edit',$filiado->id)}}" class="btn btn-dark" style="font-size: 10px">
+                                        <i class="fa fa-edit"></i>
+                                        </a>
+                                        <a href="#" class="btn btn-dark" style="font-size: 10px">Ver Mais</a>
+                                    </td>
                                     </tr>  
                                     @endforeach
                                 </tbody>
