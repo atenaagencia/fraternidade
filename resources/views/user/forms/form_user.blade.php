@@ -53,7 +53,7 @@
     </div>
 
     <div class="col-sm-6 mt-1">
-      {!! Form::hidden('password', 1234, []) !!}
+      {!! Form::hidden('password', bcrypt('1234'), []) !!}
     </div>
 
 
