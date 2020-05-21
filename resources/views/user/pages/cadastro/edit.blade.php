@@ -48,7 +48,7 @@
                 <div class="container-fluid">
                     <div class="card border-0 mb-4">
                          <div class="card-header bg-user-secondary">
-                            <h1 class="text-light">Perifl de Usuário</h1>
+                            <h1 class="text-light">Perfil de Usuário</h1>
                         </div>
                         <div class="card-body">
                             <div class="mb-3">

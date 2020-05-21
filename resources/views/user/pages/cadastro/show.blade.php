@@ -116,12 +116,10 @@
                                 </div>
                                 @endif
                                 @if(Auth::user()->perfil == "user")
-                                <div class="col-sm-6 mt-1">
-                                {!! Form::label('', 'Nova senha:', ['']) !!}
-                                {!! Form::password('password', $value=null, ['class'=> ['form-control']]) !!}
+                                <div class="col-sm-12 mt-1">
+                                    {!! Form::submit('Salvar', ['class' => ['btn', 'btn-primary', 'btn-block', 'form-nonresize']]) !!}
                                 </div>
                                 @endif
-                            
                             
                             
                             </div>

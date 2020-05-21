@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class UserController extends Controller
 {
@@ -37,7 +38,7 @@ class UserController extends Controller
     public function store(Request $request)
     {
         User::create($request->all());
-        
+
         return back();
     }
 
@@ -61,7 +62,7 @@ class UserController extends Controller
      */
     public function edit($id)
     {
-       $user = User::find($id);
+        $user = User::find($id);
         return view('user.pages.cadastro.edit')->with(compact('user'));
     }
 
