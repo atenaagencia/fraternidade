@@ -86,7 +86,7 @@
                                     <a href="{{route('cadastro.edit',$filiado->id)}}" class="btn btn-dark" style="font-size: 10px">
                                         <i class="fa fa-edit"></i>
                                         </a>
-                                        <a href="#" class="btn btn-dark" style="font-size: 10px">Ver Mais</a>
+                                    <a href="{{route('cadastro.show',$filiado->id)}}" class="btn btn-dark" style="font-size: 10px"><i class="fa fa-eye"></i></a>
                                     </td>
                                     </tr>  
                                     @endforeach
