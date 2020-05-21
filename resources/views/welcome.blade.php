@@ -164,7 +164,7 @@
                     </div>
                     <div class="col-lg-4 ml-auto text-center mb-5 mb-lg-0">
                         <i class="fas fa-phone fa-3x mb-3 text-light"></i>
-                        <div><a href="https://wa.me/558782565951" target="_blank" class="text-white">(71) 9 8256-5951</a></div>
+                        <div><a href="https://wa.me/557182565951" target="_blank" class="text-white">(71) 9 8256-5951</a></div>
                     </div>
                     <div class="col-lg-4 mr-auto text-center">
                         <i class="fas fa-envelope fa-3x mb-3 text-light"></i><a class="d-block text-light" href="mailto:contact@yourwebsite.com">suporte@winhappy.net</a>
