@@ -87,7 +87,9 @@ class UserController extends Controller
    
         if ($request->password == $request->c_password) {
             $user->password = bcrypt($request->password);
-           $user->save();            
+           $user->save();   
+           Auth::logout();
+           return redirect('/');
         }else{
            return back()->withInput(['m_senha'=> 'Senhas não conferem']);
         }
