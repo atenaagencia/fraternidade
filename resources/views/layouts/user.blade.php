@@ -59,6 +59,10 @@
                         <i data-feather="user"></i>
                         {{ __('Meu Perfil') }}
                     </a>
+                    <a class="dropdown-item" href="#" data-target="#altSenha" data-toggle="modal">
+                        <i data-feather="key"></i>
+                        {{ __('Alterar Senha') }}
+                    </a>
                     <a class="dropdown-item" href="{{ route('logout') }}"
                         onclick="event.preventDefault();
                         document.getElementById('logout-form').submit();">
@@ -258,6 +262,7 @@
     <sb-customizer project="sb-admin-pro"></sb-customizer>
 
     @include('user.features.modal_instrucoes')
+    @include('user.features.modal_alt_senha')
   
 </body>
 </html>

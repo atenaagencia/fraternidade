@@ -81,6 +81,20 @@ class UserController extends Controller
         return back();
     }
 
+    public function update2(Request $request, $id)
+    {
+        $user = User::find($id);
+   
+        if ($request->password == $request->c_password) {
+            $user->password = bcrypt($request->password);
+           $user->save();            
+        }else{
+           
+        }
+
+        return back();
+    }
+
     /**
      * Remove the specified resource from storage.
      *
