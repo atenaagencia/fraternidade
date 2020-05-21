@@ -1,5 +1,5 @@
-<div class="modal fade" id="altSenha" tabindex="-1" role="dialog"
-    aria-labelledby="exampleContatoLabel" aria-hidden="true">
+<div class="modal fade" id="altSenha" tabindex="-1" role="dialog" aria-labelledby="exampleContatoLabel"
+    aria-hidden="true">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
@@ -11,15 +11,24 @@
             <div class="modal-body">
                 <h1 class="font-weight-bold pb-3 text-left modal-title" id="exampleContatoLabel">
                 </h1>
+                @if(old('m_senha'))
+                <div class="alert alert-danger">
+                    {{old('m_senha')}}
+                </div>
+                @endif
+
+                <div>
+                    <p>Ao alterar sua senha você será deslogado para acessar o sistena com sua nova senha.</p>
+                </div>
 
                 {!! Form::open(['route'=>['upSenha', Auth::user()->id],'class'=>'user']) !!}
                 {!! Form::label('', 'Nova Senha', []) !!}
                 {!! Form::password('password', ['class'=>'form-control', 'required'] ) !!}
-                {!! Form::label('', 'Repita  Senha', []) !!}
+                {!! Form::label('', 'Repita Senha', []) !!}
                 {!! Form::password('c_password', ['class'=>'form-control','required'] ) !!}
                 {!! Form::submit('Enviar', ['class'=>['btn', 'btn-success','btn-block','mt-2']]) !!}
                 {!! Form::close() !!}
 
+            </div>
         </div>
     </div>
-</div>

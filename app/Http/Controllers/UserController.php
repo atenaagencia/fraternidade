@@ -89,7 +89,7 @@ class UserController extends Controller
             $user->password = bcrypt($request->password);
            $user->save();            
         }else{
-           
+           return back()->withInput(['m_senha'=> 'Senhas não conferem']);
         }
 
         return back();

@@ -263,6 +263,14 @@
 
     @include('user.features.modal_instrucoes')
     @include('user.features.modal_alt_senha')
+    @if(old('m_senha'))
+    <script>
+        $(document).ready(function () {
+            $('#altSenha').modal();
+        });
+    </script>
+    @endif
+  
   
 </body>
 </html>
