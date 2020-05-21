@@ -50,8 +50,8 @@
                     <h6 class="dropdown-header d-flex align-items-center">
                         <img class="dropdown-user-img" src="https://picsum.photos/200/300" />
                         <div class="dropdown-user-details">
-                            <div class="dropdown-user-details-name">{{ Auth::user()->name }}</div>
-                            <div class="dropdown-user-details-email">{{ Auth::user()->email }}</div>
+                            <div class="dropdown-user-details-name">{{ Auth::user()->nome }}</div>
+                            <div class="dropdown-user-details-email">({{ Auth::user()->usuario }})</div>
                         </div>
                     </h6>
                     <div class="dropdown-divider"></div>
