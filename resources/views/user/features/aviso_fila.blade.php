@@ -122,9 +122,8 @@
 
 <div class="square_box box_three"></div>
 <div class="square_box box_four"></div>
-<div class="container mt-5">
+<div class="container mt-0 mb-5">
     <div class="row">
-
         <div class="col-sm-12">
             <div class="alert fade alert-simple alert-danger alert-dismissible text-center font__family-montserrat font__size-16 font__weight-light brk-library-rendered rendered show"
                 role="alert" data-brk-library="component__alert">
@@ -136,6 +135,6 @@
     </div>
 </div>
 
-<div class="container-fluid m-2">
+<!-- <div class="container-fluid m-2">
     <a class="nav-link" href="#"><span class="border-0 text-light bg-aviso p-2"> </span></a>
-</div>
+</div> -->

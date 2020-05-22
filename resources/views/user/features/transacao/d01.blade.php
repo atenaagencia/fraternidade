@@ -84,9 +84,9 @@ $d01_dep = $transacao->where('origem_id', 1)->where('remetente_id',Auth::user()-
                                         @endforeach
                                     </tbody>
                                 </table>
-                                <div>
+                                <div class="mt-3">
                                     @if(count($d01_dep) == 0)
-                                    <a href="/iniciar" class="btn btn-success btn-block"> Atualizar lista de depósito</a>
+                                        <a href="/iniciar" class="btn btn-success btn-block py-3"> Atualizar lista de depósito</a>
                                     @endif
                                 </div>
                             </div>

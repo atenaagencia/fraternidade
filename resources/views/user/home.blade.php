@@ -11,7 +11,6 @@
 
 <link rel="stylesheet" type="text/css" href="{{asset('css/alerts.css')}}">
 
-<!-- <div class="page-header pb-10 page-header-dark bg-gradient-primary-to-secondary" style="background: url(https://pcbx.us/bexy.jpg);"> -->
 <div class="page-header pb-5 page-header-dark bg-dark mb-2" style="background: url(https://pcbx.us/bexy.jpg);">
     <div class="container-fluid">
         <div class="page-header-content row">
@@ -31,8 +30,7 @@
                 </div>
             </div>
 
-            <div class="col-lg-3 row justify-content-right ml-auto m-3">
-
+            <div class="col-lg-3 row justify-content-right ml-auto m-3 mb-0 pb-0">
                 <div class="col-sm-12">
                     <div
                         class="alert fade alert-simple alert-success alert-dismissible text-left font__family-montserrat font__size-16 font__weight-light brk-library-rendered rendered show">
@@ -40,21 +38,10 @@
                         <strong class="font-weight-bold">Saldo Disponível:</strong> <b>R$ {{number_format(Auth::user()->saldo,2,',','.')}}</b>
                     </div>
                 </div>
-
-                <!-- <div class="page-header-subtitle">
-                    <span class=" badge badge-success">
-                        <h4 class="font-weight-bold text-light">R$ {{Auth::user()->saldo}}</h4>
-                    </span>
-                </div> -->
             </div>
-
-            {{-- @if(Auth::user()->status == "inativo")
-            <div class="container-fluid mx-auto text-center">
-                @include('user.features.aviso_ativacao')
-            </div> 
-            @endif --}}
+         
             @if(Auth::user()->status == "pendente")
-            <div class="container-fluid mx-auto text-center">
+            <div class="container-fluid mx-auto text-center m-0 p-0">
                 @include('user.features.aviso_fila')
             </div>
             @endif
