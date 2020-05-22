@@ -22,6 +22,7 @@
                                             <th>Usuario</th>
                                             <th>Nome</th>
                                             <th>Doação Recebidas</th>
+                                            <th>Doações Liberadas</th>
                                             @if(Auth::user()->perfil == 'adm')
                                               <th colspan="2">Ações</th>  
                                             @endif
@@ -35,6 +36,7 @@
                                         <td>{{$filiado->posicao}}</td>
                                         <td>{{$filiado->user->usuario}}</td>
                                         <td>{{$filiado->user->nome}}</td>
+                                        <td>{{$filiado->cont_receber}}</td>
                                         <td>{{$filiado->contador}}</td>
                                           @if(Auth::user()->perfil == 'adm') 
                                         <td><a href="{{route('cadastro.show',$filiado->user->id)}}?nivel={{$nivel}}" class="btn btn-info"><i class="fa fa-user"></i></a></td>
