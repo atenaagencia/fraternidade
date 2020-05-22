@@ -1,6 +1,6 @@
 @inject('transacao', 'App\Transacao')
 @php
-$r02_dep = $transacao->where('origem_id', 2)->where('destinatario_id',Auth::user()->id)->where('status','<>','liberado')->get();
+$r02_dep = $transacao->where('origem_id', 2)->where('destinatario_id',Auth::user()->id)->get();
 
     $espera = count($r02_dep);
     @endphp
