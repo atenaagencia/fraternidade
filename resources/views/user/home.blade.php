@@ -54,6 +54,8 @@
             <div class="col-md-12">
                 <h1 class="font-weight-bold display-4 text-center text-light">Você está na fila:
                     {{Auth::user()->fila->tipo}}</h1>
+                    <h3 class="font-weight-bold display-4 text-center text-light">Sua posição é:
+                        {{Auth::user()->fila->posicao.'º'}}</h3>
                 <p class="lead text-center font-weight-bold text-light py-3">Faltam {{niveis(Auth::user()->fila->tipo)->quantidade - Auth::user()->cont_deposito}} depósitos para você ir para a
                     próxima fila.</p>
                 <div class="card bg-transparent mb-4">

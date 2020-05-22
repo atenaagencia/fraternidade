@@ -25,6 +25,7 @@ $d01_dep = $transacao->where('origem_id', 1)->where('remetente_id',Auth::user()-
                                         </tr>
                                     </thead>
                                     <tbody>
+                                       
                                         @foreach ($d01_dep as $filiado)
 
                                         <tr>
