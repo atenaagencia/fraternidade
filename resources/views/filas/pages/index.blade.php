@@ -54,7 +54,6 @@
 
 </div>
 <div class="container" style="padding-left: 60px;padding-right: 60px; padding-top: 30px;">
-<h1>Você está na fila {{$nivel}}</h1>
     <div class="row">
         <div class="col">
         <a href="{{route('filas.index')}}?nivel=1" class="btn btn-info btn-block">Nivel 01</a>
