@@ -1,9 +1,9 @@
 @inject('transacao', 'App\Transacao')
 @php
-$r02_dep = $transacao->where('origem_id', 2)->where('destinatario_id',Auth::user()->id)->where('status','<>
+$r01_dep = $transacao->where('origem_id', 1)->where('destinatario_id',Auth::user()->id)->where('status','<>
     ','liberado')->get();
 
-    $espera = count($r02_dep);
+    $espera = count($r01_dep);
     @endphp
     <div class="container-fluid mt-n10 ">
         <div class="col-12">
@@ -74,7 +74,7 @@ $r02_dep = $transacao->where('origem_id', 2)->where('destinatario_id',Auth::user
                                                 </tr>
                                                 @endfor
                                              @endif
-                                                @foreach ($r02_dep as $filiado)
+                                                @foreach ($r01_dep as $filiado)
 
                                                 <tr>
 

@@ -1,6 +1,6 @@
 @inject('transacao', 'App\Transacao')
 @php
-$d01_dep = $transacao->where('origem_id', 1)->where('remetente_id',Auth::user()->id)->where('status','<>','liberado')->get();
+$d02_dep = $transacao->where('origem_id', 2)->where('remetente_id',Auth::user()->id)->where('status','<>','liberado')->get();
 @endphp
 <div class="container-fluid mt-n10">
     <div class="col-12">
@@ -26,7 +26,7 @@ $d01_dep = $transacao->where('origem_id', 1)->where('remetente_id',Auth::user()-
                                     </thead>
                                     <tbody>
                                        
-                                        @foreach ($d01_dep as $filiado)
+                                        @foreach ($d02_dep as $filiado)
 
                                         <tr>
                                           
@@ -86,8 +86,8 @@ $d01_dep = $transacao->where('origem_id', 1)->where('remetente_id',Auth::user()-
                                     </tbody>
                                 </table>
                                 <div class="mt-3">
-                                    @if(count($d01_dep) == 0)
-                                <a href="/iniciar/{{Auth::user()->nivel_id}}" class="btn btn-success btn-block py-3"> Atualizar lista de depósito</a>
+                                    @if(count($d02_dep) == 0)
+                                    <a href="/iniciar/{{Auth::user()->nivel_id}}" class="btn btn-success btn-block py-3"> Atualizar lista de depósito</a>
                                     @endif
                                 </div>
                             </div>

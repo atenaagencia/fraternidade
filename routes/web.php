@@ -30,7 +30,7 @@ Route::middleware(['auth', 'winhappy'])->group(function () {
     Route::resource('filalideres', 'FilaLiderController')->middleware('v_perfil');
     Route::resource('cadastro', 'UserController');
     Route::post('upsenha{id}', 'UserController@update2')->name('upSenha');
-    Route::get('iniciar','TransacaoController@t_inicial');
+    Route::get('iniciar/{id}','TransacaoController@t_inicial');
     Route::post('set_arquivo', 'TransacaoController@set_comprovante');
     Route::get('arquivo-{id}','TransacaoController@download')->name('download');
     Route::get('recebidas', 'TransacaoController@show_rec')->name('trecebidas');
