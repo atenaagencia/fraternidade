@@ -18,7 +18,7 @@ class UserController extends Controller
         if($request->pesquisa){
             $usuario = User::where('nome','like', '%'.$request->pesquisa.'%')->orWhere('usuario', 'like', '%' . $request->pesquisa . '%')->paginate(15);
         }else{
-            $usuario = User::orderby('id', 'desc')->paginate(15);
+            $usuario = User::orderby('id', 'desc')->paginate(5);
         }        
         return view('user.pages.cadastro.index')->with(compact('usuario'));
     }

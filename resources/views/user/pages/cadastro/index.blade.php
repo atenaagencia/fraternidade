@@ -102,7 +102,7 @@
                                 </tbody>
                             </table>
                         </div>
-                    <div>{{$usuario->links('vendor.pagination.default')}}</div>
+                    <div>{{$usuario->links('vendor.pagination.cadastros')}}</div>
                     </div>
 
                 </div>
