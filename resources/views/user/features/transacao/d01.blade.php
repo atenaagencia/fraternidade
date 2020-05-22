@@ -1,6 +1,6 @@
 @inject('transacao', 'App\Transacao')
 @php
-$d01_dep = $transacao->where('origem_id', 1)->where('remetente_id',Auth::user()->id)->where('status','<>','liberado')->get();
+$d01_dep = $transacao->where('origem_id', 1)->where('remetente_id',Auth::user()->id)->get();
 @endphp
 <div class="container-fluid mt-n10">
     <div class="col-12">
