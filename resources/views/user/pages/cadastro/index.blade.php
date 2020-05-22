@@ -58,7 +58,7 @@
                             @endif
                             <div class="mb-3">
                                 <a href="" data-toggle="modal" data-target="#cadastro" class="btn btn-success"><i class="fa fa-user-plus"></i></a>
-                                <a href="" data-toggle="modal" data-target="#pesquisa" class="btn btn-success"><i class="fa fa-search"></i></a>
+                                <a href="" data-toggle="modal" data-target="#pesquisa" class="btn btn-info"><i class="fa fa-search"></i></a>
                             </div>
 
                             @if (!empty(old('mensagem')) )
