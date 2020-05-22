@@ -16,7 +16,7 @@ class UserController extends Controller
     public function index(Request $request)
     {
         if($request->pesquisa){
-            $usuario = User::where('nome','like', '%'.$request->pesquisa.'%')->paginate(15);
+            $usuario = User::where('nome','like', '%'.$request->pesquisa.'%')->orWhere('usuario', 'like', '%' . $request->pesquisa . '%')->paginate(15);
         }else{
             $usuario = User::orderby('id', 'desc')->paginate(15);
         }        
