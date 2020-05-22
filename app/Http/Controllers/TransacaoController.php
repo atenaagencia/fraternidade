@@ -13,7 +13,8 @@ class TransacaoController extends Controller
 {
     public function t_inicial($id)
     {
-        $c_fila = Fila::where('tipo', $id)->where('posicao', '>', 0)->where('cont_receber', '<', 2)->orderBy('posicao', 'asc')->first();
+        $quantidade = niveis($id)->quantidade;
+        $c_fila = Fila::where('tipo', $id)->where('posicao', '>', 0)->where('cont_receber', '<',$quantidade )->orderBy('posicao', 'asc')->first();
         if (isset($c_fila)) {
             $q_transacao = Transacao::create([
                 'remetente_id' => Auth::user()->id,
