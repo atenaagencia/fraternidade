@@ -28,52 +28,8 @@ $r01_dep = $transacao->where('origem_id', 1)->where('destinatario_id',Auth::user
                                             </tr>
                                         </thead>
                                         <tbody>
-                                            @if( $espera == 0)
-                                            @for ($i = 0; $i < niveis(Auth::user()->nivel_id)->quantidade; $i++)
-                                                <tr>
-                                                    <td><i class="fa fa-user"></i></td>
-                                                    <td>
-                                                        <div class="badge badge-warning">Aguardando</div>
-                                                    </td>
-                                                    <td>
-                                                        <div class="badge badge-warning">Aguardando</div>
-                                                    </td>
-                                                    <td>
-                                                        <div class="badge badge-warning">Aguardando</div>
-                                                    </td>
-                                                    <td>
-                                                        <div class="badge badge-warning">Aguardando</div>
-                                                    </td>
-                                                    <td>
-                                                        <div class="badge badge-warning">Aguardando</div>
-                                                    </td>
-
-                                                </tr>
-                                            @endfor
-                                            @elseif($espera > 0)
-                                            @for ($i = 0; $i < niveis(Auth::user()->nivel_id)->quantidade - $espera; $i++)
-                                                <tr>
-                                                    <td><i class="fa fa-user"></i></td>
-                                                    <td>
-                                                        <div class="badge badge-warning">Aguardando</div>
-                                                    </td>
-                                                    <td>
-                                                        <div class="badge badge-warning">Aguardando</div>
-                                                    </td>
-                                                    <td>
-                                                        <div class="badge badge-warning">Aguardando</div>
-                                                    </td>
-                                                    <td>
-                                                        <div class="badge badge-warning">Aguardando</div>
-                                                    </td>
-                                                    <td>
-                                                        <div class="badge badge-warning">Aguardando</div>
-                                                    </td>
-                                            
-                                                </tr>
-                                                @endfor
-                                             @endif
-                                                @foreach ($r01_dep as $filiado)
+                                           
+                                                @foreach ($r02_dep as $filiado)
 
                                                 <tr>
 
@@ -141,6 +97,51 @@ $r01_dep = $transacao->where('origem_id', 1)->where('destinatario_id',Auth::user
                                                 @include('user.features.modal_arquivo')
                                                 @include('user.features.modal_contato')
                                                 @endforeach
+                                                @if( $espera == 0)
+                                                @for ($i = 0; $i < niveis(Auth::user()->nivel_id)->quantidade; $i++)
+                                                    <tr>
+                                                        <td><i class="fa fa-user"></i></td>
+                                                        <td>
+                                                            <div class="badge badge-warning">Aguardando</div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="badge badge-warning">Aguardando</div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="badge badge-warning">Aguardando</div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="badge badge-warning">Aguardando</div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="badge badge-warning">Aguardando</div>
+                                                        </td>
+                                                
+                                                    </tr>
+                                                    @endfor
+                                                    @elseif($espera > 0)
+                                                    @for ($i = 0; $i < niveis(Auth::user()->nivel_id)->quantidade - $espera; $i++)
+                                                        <tr>
+                                                            <td><i class="fa fa-user"></i></td>
+                                                            <td>
+                                                                <div class="badge badge-warning">Aguardando</div>
+                                                            </td>
+                                                            <td>
+                                                                <div class="badge badge-warning">Aguardando</div>
+                                                            </td>
+                                                            <td>
+                                                                <div class="badge badge-warning">Aguardando</div>
+                                                            </td>
+                                                            <td>
+                                                                <div class="badge badge-warning">Aguardando</div>
+                                                            </td>
+                                                            <td>
+                                                                <div class="badge badge-warning">Aguardando</div>
+                                                            </td>
+                                                
+                                                        </tr>
+                                                        @endfor
+                                                        @endif
                                         </tbody>
                                     </table>
                                 </div>
