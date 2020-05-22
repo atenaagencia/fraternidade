@@ -9,7 +9,7 @@ $d03_dep = $transacao->where('origem_id',3)->where('remetente_id', Auth::user()-
                 <div class="container-fluid">
                     <div class="card border-0 mb-4">
                         <div class="card-header bg-user-secondary">
-                        <h1 class="text-light">Depósitos {{$d03_dep}}</h1>
+                        <h1 class="text-light">Depósitos</h1>
                         </div>
                         <div class="card-body">
                             <div class="table-responsive">
