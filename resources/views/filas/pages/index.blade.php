@@ -84,13 +84,13 @@
 <div class="container" style="padding-left: 60px;padding-right: 60px; padding-top: 30px;">
     <div class="row">
         <div class="col">
-            <button class="btn btn-info btn-block">Nivel 01</button>
+        <a href="{{route('filas.index')}}?nivel=1" class="btn btn-info btn-block">Nivel 01</a>
         </div>
         <div class="col">
-        <button class="btn btn-info btn-block">Nivel 02</button>
+        <a href="{{route('filas.index')}}?nivel=2" class="btn btn-info btn-block">Nivel 02</a>
         </div>
         <div class="col">
-           <button class="btn btn-info btn-block">Nivel 03</button>
+           <a href="{{route('filas.index')}}?nivel=3" class="btn btn-info btn-block">Nivel 03</a>
         </div>
     </div>
 </div>
@@ -99,6 +99,6 @@
 
 @section('content')
 <div style="margin-top: 150px;">
-    @include('filas.fila1')
+    @include('filas.fila')
 </div>
 @endsection

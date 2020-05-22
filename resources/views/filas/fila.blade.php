@@ -6,9 +6,13 @@
                 <div class="container-fluid">
                     <div class="card border-0 mb-4">
                         <div class="card-header bg-user-secondary">
-                            <h1 class="text-light">Nivel 01</h1>
+                        <h1 class="text-light">Nivel {{$nivel}}</h1>
                         </div>
                         <div class="card-body">
+                            <div class="mb-3">
+                                <a href="" data-toggle="modal" data-target="#cadastro" class="btn btn-success"><i class="fa fa-user-plus"></i></a>
+                                <a href="" data-toggle="modal" data-target="#pesquisa" class="btn btn-info"><i class="fa fa-search"></i></a>
+                            </div>
                             <div class="table-responsive">
                                 <table class="table table-bordered table-hover text-center" id="dataTable" width="100%"
                                     cellspacing="0">
@@ -48,7 +52,7 @@
                                 </table>
                             </div>
                             <div>
-                                {{$fila->links()}}
+                                {{$fila->links('vendor.pagination.bootstrap-4',['nivel' => $nivel])}}
                             </div>
                         </div>
                     </div>
