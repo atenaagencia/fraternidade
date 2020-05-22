@@ -110,9 +110,9 @@
 @if(Auth::user()->nivel_id == 3)
 
 @if(Auth::user()->status == "pendente")
-@include('user.features.transacao.d02')
+@include('user.features.transacao.d03')
 @elseif(Auth::user()->status == "ativo")
-@include('user.features.transacao.r02')
+@include('user.features.transacao.r03')
 
 @endif
 @endif
