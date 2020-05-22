@@ -11,14 +11,14 @@ use Illuminate\Support\Facades\Storage;
 
 class TransacaoController extends Controller
 {
-    public function t_inicial(){
-
-        $c_fila = Fila::where('tipo',1)->where('posicao','>',0)->where('cont_receber', '<', 2)->orderBy('posicao','asc')->first();
+    public function t_inicial($id){
+        $qt = niveis($id)->quantidade;
+        $c_fila = Fila::where('tipo',$id)->where('posicao','>',0)->where('cont_receber', '<', $qt)->orderBy('posicao','asc')->first();
     if(isset($c_fila)){
         $q_transacao = Transacao::create([
             'remetente_id'=> Auth::user()->id,
             'destinatario_id' => $c_fila->user_id,
-            'origem_id' => $c_fila->tipo,
+            'origem_id' => $id,
         ]);
             $c_fila->cont_receber =  $c_fila->cont_receber + 1;
             $c_fila ->save();
