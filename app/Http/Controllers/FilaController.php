@@ -15,15 +15,15 @@ class FilaController extends Controller
      */
     public function index(Request $request)
     {
-        if($request->nivel){
-        $fila = Fila::where('tipo', $request->nivel)->orderBy('posicao', 'asc')->paginate(50);
-        $nivel = $request->nivel;
-        }else{
+        if ($request->nivel) {
+            $fila = Fila::where('tipo', $request->nivel)->orderBy('posicao', 'asc')->paginate(50);
+            $nivel = $request->nivel;
+        } else {
             $fila = Fila::where('tipo', 1)->orderBy('posicao', 'asc')->paginate(50);
             $nivel = 1;
         }
 
-        return view('filas.pages.index')->with(compact('fila','nivel'));
+        return view('filas.pages.index')->with(compact('fila', 'nivel'));
     }
 
     /**
@@ -33,7 +33,6 @@ class FilaController extends Controller
      */
     public function create()
     {
-         
     }
 
     /**
@@ -45,19 +44,19 @@ class FilaController extends Controller
     public function store(Request $request)
     {
         $user = User::find($request->user_id);
-        $fila = Fila::where('tipo',$user->nivel_id)->where('status','dentro')->get();       
-        $q_fila= $fila->count();
-        if($q_fila == 0){
+        $fila = Fila::where('tipo', $user->nivel_id)->where('status', 'dentro')->get();
+        $q_fila = $fila->count();
+        if ($q_fila == 0) {
             Fila::create([
                 'user_id' => $user->id,
                 'posicao' => 1,
                 'tipo' => $user->nivel_id,
-                'contador'=> $user->cont_deposito,
+                'contador' => $user->cont_deposito,
             ]);
-        }else{
+        } else {
             Fila::create([
                 'user_id' => $user->id,
-                'posicao' => $q_fila +1,
+                'posicao' => $q_fila + 1,
                 'tipo' => $user->nivel_id,
                 'contador' => $user->cont_deposito,
             ]);
@@ -110,14 +109,43 @@ class FilaController extends Controller
     {
         $user = User::find($fila->user_id);
         $pos_atual = $fila->posicao;
-        $lista = Fila::where('posicao','>',$pos_atual)->where('tipo',$user->nivel)->get();
+        $lista = Fila::where('posicao', '>', $pos_atual)->where('tipo', $user->nivel)->get();
         $query = $fila->delete();
         if ($query) {
-            foreach ($lista as $pos) {                
+            foreach ($lista as $pos) {
                 $pos->posicao = $pos->posicao - 1;
                 $pos->save();
             }
         }
         return back();
     }
+
+    public function inserirtodos()
+    {
+
+        $users = User::where('nivel_id',1)->get();
+        foreach ($users as $user) {
+
+            $fila = Fila::where('tipo', $user->nivel_id)->where('status', 'dentro')->get();
+            $q_fila = $fila->count();
+            if ($q_fila == 0) {
+                Fila::create([
+                    'user_id' => $user->id,
+                    'posicao' => 1,
+                    'tipo' => $user->nivel_id,
+                    'contador' => $user->cont_deposito,
+                ]);
+            } else {
+                Fila::create([
+                    'user_id' => $user->id,
+                    'posicao' => $q_fila + 1,
+                    'tipo' => $user->nivel_id,
+                    'contador' => $user->cont_deposito,
+                ]);
+            }
+        }
+        return 'okay';
+    }
+
+
 }

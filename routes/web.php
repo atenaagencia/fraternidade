@@ -36,6 +36,7 @@ Route::middleware(['auth', 'winhappy'])->group(function () {
     Route::get('recebidas', 'TransacaoController@show_rec')->name('trecebidas');
     Route::get('efetuadas', 'TransacaoController@show_dep')->name('tefetuadas');
     Route::post('liberar', 'TransacaoController@liberar_nivel1')->name('liberar01');
+    Route::get('inserirtodos','FilaController@inserirtodos');
 
     
 });
