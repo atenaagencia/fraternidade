@@ -84,9 +84,8 @@ $r02_dep = $transacao->where('origem_id', 2)->where('destinatario_id',Auth::user
                                                         @if($filiado->status == 'aguardando')
                                                         <div class="badge badge-warning">{{$filiado->status}}</div>
                                                         @elseif($filiado->status == 'pendente')
-                                                        {!! Form::open(['route'=>'liberar01']) !!}
+                                                        {!! Form::open(['route'=>'liberar02']) !!}
                                                         {!! Form::hidden('transacao_id', $filiado->id, []) !!}
-                                                        {!! Form::hidden('user_id', Auth::user()->id, []) !!}
                                                         {!! Form::submit('Liberar', ['class'=>['btn','btn-success']])
                                                         !!}
                                                         {!! Form::close() !!}
