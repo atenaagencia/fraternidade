@@ -21,7 +21,7 @@ input[type=checkbox], input[type=radio] {
 @section('content')
 <br><br>
 
-<div class="font-montserrat text-center mt-4 mx-auto">
+<div class="font-montserrat text-center mt-5 py-4 mx-auto">
     <h1><i class="fas fa-handshake text-light mr-4"></i>Acesso ao Sistema</h1>
 </div>
 
@@ -135,7 +135,7 @@ input[type=checkbox], input[type=radio] {
 </div>
 
 
-<footer class="footer shadow-lg border-top border-light">
+<!-- <footer class="footer shadow-lg border-top border-light">
     <div class="links text-right row justify-content-right clearfix" id="footer">
         <a href="/" class="text-light font-weight-bold" style="color: white !important">VOLTAR PARA O SITE</a>
         {{-- <a href="#" class="">Lorem Ipsum</a>
@@ -145,7 +145,7 @@ input[type=checkbox], input[type=radio] {
         <i class="fas fa-handshake fa-2x text-shadow shadow-sm border border-dark"></i>
     </div>
     <div class="clearfix"></div>
-</footer>
+</footer> -->
 
 
 <!-- <footer class="footer border-top border-dark p-5 bg-light text-dark font-montserrat">
