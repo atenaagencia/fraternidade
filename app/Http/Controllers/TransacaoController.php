@@ -174,7 +174,7 @@ class TransacaoController extends Controller
             }
 
             $fila_remetente = Fila::where('user_id', $transacao->remetente_id)->first();
-            dd($transacao->rementente);
+            dd($transacao->remetente_id);
             $fila_remetente->tipo = 2;
             $fila_remetente->contador = 0;
             $fila_remetente->cont_receber = 0;
