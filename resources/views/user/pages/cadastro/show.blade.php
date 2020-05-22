@@ -53,7 +53,12 @@
                         <div class="card-body">
                             <div class="mb-3">
                               @if(Auth::user()->perfil == 'adm')
+                                @if(isset($_GET['nivel']))
+                            <a href="/filas?nivel={{$_GET['nivel']}}" class="btn btn-success"><i class="fa fa-arrow-left"></i></a>
+                                @else
                             <a href="{{route('cadastro.index')}}"  class="btn btn-success"><i class="fa fa-arrow-left"></i></a>
+                                @endif
+
                             </div>
                             @endif
 

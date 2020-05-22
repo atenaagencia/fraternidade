@@ -37,7 +37,7 @@
                                         <td>{{$filiado->user->nome}}</td>
                                         <td>{{$filiado->contador}}</td>
                                           @if(Auth::user()->perfil == 'adm') 
-                                          <td><button  class="btn btn-info"><i class="fa fa-user"></i></button></td>
+                                        <td><a href="{{route('cadastro.show',$filiado->user->id)}}?nivel={{$nivel}}" class="btn btn-info"><i class="fa fa-user"></i></a></td>
                                             <td>
                                             <form  action="{{route('filas.destroy',$filiado->id)}}" method="POST">
                                                 @csrf
