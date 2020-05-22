@@ -120,10 +120,10 @@ class FilaController extends Controller
         return back();
     }
 
-    public function inserirtodos()
+    public function inserirtodos($id)
     {
 
-        $users = User::where('nivel_id',1)->get();
+        $users = User::where('nivel_id',$id)->get();
         foreach ($users as $user) {
 
             $fila = Fila::where('tipo', $user->nivel_id)->where('status', 'dentro')->get();
