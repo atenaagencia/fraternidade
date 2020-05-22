@@ -173,7 +173,7 @@ class TransacaoController extends Controller
                 $n_posicao = $q_fila->posicao + 1;
             }
 
-            $fila_remetente = Fila::where('user_id', $request->remetente)->first();
+            $fila_remetente = Fila::where('user_id',"".$request->remetente."")->first();
             $fila_remetente->tipo = 2;
             $fila_remetente->contador = 0;
             $fila_remetente->cont_receber = 0;
