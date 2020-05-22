@@ -2,7 +2,7 @@
 @php
 $r02_dep = $transacao->where('origem_id', 1)->where('destinatario_id',Auth::user()->id)->where('status','<>','liberado')->get();
 
-    $espera = count($r01_dep);
+    $espera = count($r02_dep);
     @endphp
     <div class="container-fluid mt-n10 ">
         <div class="col-12">
