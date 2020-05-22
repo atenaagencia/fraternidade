@@ -22,11 +22,24 @@ input[type=checkbox], input[type=radio] {
 <br><br>
 
 <div class="font-montserrat text-center mt-5 py-4 mx-auto">
-    <h1><i class="fas fa-handshake text-light mr-4"></i>Acesso ao Sistema</h1>
+    <h1><i class="fas fa-handshake text-light mr-4 py-4"></i>Winhappy</h1><br>
+    <h1 class="display-4">Acesso ao Sistema</h1>
 </div>
+
+@if (Route::has('login'))
+
+@auth
+<div class="container bg-transparent mx-auto text-center">
+    <h1 class="text-light py-5">Você já está logado.</h1>
+    <a href="{{ route('home') }}" class="action-button shadow animate blue">Ir para Início</a>
+</div>
+
+@else
+
 
 <div class="login-page">
     <div class="form">
+
         <form class="register-form" method="POST" action="{{ route('register') }}">
             @csrf
 
@@ -133,6 +146,9 @@ input[type=checkbox], input[type=radio] {
         </form>
     </div>
 </div>
+@endauth
+
+@endif
 
 
 <!-- <footer class="footer shadow-lg border-top border-light">
