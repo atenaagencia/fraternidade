@@ -129,7 +129,7 @@ class TransacaoController extends Controller
     {
 
         $transacao = Transacao::find($request->transacao_id);
-        dd($transacao);
+        dd($transacao->remetente_id);
         $fila_destino = Fila::where('user_id', $transacao->destinatario_id)->first();
         $pos_atual = $fila_destino->posicao;
         $user = User::find($transacao->destinatario_id);
