@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Fila;
+use App\User;
 use Illuminate\Http\Request;
 
 class FilaController extends Controller
@@ -32,7 +33,7 @@ class FilaController extends Controller
      */
     public function create()
     {
-        //
+         
     }
 
     /**
@@ -43,7 +44,26 @@ class FilaController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $user = User::find($request->user_id);
+        $fila = Fila::where('tipo',$user->nivel_id)->where('status','dentro')->get();       
+        $q_fila= $fila->count();
+        if($q_fila == 0){
+            Fila::create([
+                'user_id' => $user->id,
+                'posicao' => 1,
+                'tipo' => $user->nivel_id,
+                'contador'=> $user->cont_deposito,
+            ]);
+        }else{
+            Fila::create([
+                'user_id' => $user->id,
+                'posicao' => $q_fila +1,
+                'tipo' => $user->nivel_id,
+                'contador' => $user->cont_deposito,
+            ]);
+        }
+
+        return back();
     }
 
     /**
@@ -88,8 +108,9 @@ class FilaController extends Controller
      */
     public function destroy(Fila $fila)
     {
+        $user = User::find($fila->user_id);
         $pos_atual = $fila->posicao;
-        $lista = Fila::where('posicao','>',$pos_atual)->get();
+        $lista = Fila::where('posicao','>',$pos_atual)->where('tipo',$user->nivel)->get();
         $query = $fila->delete();
         if ($query) {
             foreach ($lista as $pos) {                
@@ -97,6 +118,6 @@ class FilaController extends Controller
                 $pos->save();
             }
         }
-        return redirect('filas');
+        return back();
     }
 }

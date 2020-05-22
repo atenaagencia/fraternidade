@@ -10,7 +10,7 @@
                         </div>
                         <div class="card-body">
                             <div class="mb-3">
-                                <a href="" data-toggle="modal" data-target="#cadastro" class="btn btn-success"><i class="fa fa-plus"></i></a>
+                                <a href="" data-toggle="modal" data-target="#fila" class="btn btn-success"><i class="fa fa-plus"></i></a>
                                 <a href="" data-toggle="modal" data-target="#pesquisa" class="btn btn-info"><i class="fa fa-search"></i></a>
                             </div>
                             <div class="table-responsive">
@@ -62,3 +62,5 @@
         <!--col--12-->
     </div>
 </div>
+
+@include('filas.features.modal_fila')

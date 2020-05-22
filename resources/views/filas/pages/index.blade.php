@@ -72,5 +72,6 @@
 @section('content')
 <div style="margin-top: 150px;">
     @include('filas.fila')
+    
 </div>
 @endsection
