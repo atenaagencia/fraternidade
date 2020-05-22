@@ -13,9 +13,13 @@ class UserController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        $usuario = User::orderby('id', 'desc')->paginate(15);
+        if($request->pesquisa){
+            $usuario = User::where('nome','like', '%'.$request->pesquisa.'%')->paginate(15);
+        }else{
+            $usuario = User::orderby('id', 'desc')->paginate(15);
+        }        
         return view('user.pages.cadastro.index')->with(compact('usuario'));
     }
 

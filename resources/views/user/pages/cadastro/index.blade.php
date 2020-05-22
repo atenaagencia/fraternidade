@@ -58,6 +58,7 @@
                             @endif
                             <div class="mb-3">
                                 <a href="" data-toggle="modal" data-target="#cadastro" class="btn btn-success"><i class="fa fa-user-plus"></i></a>
+                                <a href="" data-toggle="modal" data-target="#pesquisa" class="btn btn-success"><i class="fa fa-search"></i></a>
                             </div>
 
                             @if (!empty(old('mensagem')) )
@@ -125,6 +126,25 @@
             </div>
             <div class="modal-body">
                 @include('user.forms.form_user')
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="pesquisa" tabindex="-1" role="dialog" aria-labelledby="exampleContatoLabel"
+    aria-hidden="true">
+    <div class="modal-dialog " role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleContatoLabel">Pesquisa usuario</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                {!! Form::open(['route'=>'cadastro.index', 'method'=> 'GET']) !!}
+                {!! Form::text('pesquisa', '', ['class'=>'form-control', 'placeholder' =>'Informe Nome ou Username' ]) !!}
+                {!! Form::submit('Pesquisar', ['class'=>['btn', 'btn-success','btn-block','mt-2']]) !!}
+                {!! Form::close() !!}
             </div>
         </div>
     </div>
