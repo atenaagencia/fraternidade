@@ -102,7 +102,7 @@
                                 </tbody>
                             </table>
                         </div>
-                    <div>{{$usuario->links()}}</div>
+                    <div>{{$usuario->links('vendor.pagination.default')}}</div>
                     </div>
 
                 </div>
