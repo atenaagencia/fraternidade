@@ -133,7 +133,7 @@ class TransacaoController extends Controller
         $pos_atual = $fila_destino->posicao;
         $user = User::find($transacao->destinatario_id);
 
-        if (($fila_destino->contador < 4) && ($fila_destino->status == 'dentro')) {
+        if (($fila_destino->contador < 3) && ($fila_destino->status == 'dentro')) {
             $fila_destino->contador = $fila_destino->contador + 1;
             $fila_destino->save();
 
