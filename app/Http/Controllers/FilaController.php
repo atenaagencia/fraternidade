@@ -109,7 +109,7 @@ class FilaController extends Controller
     {
         $user = User::find($fila->user_id);
         $pos_atual = $fila->posicao;
-        $lista = Fila::where('posicao', '>', $pos_atual)->where('tipo', $user->nivel)->get();
+        $lista = Fila::where('posicao', '>', $pos_atual)->where('tipo', $user->nivel_id)->get();
         $query = $fila->delete();
         if ($query) {
             foreach ($lista as $pos) {
