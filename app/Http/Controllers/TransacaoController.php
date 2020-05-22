@@ -129,6 +129,7 @@ class TransacaoController extends Controller
     {
 
         $transacao = Transacao::find($request->transacao_id);
+        dd($transacao);
         $fila_destino = Fila::where('user_id', $transacao->destinatario_id)->first();
         $pos_atual = $fila_destino->posicao;
         $user = User::find($transacao->destinatario_id);
@@ -173,8 +174,7 @@ class TransacaoController extends Controller
                 $n_posicao = $q_fila->posicao + 1;
             }
 
-            $fila_remetente = Fila::where('user_id', $transacao->remetente_id)->first();
-            dd($transacao->remetente_id);
+            $fila_remetente = Fila::where('user_id', )->first();
             $fila_remetente->tipo = 2;
             $fila_remetente->contador = 0;
             $fila_remetente->cont_receber = 0;
