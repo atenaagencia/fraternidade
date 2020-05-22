@@ -12,10 +12,10 @@
 <link rel="stylesheet" type="text/css" href="{{asset('css/alerts.css')}}">
 
 <!-- <div class="page-header pb-10 page-header-dark bg-gradient-primary-to-secondary" style="background: url(https://pcbx.us/bexy.jpg);"> -->
-<div class="page-header pb-10 page-header-dark bg-dark mb-2" style="background: url(https://pcbx.us/bexy.jpg);">
+<div class="page-header pb-5 page-header-dark bg-dark mb-2" style="background: url(https://pcbx.us/bexy.jpg);">
     <div class="container-fluid">
         <div class="page-header-content row">
-            <div class="col-lg-4 m-2">
+            <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12 m-2">
                 <h1 class="text-light">
                     <span>Bem vindo, <b class="text-uppercase font-weight-bold">{{Auth::user()->nome}}</b></span>
                 </h1>

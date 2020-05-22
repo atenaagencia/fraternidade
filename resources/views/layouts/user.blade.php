@@ -26,9 +26,9 @@
 
         <!-- <form class="form-inline mr-auto d-none d-lg-block"><input class="form-control form-control-solid mr-sm-2" type="search" placeholder="Search" aria-label="Search" /></form> -->
         <ul class="navbar-nav align-items-center ml-auto">
-            <li class="nav-item no-caret mr-3">
+            <!-- <li class="nav-item no-caret mr-3">
                 <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">Instruções</button>
-            </li>
+            </li> -->
             <!-- <li class="nav-item dropdown no-caret mr-3">
                 <a class="nav-link dropdown-toggle" id="navbarDropdownDocs" href="javascript:void(0);" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     <div class="d-none d-md-inline font-weight-500"><i class="badge badge-primary p-2">Instruções</i></div>
@@ -179,8 +179,6 @@
                         </div>
                         @endif
                        
-                        
-                    
                         <div class="collapse" id="collapsePages" data-parent="#accordionSidenav">
                             <nav class="sidenav-menu-nested nav accordion" id="accordionSidenavPagesMenu">
                                 <a class="nav-link collapsed" href="javascript:void(0);" data-toggle="collapse"
@@ -261,7 +259,6 @@
     <script src="{{asset('js/sb-customizer.js')}}"></script>
     <sb-customizer project="sb-admin-pro"></sb-customizer>
 
-    @include('user.features.modal_instrucoes')
     @include('user.features.modal_alt_senha')
     @if(old('m_senha'))
     <script>
@@ -270,7 +267,6 @@
         });
     </script>
     @endif
-  
   
 </body>
 </html>
