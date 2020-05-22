@@ -51,7 +51,7 @@
                                     </tbody>
                                 </table>
                             </div>
-                            <div>
+                            <div class="mx-auto">
                                 {{$fila->links('vendor.pagination.bootstrap-4',['nivel' => $nivel])}}
                             </div>
                         </div>
