@@ -12,6 +12,7 @@ use Illuminate\Support\Facades\Storage;
 class TransacaoController extends Controller
 {
     public function t_inicial($id){
+        
         $qt = niveis($id)->quantidade;
         $c_fila = Fila::where('tipo',$id)->where('posicao','>',0)->where('cont_receber', '<', $qt)->orderBy('posicao','asc')->first();
     if(isset($c_fila)){
