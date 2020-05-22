@@ -107,4 +107,14 @@
     @endif
 @endif
 
+@if(Auth::user()->nivel_id == 3)
+
+@if(Auth::user()->status == "pendente")
+@include('user.features.transacao.d02')
+@elseif(Auth::user()->status == "ativo")
+@include('user.features.transacao.r02')
+
+@endif
+@endif
+
 @endsection
