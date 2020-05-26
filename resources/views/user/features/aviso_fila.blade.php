@@ -120,21 +120,8 @@
     }
 </style>
 
-<div class="square_box box_three"></div>
-<div class="square_box box_four"></div>
-<div class="container mt-0 mb-5">
-    <div class="row">
-        <div class="col-sm-12">
-            <div class="alert fade alert-simple alert-danger alert-dismissible text-center font__family-montserrat font__size-16 font__weight-light brk-library-rendered rendered show"
-                role="alert" data-brk-library="component__alert">
-                <i class="start-icon far fa-times-circle faa-pulse animated"></i>
-                <strong class="font__weight-semibold">Você ainda não está em uma fila.</strong> Para entrar na Fila {{niveis(Auth::user()->nivel_id)->id}} realize um deposito de R$ {{niveis(Auth::user()->nivel_id)->valor_deposito}} <br>
-            </div>
-        </div>
 
-    </div>
+<div class="alert alert-danger mx-auto text-center">
+    <i class="start-icon far fa-times-circle faa-pulse animated"></i>
+    <strong class="font__weight-semibold">Você ainda não está em uma fila.</strong> Para entrar na Fila {{niveis(Auth::user()->nivel_id)->id}} realize um deposito de R$ {{niveis(Auth::user()->nivel_id)->valor_deposito}}
 </div>
-
-<!-- <div class="container-fluid m-2">
-    <a class="nav-link" href="#"><span class="border-0 text-light bg-aviso p-2"> </span></a>
-</div> -->

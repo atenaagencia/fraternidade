@@ -1,24 +1,17 @@
 @extends('layouts.user')
 
-<style>
-    .page-header .page-header-content {
-        padding-top: 2rem !important;
-        padding-bottom: 2rem !important;
-    }
-</style>
 
 @section('header')
 
 <link rel="stylesheet" type="text/css" href="{{asset('css/alerts.css')}}">
 
-<div class="page-header pb-5 page-header-dark bg-dark mb-2" style="background: url(https://pcbx.us/bexy.jpg);">
+<header class="mb-5 p-4" style="background: url(https://pcbx.us/bexy.jpg);">
     <div class="container-fluid">
-        <div class="page-header-content row">
-            <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12 m-2">
-                <h1 class="text-light">
-                    <span>Bem vindo, <b class="text-uppercase font-weight-bold">{{Auth::user()->nome}}</b></span>
+        <div class="row pt-2">
+            <div class="col-lg-7 col-md-6 col-sm-6 col-xs-12 mt-3 mb-3">
+                <h1 class="text-light py-1">
+                    <b class="text-uppercase font-weight-bold">{{Auth::user()->nome}}</b>
                 </h1>
-
                 <div class="page-header-subtitle">
                     <div class="badge badge-warning font-weight-bold text-dark">Afiliado gold</div>
                     <div class="badge badge-info font-weight-bold text-dark">Nivel: {{Auth::user()->nivel->id}}</div>
@@ -29,26 +22,18 @@
                     @endif
                 </div>
             </div>
-
-            <div class="col-lg-3 row justify-content-right ml-auto m-3 mb-0 pb-0">
-                <div class="col-sm-12">
-                    <div
-                        class="alert fade alert-simple alert-success alert-dismissible text-left font__family-montserrat font__size-16 font__weight-light brk-library-rendered rendered show">
-                        <i class="start-icon far fa-check-circle faa-tada animated"></i>
-                        <strong class="font-weight-bold">Saldo Disponível:</strong> <b>R$ {{number_format(Auth::user()->saldo,2,',','.')}}</b>
-                    </div>
+            <div class="col-lg-5 col-md-6 col-sm-6 col-xs-12 mt-3 mb-3">
+                <div class="p-2 alert fade alert-simple alert-success alert-dismissible text-left font__family-montserrat font__weight-light brk-library-rendered rendered show">
+                    <i class="start-icon far fa-check-circle faa-tada animated"></i>
+                    <strong class="font-weight-bold">Saldo Disponível:</strong> <b>R$ {{number_format(Auth::user()->saldo,2,',','.')}}</b>
                 </div>
             </div>
-         
-            @if(Auth::user()->status == "pendente")
-            <div class="container-fluid mx-auto text-center m-0 p-0">
-                @include('user.features.aviso_fila')
-            </div>
-            @endif
+        </div><!--row-->
+    </div><!--container-fluid-->
 
-        </div>
+    
 
-        @if(Auth::user()->status == "ativo")
+    @if(Auth::user()->status == "ativo")
         @if(isset(Auth::user()->fila->tipo) == 1)
         <div class="container-fluid">
             <div class="col-md-12">
@@ -80,11 +65,17 @@
             </div>
         </div>
         @endif
-        @endif
+    @endif
 
+</header>
+
+@if(Auth::user()->status == "pendente")
+    
+    <div class="container mx-auto text-center m-5">
+        @include('user.features.aviso_fila')
     </div>
+@endif
 
-</div>
 @endsection
 
 @section('content')
