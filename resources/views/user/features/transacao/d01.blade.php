@@ -4,11 +4,11 @@ $d01_dep = $transacao->where('origem_id', 1)->where('remetente_id',Auth::user()-
 @endphp
 <div class="container-fluid"> <!--mt-n10-->
     <div class="col-12">
-        <div class="card border-0 mb-4">
-            <div class="card-header">
-                <h1 class="text-dark">Depósitos</h1>
+        <div class="card border-0 mb-4 rounded-0">
+            <div class="card-header bg-user-secondary rounded-0">
+                <h1 class="text-light">Depósitos</h1>
             </div>
-            <div class="card-body">
+            <div class="card-body rounded-0">
                 <div class="table-responsive">
                     <table class="table table-bordered table-hover" id="dataTable" width="100%"
                         cellspacing="0">

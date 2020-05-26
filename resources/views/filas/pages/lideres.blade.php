@@ -9,7 +9,7 @@
 
 
 @section('content')
-<div style="margin-top: 150px;">
+<div class="mt-5">
     @include('filas.fila_lider')
 </div>
 @endsection

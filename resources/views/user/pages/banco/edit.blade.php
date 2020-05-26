@@ -40,7 +40,10 @@
 
 <div class="container-fluid m-0 mt-5">
     <div class="col-12 m-0">
-        <div class="card border-0 mb-4 m-0">
+        <div class="card border-0 mb-4 m-0 rounded-0">
+            <div class="card-header rounded-0 bg-user-secondary">
+                <h1 class="text-light">Dados Gerais</h1>
+            </div>
             <div class="card-body m-0">
                 @include('user.forms.form_banco')         
             </div>

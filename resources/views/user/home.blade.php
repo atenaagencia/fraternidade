@@ -31,8 +31,6 @@
         </div><!--row-->
     </div><!--container-fluid-->
 
-    
-
     @if(Auth::user()->status == "ativo")
         @if(isset(Auth::user()->fila->tipo) == 1)
         <div class="container-fluid">
@@ -43,25 +41,6 @@
                         {{Auth::user()->fila->posicao.'º'}}</h3>
                 <p class="lead text-center font-weight-bold text-light py-3">Faltam {{niveis(Auth::user()->fila->tipo)->quantidade - Auth::user()->cont_deposito}} depósitos para você ir para a
                     próxima fila.</p>
-                <div class="card bg-transparent mb-4">
-                    <!-- <div class="card-header bg-transparent">
-                        <h1 class="text-light">Progresso</h1>
-                    </div> -->
-                    {{-- <div class="card-body bg-transparent">
-                        <!-- <h1 class="font-weight-bold pb-3 py-3 text-center text-light">Você está na fila: 1</h1>
-                        <p class="lead text-center">Faltam 04 depósitos para você ir para a próxima fila.</p> -->
-                        <div class="bd-example p-4">
-                            <div class="progress mb-3" style="height: 1px;">
-                                <div class="progress-bar bg-success" role="progressbar" style="width: 50%;"
-                                    aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
-                            </div>
-                            <div class="progress" style="height: 20px;">
-                                <div class="progress-bar bg-success" role="progressbar" style="width: 50%;"
-                                    aria-valuenow="0" aria-valuemin="0" aria-valuemax="5">50%</div>
-                            </div>
-                        </div>
-                    </div> --}}
-                </div>
             </div>
         </div>
         @endif

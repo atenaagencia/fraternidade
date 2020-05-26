@@ -790,10 +790,7 @@
 @endif
 
 <div class="form-group row">
-    {!! Form::hidden('user_id', Auth::user()->id, ['']) !!}
-    <div class="container-fluid font-weight-bold">
-        <h1 class="text-left">Dados Gerais</h1><hr>
-    </div>
+        {!! Form::hidden('user_id', Auth::user()->id, ['']) !!}
     <div class="col-sm-6 mt-1 text-left">
         {!! Form::label('', 'Nome Completo do Titular*:', ['']) !!}
         {!! Form::text('nome_completo', $value=null, ['class'=> ['form-control','form-control-user'],'required']) !!}
@@ -801,17 +798,15 @@
     <div class="col-sm-6 mt-1 text-left">
         {!! Form::label('', 'CPF do Titular*:', ['']) !!}
         {!! Form::text('cpf', ($value=null), ['class'=> ['form-control','form-control-user'],'required','maxlength'=>'11']) !!}
-    </div>
-    <div class="container-fluid font-weight-bold mt-5">
-        <h1 class="text-left">Dados Bancários</h1><hr>
-    </div>
+    </div> 
+</div>
+<div class="form-group row mt-3">
     <div class="col-sm-4 mt-1 text-left">
-       
+    
         {!! Form::label('', 'Tipo de Conta*:', ['']) !!}
         {!! Form::select('tipo_conta',['corrente'=>'Corrente','poupanca'=> 'Poupança'], $value=null, ['class'=>
         ['form-control','form-control-user'],'required']) !!}
     </div>
-
     <div class="col-sm-6 mt-1 text-left">
         {!! Form::label('banco', 'Nome do Banco*:', ['']) !!}
         <select name="banco" id="" class="form-control form-control-user" required>
@@ -852,8 +847,7 @@
             </div>
         </div>
         @endif
-    </div>   
-</div>
-
+    </div>
+</div><!--mt-->
 
 {!! Form::close() !!}

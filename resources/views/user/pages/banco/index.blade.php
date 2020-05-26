@@ -38,16 +38,13 @@
 
 @section('content')
 
-<div class="container-fluid mx-auto text-center mt-5">
-<h1 class="page-header-title text-dark">
-    <span>Insira ou edite seus dados abaixo.</span>
-</h1>
-</div>
-
 <div class="container-fluid m-0 mt-5">
     <div class="col-12 m-0">
-        <div class="card border-0 mb-4 m-0">
-            <div class="card-body m-0">
+        <div class="card border-0 mb-4 m-0 rounded-0">
+            <div class="card-header bg-user-secondary rounded-0">
+                <h1 class="text-light">Dados Bancários</h1>
+            </div>
+            <div class="card-body m-0 rounded-0">
                 @if (!empty(old('mensagem')) )
                 <div class="alert alert-danger">
                     {{old('mensagem')}}
