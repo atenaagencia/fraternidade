@@ -223,6 +223,9 @@
                 <div class="sidenav-footer-content">
                     <div class="sidenav-footer-subtitle">Contato Suporte:</div>
                     <div class="sidenav-footer-title">suporte@winhappy.net</div>
+                    <hr>
+                    <div class="sidenav-footer-subtitle">WhatsApp:</div>
+                    <div class="sidenav-footer-title"><a href="https://wa.me/558799220895" target="_blank" class="text-white">(87) 9 99220895 </a> <br> <a href="https://wa.me/557182565951" target="_blank" class="text-white">(71) 9 8256-5951</a></div>
                 </div>
                 </div>
                 <div class="sidenav-footer">
