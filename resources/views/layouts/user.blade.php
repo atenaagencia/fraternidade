@@ -220,10 +220,13 @@
                     </div>
                 </div>
                 <div class="sidenav-footer">
-                    <div class="sidenav-footer-content">
-                        <div class="sidenav-footer-subtitle">Contato Suporte:</div>
-                        <div class="sidenav-footer-title">suporte@winhappy.net</div>
-                    </div>
+                <div class="sidenav-footer-content">
+                    <div class="sidenav-footer-subtitle">Contato Suporte:</div>
+                    <div class="sidenav-footer-title">suporte@winhappy.net</div>
+                </div>
+                </div>
+                <div class="sidenav-footer">
+                  
                     <div class="sidenav-footer-content">
                         <div class="sidenav-footer-subtitle">Logado como:</div>
                         <div class="sidenav-footer-title">{!! auth::user()->nome !!}</div>
