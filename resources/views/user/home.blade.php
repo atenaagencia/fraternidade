@@ -32,7 +32,7 @@
     </div><!--container-fluid-->
 
     @if(Auth::user()->status == "ativo")
-        @if(isset(Auth::user()->fila->tipo) == 1)
+ 
         <div class="container-fluid">
             <div class="col-md-12">
                 <h1 class="font-weight-bold display-4 text-center text-light">Você está na fila:
@@ -43,7 +43,7 @@
                     próxima fila.</p>
             </div>
         </div>
-        @endif
+  
     @endif
 
 </header>

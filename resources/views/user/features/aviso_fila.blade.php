@@ -123,5 +123,5 @@
 
 <div class="alert alert-danger mx-auto text-center">
     <i class="start-icon far fa-times-circle faa-pulse animated"></i>
-    <strong class="font__weight-semibold">Você ainda não está em uma fila.</strong> Para entrar na Fila {{niveis(Auth::user()->nivel_id)->id}} realize um deposito de R$ {{niveis(Auth::user()->nivel_id)->valor_deposito}}
+    <strong class="font__weight-semibold">Você ainda não está em uma fila.</strong> Para entrar na Fila {{niveis(Auth::user()->nivel_id)->id}} realize um deposito de R$ {{niveis(Auth::user()->nivel_id)->valor_deposito}} para um usuario da fila. @if(Auth::user()->nivel_id == 3) E um deposito de 20,00 na conta do sistema @endif
 </div>

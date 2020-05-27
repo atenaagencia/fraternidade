@@ -22,6 +22,14 @@ class TransacaoController extends Controller
                 'destinatario_id' => $c_fila->user_id,
                 'origem_id' => $id,
             ]);
+            if ($id == 3) {
+                $sistema = User::where('usuario', 'sistema')->first();
+                $q_transacao = Transacao::create([
+                    'remetente_id' => Auth::user()->id,
+                    'destinatario_id' => $sistema->id,
+                    'origem_id' => $id,
+                ]);
+            }
             $c_fila->cont_receber =  $c_fila->cont_receber + 1;
             $c_fila->save();
             $user = User::find(Auth::user()->id);
@@ -173,7 +181,7 @@ class TransacaoController extends Controller
             $fila_remetente->tipo = 2;
             $fila_remetente->contador = 0;
             $fila_remetente->cont_receber = 0;
-            $fila_remetente->posicao = 0;
+            $fila_remetente->posicao = $n_posicao;
             $fila_remetente->status = 'dentro';
             $fila_remetente->save();
 
@@ -188,12 +196,119 @@ class TransacaoController extends Controller
         return back();
     }
 
+    public function liberar_nivel3(Request $request)
+    {
+
+        $transacao = Transacao::find($request->transacao_id);
+        $user = User::find($transacao->destinatario_id);
+        $sistema = User::where('usuario', 'sistema')->first();
+        $r_liberar = Transacao::where('remetente_id', $transacao->remetente_id)->where('origem_id', 3)->where('status','liberado')->get();
+
+        if ($user->usuario == 'sistema') {
+            $q_fila = Fila::where('tipo', 3)->orderBy('posicao', 'desc')->first();
+            if ($q_fila == null) {
+                $n_posicao = 1;
+            } else {
+                $n_posicao = $q_fila->posicao + 1;
+            }
+
+            if (count($r_liberar) == 1) {
+                $fila_remetente = Fila::where('user_id', $transacao->remetente_id)->first();
+                $fila_remetente->tipo = 3;
+                $fila_remetente->contador = 0;
+                $fila_remetente->cont_receber = 0;
+                $fila_remetente->posicao = $n_posicao;
+                $fila_remetente->status = 'dentro';
+                $fila_remetente->save();
+                $remetente = User::find($transacao->remetente_id);
+                $remetente->status = 'ativo';
+                $remetente->save();
+            }
+            $transacao->status = 'liberado';
+            $transacao->save();
+            return back();
+        }else{
+
+        $fila_destino = Fila::where('user_id', $transacao->destinatario_id)->first();
+        $pos_atual = $fila_destino->posicao;
+
+        }
+
+
+
+        if (($fila_destino->contador < 3) && ($fila_destino->status == 'dentro')) {
+            $fila_destino->contador = $fila_destino->contador + 1;
+            $fila_destino->save();
+
+            if ($fila_destino->contador == 3) {
+                $fila_destino->tipo = 3;
+                $fila_destino->contador = 0;
+                $fila_destino->cont_receber = 0;
+                $fila_destino->posicao = 0;
+                $fila_destino->status = 'fora';
+                $fila_destino->save();
+
+                $user->cont_deposito = 0;
+                $user->nivel_id = 3;
+                $user->status = 'pendente';
+                $user->saldo =   $user->saldo + $transacao->valor;
+                $user->save();
+
+                $lista = Fila::where('tipo', 2)->where('posicao', '>', $pos_atual)->get();
+                if ($lista) {
+                    foreach ($lista as $pos) {
+                        $pos->posicao = $pos->posicao - 1;
+                        $pos->save();
+                    }
+                }
+            } else {
+                $user->cont_deposito = $user->cont_deposito + 1;
+                $user->saldo = $user->saldo + $transacao->valor;
+                $user->save();
+            }
+
+
+
+            $q_fila = Fila::where('tipo', 3)->orderBy('posicao', 'desc')->first();
+            if ($q_fila == null) {
+                $n_posicao = 1;
+            } else {
+                $n_posicao = $q_fila->posicao + 1;
+            }
+
+            if (count($r_liberar) == 1) {
+                $fila_remetente = Fila::where('user_id', "" . $request->remetente . "")->first();
+                $fila_remetente->tipo = 3;
+                $fila_remetente->contador = 0;
+                $fila_remetente->cont_receber = 0;
+                $fila_remetente->posicao = $n_posicao;
+                $fila_remetente->status = 'dentro';
+                $fila_remetente->save();
+                $remetente = User::find($transacao->remetente_id);
+                $remetente->status = 'ativo';
+                $remetente->save();
+            }
+
+            $transacao->status = 'liberado';
+            $transacao->save();
+        }
+
+        return back();
+    }
+
 
     public function show_rec()
     {
         $t_recebidas = Transacao::where('destinatario_id', Auth::user()->id)->orderBy('created_at', 'desc')->paginate(10);
 
         return view('user.pages.transacoes.index_recebidas')->with(compact('t_recebidas'));
+    }
+    public function show_rec_sistema()
+    {
+        $sistema = User::where('usuario', 'sistema')->first();
+        $t_recebidas_sis = Transacao::where('destinatario_id', $sistema->id)->orderBy('created_at', 'desc')->paginate(10);
+
+        return view('user.pages.transacoes.index_recebidas_sis')->with(compact('t_recebidas_sis'));
     }
 
     public function show_dep()

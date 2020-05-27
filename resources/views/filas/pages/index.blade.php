@@ -43,7 +43,7 @@
 </header>
 
 
-<div class="container pl-5 pr-5" style="">
+<div class="container pl-5 pr-5 pb-5" style="">
     <div class="row">
         <div class="col">
             <a href="{{route('filas.index')}}?nivel=1" class="btn btn-info btn-block">Nivel 01</a>

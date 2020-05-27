@@ -100,7 +100,7 @@
                         </div>
                         <div class="collapse" id="collapseDashboards" data-parent="#accordionSidenav">
                             <nav class="sidenav-menu-nested nav accordion" id="accordionSidenavPages">
-                                <a class="nav-link" href="{{route('tefetuadas')}}">Transações Efuadas</span></a>
+                                <a class="nav-link" href="{{route('tefetuadas')}}">Transações Efetuadas</span></a>
                             </nav>
                         </div>
                         <div class="collapse" id="collapseDashboards" data-parent="#accordionSidenav">
@@ -169,7 +169,7 @@
                         </div> --}}
                         <div class="collapse" id="collapseDashboards2" data-parent="#accordionSidenav">
                             <nav class="sidenav-menu-nested nav accordion" id="accordionSidenavPages">
-                                <a class="nav-link" href="{{route('filalideres.index')}}">Dados Bancários sistema</span></a>
+                                <a class="nav-link" href="{{route('trecebidas_sis')}}">Transações sistema</span></a>
                             </nav>
                         </div>
                         <div class="collapse" id="collapseDashboards2" data-parent="#accordionSidenav">

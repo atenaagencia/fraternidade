@@ -14,7 +14,11 @@
         {!! Form::open(['url'=>'set_arquivo', 'files' => true]) !!}
         {!! Form::hidden('t_id', $filiado->id, []) !!}
         {!! Form::label('Valor:', []) !!}
+        @if($filiado->destinatario->usuario == 'sistema')
+        {!! Form::number('valor', 20, ['class'=>'form-control', 'readonly']) !!}
+        @else
         {!! Form::number('valor', niveis(Auth::user()->nivel_id)->valor_deposito, ['class'=>'form-control', 'readonly']) !!}
+        @endif
         {!! Form::file('arquivo', ['class'=>['form-control','mt-2'],'required']) !!}
         {!! Form::submit('Enviar', ['class'=>['btn', 'btn-success','btn-block','mt-2']]) !!}
         {!! Form::close() !!}        

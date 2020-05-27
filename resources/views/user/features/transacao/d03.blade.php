@@ -1,8 +1,8 @@
 @inject('transacao', 'App\Transacao')
 @php
-$d03_dep = $transacao->where('origem_id',3)->where('remetente_id', Auth::user()->id)->where('status','<>','liberado')->get();
+$d03_dep = $transacao->where('origem_id',3)->where('remetente_id', Auth::user()->id)->get();
 @endphp
-<div class="container-fluid mt-n10">
+<div class="container-fluid ">
     <div class="col-12">
         <div class="row">
             <div class="col-md-12">
@@ -18,23 +18,23 @@ $d03_dep = $transacao->where('origem_id',3)->where('remetente_id', Auth::user()-
                                     <thead>
                                         <tr>
                                             <th>Nome</th>
-                                            <th>Doação</th>
+                                            <th>Lista Bancos</th>
                                             <th>Comprovantes Bancários</th>
                                             <th>Status</th>
                                             <th>Ações</th>
                                         </tr>
                                     </thead>
                                     <tbody>
-                                       
+                                    
                                         @foreach ($d03_dep as $filiado)
 
                                         <tr>
                                           
                                             <td>{{$filiado->destinatario->nome}}</td>
                                             <td>
-                                                <button class="btn btn-sm btn-outline-dark" data-toggle="modal"
+                                                <button class="btn  btn-outline-dark btn-block" data-toggle="modal"
                                                     data-target="#exampleBanco{{$filiado->id}}"><i
-                                                        class="fas fa-hand-holding-usd mr-3"></i>Depositar</button>
+                                                        class="fas fa-hand-holding-usd mr-3"></i>Lista de Bancos</button>
                                             </td>
                                             <td>
                                                 <div class="btn-toolbar" role="toolbar"

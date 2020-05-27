@@ -2,7 +2,7 @@
 @php
 $d02_dep = $transacao->where('origem_id', 2)->where('remetente_id',Auth::user()->id)->where('status','<>','liberado')->get();
 @endphp
-<div class="container-fluid mt-n10">
+<div class="container-fluid ">
     <div class="col-12">
         <div class="row">
             <div class="col-md-12">

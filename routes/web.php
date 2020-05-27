@@ -34,9 +34,11 @@ Route::middleware(['auth', 'winhappy'])->group(function () {
     Route::post('set_arquivo', 'TransacaoController@set_comprovante');
     Route::get('arquivo-{id}','TransacaoController@download')->name('download');
     Route::get('recebidas', 'TransacaoController@show_rec')->name('trecebidas');
+    Route::get('recebidas-sistema', 'TransacaoController@show_rec_sistema')->name('trecebidas_sis');
     Route::get('efetuadas', 'TransacaoController@show_dep')->name('tefetuadas');
     Route::post('liberar', 'TransacaoController@liberar_nivel1')->name('liberar01');
     Route::post('liberar2', 'TransacaoController@liberar_nivel2')->name('liberar02');
+    Route::post('liberar3', 'TransacaoController@liberar_nivel3')->name('liberar03');
     Route::get('inserirtodos/{id}','FilaController@inserirtodos');
 
     

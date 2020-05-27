@@ -14,6 +14,17 @@ class DatabaseSeeder extends Seeder
        $this->call(NivelSeeder::class);
 
         DB::table('users')->insert([
+            'nome' => 'Sistema WinHappy',
+            'usuario' => 'sistema',
+            'email' => 'suporte@winhappy.net',
+            'telefone' => '7182565951',
+            'whatsapp' => '7182565951',
+            'nivel_id' => 1,
+            'perfil' => 'adm',
+            'password' => bcrypt('suporte')
+        ]);
+
+        DB::table('users')->insert([
             'nome' => 'Herbet Junior',
             'usuario'=>'herbetjr',
             'email' => 'herbetjr@gmail.com',
@@ -23,6 +34,7 @@ class DatabaseSeeder extends Seeder
             'perfil' => 'adm',
             'password' => bcrypt('01072015')
         ]);
+        
         DB::table('users')->insert([
             'nome' => 'Reinaldo Neto',
             'usuario' => 'nneetto885',

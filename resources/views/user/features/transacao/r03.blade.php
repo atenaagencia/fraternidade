@@ -1,10 +1,10 @@
 @inject('transacao', 'App\Transacao')
 @php
-$r03_dep = $transacao->where('origem_id', 2)->where('destinatario_id',Auth::user()->id)->get();
+$r03_dep = $transacao->where('origem_id', 3)->where('destinatario_id',Auth::user()->id)->get();
 
     $espera = count($r03_dep);
     @endphp
-    <div class="container-fluid mt-n10 ">
+    <div class="container-fluid ">
         <div class="col-12">
             <div class="row">
                 <div class="col-md-12">
@@ -84,7 +84,7 @@ $r03_dep = $transacao->where('origem_id', 2)->where('destinatario_id',Auth::user
                                                         @if($filiado->status == 'aguardando')
                                                         <div class="badge badge-warning">{{$filiado->status}}</div>
                                                         @elseif($filiado->status == 'pendente')
-                                                        {!! Form::open(['route'=>'liberar02']) !!}
+                                                        {!! Form::open(['route'=>'liberar03']) !!}
                                                         {!! Form::hidden('transacao_id', $filiado->id, []) !!}
                                                         {!! Form::hidden('remetente', $filiado->destinatario->id, []) !!}
                                                         {!! Form::submit('Liberar', ['class'=>['btn','btn-success']])
