@@ -1,6 +1,6 @@
 @inject('filiados', 'App\User')
 @php
- $filiado = $filiados->where('nivel_id',$nivel)->orderBy('nome','asc')->get();   
+ $filiado = $filiados->where('nivel_id',$nivel)->orderBy('nome','asc')->get(); 
 @endphp
 
 
@@ -9,8 +9,9 @@
 <select name="user_id" id="" class=" form-control" required>
     <option value="">-----</option>
     @foreach ($filiado as $user)
-<option value="{{$user->id}}">{{$user->nome.' | '.$user->usuario}}</option>
-
+    @if(count($user->fila) == 0)
+    <option value="{{$user->id}}">{{$user->nome.' | '.$user->usuario}}</option>
+    @endif
     @endforeach
 </select>
 {{-- {!! Form::select('user_id',$filiado,'' , ['class'=>'form-control', 'required']) !!} --}}
