@@ -9,7 +9,7 @@
 <select name="user_id" id="" class=" form-control" required>
     <option value="">-----</option>
     @foreach ($filiado as $user)
-    @if(count($user->fila) == 0)
+    @if(count($user->fila()) == 0)
     <option value="{{$user->id}}">{{$user->nome.' | '.$user->usuario}}</option>
     @endif
     @endforeach
