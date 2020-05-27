@@ -241,15 +241,16 @@ class TransacaoController extends Controller
             $fila_destino->save();
 
             if ($fila_destino->contador == 3) {
-                $fila_destino->tipo = 3;
+                $fila_destino->tipo = 1;
                 $fila_destino->contador = 0;
                 $fila_destino->cont_receber = 0;
                 $fila_destino->posicao = 0;
                 $fila_destino->status = 'fora';
                 $fila_destino->save();
+                $fila_destino->delete();
 
                 $user->cont_deposito = 0;
-                $user->nivel_id = 3;
+                $user->nivel_id = 1;
                 $user->status = 'pendente';
                 $user->saldo =   $user->saldo + $transacao->valor;
                 $user->save();
@@ -277,7 +278,7 @@ class TransacaoController extends Controller
             }
 
             if (count($r_liberar) == 1) {
-                $fila_remetente = Fila::where('user_id', "" . $request->remetente . "")->first();
+                $fila_remetente = Fila::where('user_id',$transacao->remetente_id)->first();
                 $fila_remetente->tipo = 3;
                 $fila_remetente->contador = 0;
                 $fila_remetente->cont_receber = 0;
