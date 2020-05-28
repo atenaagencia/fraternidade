@@ -197,9 +197,11 @@
     $(document).ready(function(){
     $('form').animate({height: "toggle", opacity: "toggle"}, "slow");
 });
-</script> --}}
+
 
 @endif
+
+</script> --}}
 
 <script>
     $('.message a').click(function(){
