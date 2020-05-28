@@ -191,13 +191,13 @@
     </div>
     <div class="clearfix"></div>
 </footer> -->
-
+{{-- 
 @if ($errors->any())
 <script>
     $(document).ready(function(){
     $('form').animate({height: "toggle", opacity: "toggle"}, "slow");
 });
-</script>
+</script> --}}
 
 @endif
 
