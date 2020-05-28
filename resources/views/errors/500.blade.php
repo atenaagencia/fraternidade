@@ -34,7 +34,7 @@
 <div class="login-page">
     <div class="form text-center">
     <h1 class="text-dark">Ops! Aconteceu algum problema.</h1>
-    <h2 class="text-dark">Por favor Entre em contato com o suporte</h2>
+    <h2 class="text-dark">Por favor entre em contato com o suporte</h2>
     </div>
 </div>
 
