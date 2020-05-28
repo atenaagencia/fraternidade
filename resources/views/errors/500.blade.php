@@ -32,8 +32,10 @@
 
 
 <div class="login-page">
+    <div class="form">
     <h1>Ops! Aconteceu algum problema.</h1>
     <h2>Por favor Entre em contato com o suporte</h2>
+    </div>
 </div>
 
 
