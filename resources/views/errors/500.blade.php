@@ -26,14 +26,14 @@
 
 <div class="font-montserrat text-center mt-5 py-4 mx-auto">
     <h1><i class="fas fa-handshake text-light mr-4 py-4"></i>Winhappy</h1><br>
-    <h1 class="display-4">Acesso ao Sistema</h1>
 </div>
 
 
 
 
 <div class="login-page">
- 
+    <h1>Ops! Aconteceu algum problema.</h1>
+    <h2>Por favor Entre em contato com o suporte</h2>
 </div>
 
 
