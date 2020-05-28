@@ -137,17 +137,24 @@
 
 
         <form lass="login-form" method="POST" action="{{ route('login') }}">
+            @if ($errors->any())
+            <div class="alert alert-danger">
+                @error('usuario')
+                {{$message}}
+                @enderror
+                @error('password')
+                {{$message}}
+                @enderror
+            </div>
+
+
+            @endif
             @csrf
             <p class="lead font-weight-bold text-left mb-2 mt-3 text-dark">INSIRA SEU USUARIO E SENHA</p>
             <hr>
             <input id="email" type="text" class="@error('usuario') is-invalid @enderror" name="usuario"
                 value="{{ old('usuario') }}" required autocomplete="usuario" autofocus placeholder="Usuário.">
 
-            @error('usuario')
-            <span class="invalid-feedback" role="alert">
-                <strong>{{ $message }}</strong>
-            </span>
-            @enderror
 
             <input id="password" type="password" class="@error('password') is-invalid @enderror" name="password"
                 required autocomplete="current-password" placeholder="Senha">
