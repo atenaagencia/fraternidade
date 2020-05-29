@@ -63,11 +63,7 @@
 @if(Auth::user()->status == "pendente")
 
 <div class="container mx-auto text-center m-5">
-    @if(Auth::user()->fila)
-    @if (Auth::user()->fila->status == 'dentro')
-
-    @endif
-    @endif
+ 
     @include('user.features.aviso_fila')
 </div>
 @endif
@@ -81,8 +77,11 @@
 @if(Auth::user()->status == "pendente")
 @include('user.features.transacao.d01')
 @elseif(Auth::user()->status == "ativo")
-@include('user.features.transacao.r01')
-@endif
+@if(Auth::user()->fila)
+    @include('user.features.transacao.r01')
+    @else
+    <h1>Seu Perfil está ativo, mas você não está em uma fila. Favor entrar em contato com o suporte</h1>
+    @endif
 @endif
 @if(Auth::user()->nivel_id == 2)
 
