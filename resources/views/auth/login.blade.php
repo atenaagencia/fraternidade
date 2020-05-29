@@ -139,12 +139,9 @@
         <form lass="login-form" method="POST" action="{{ route('login') }}">
             @if ($errors->any())
             <div class="alert alert-danger">
-                @error('usuario')
+                @foreach ($errors->all() as $message)
                 {{$message}}
-                @enderror
-                @error('password')
-                {{$message}}
-                @enderror
+                @endforeach
             </div>
 
 
