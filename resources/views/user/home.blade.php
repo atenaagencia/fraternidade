@@ -51,6 +51,7 @@
 @if(Auth::user()->status == "pendente")
     
     <div class="container mx-auto text-center m-5">
+        {{count(Auth::user()->fila)}}
         @include('user.features.aviso_fila')
     </div>
 @endif
