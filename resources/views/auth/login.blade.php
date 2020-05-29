@@ -44,82 +44,57 @@
     <div class="form">
 
         <form class="register-form" method="POST" action="{{ route('register') }}">
+            @if ($errors->any())
+                <div class="alert alert-danger">
+                    @foreach ($errors->all() as $message)
+                    {{$message}}
+                    @endforeach
+                </div>
+                
+                
+                @endif
             @csrf
 
             <p class="lead font-weight-bold text-left mb-2 mt-3 text-dark">INFORMAÇÕES PESSOAIS</p>
             <hr>
             <input id="name" type="text" class="@error('name') is-invalid @enderror font-weight-bold text-dark lead"
                 name="nome" value="{{ old('nome') }}" required autocomplete="nome" autofocus placeholder="Nome">
-            @error('name')
-            <span class="invalid-feedback" role="alert">
-                <strong>{{ $message }}</strong>
-            </span>
-            @enderror
+   
             <small class="text-dark text-left">Sem espaçamento, somente letras minusculas</small>
             <input id="usuario" type="text"
                 class="@error('usuario') is-invalid @enderror font-weight-bold text-dark lead" name="usuario"
                 value="{{ old('nome') }}" required autocomplete="nome" autofocus placeholder="Usuário">
-            @error('usuario')
-            <span class="invalid-feedback" role="alert">
-                <strong>{{ $message }}</strong>
-            </span>
-            @enderror
+     
 
             <input id="email" type="email" class="@error('email') is-invalid @enderror font-weight-bold text-dark lead"
                 name="email" value="{{ old('email') }}" required autocomplete="email" autofocus placeholder="Email">
-            @error('email')
-            <span class="invalid-feedback" role="alert">
-                <strong>{{ $message }}</strong>
-            </span>
-            @enderror
+       
 
             <input id="email" type="text" class="font-weight-bold text-dark lead" name="telefone"
                 value="{{ old('telefone') }}" required autocomplete="telefone" autofocus placeholder="Telefone">
 
-            @error('telefone')
-            <span class="invalid-feedback" role="alert">
-                <strong>{{ $message }}</strong>
-            </span>
-            @enderror
+     
 
             <input id="email" type="text" class="font-weight-bold text-dark lead" name="whatsapp"
                 value="{{ old('whatsapp') }}" required autocomplete="whatsapp" autofocus placeholder="Whatsapp">
 
-            @error('whatsapp')
-            <span class="invalid-feedback" role="alert">
-                <strong>{{ $message }}</strong>
-            </span>
-            @enderror
+        
             <input id="email" type="text" class="font-weight-bold text-dark lead" name="picpay"
                 value="{{ old('picpay') }}" required autocomplete="picpay" autofocus placeholder="Conta PicPay"
                 required>
             <p class="text-dark"> Se você não tem cadastrado PicPay <a href="http://www.picpay.com/convite?@XAFO"
                     target="_blank"> Clique Aqui</a></p>
 
-            @error('picpay')
-            <span class="invalid-feedback" role="alert">
-                <strong>{{ $message }}</strong>
-            </span>
-            @enderror
-
             <p class="lead font-weight-bold text-left mb-2 mt-3 text-dark">CREDENCIAIS DE ACESSO</p>
             <hr>
 
             <input id="password" type="password" class="@error('password') is-invalid @enderror" name="password"
                 value="{{ old('password') }}" required autocomplete="password" autofocus placeholder="Senha">
-            @error('password')
-            <span class="invalid-feedback" role="alert">
-                <strong>{{ $message }}</strong>
-            </span>
-            @enderror
+        
 
             <input id="password" type="password" class="" name="password_confirmation" required
                 autocomplete="new-password" placeholder="Repita a Senha">
-            @error('password')
-            <span class="invalid-feedback" role="alert">
-                <strong>{{ $message }}</strong>
-            </span>
-            @enderror
+     
 
             <div class="form-check text-dark text-left">
                 <input class="form-check-input" type="checkbox" value="" id="defaultCheck1" style="width: 15 !important"
@@ -156,11 +131,7 @@
             <input id="password" type="password" class="@error('password') is-invalid @enderror" name="password"
                 required autocomplete="current-password" placeholder="Senha">
 
-            @error('password')
-            <span class="invalid-feedback" role="alert">
-                <strong>{{ $message }}</strong>
-            </span>
-            @enderror
+     
             <button type="submit" class="action-button animate green btn-block">{{ __('Login') }}</button>
             <p class="message text-dark py-3">Ainda não é filiado? <a href="#">Crie sua Conta.</a></p>
         </form>
