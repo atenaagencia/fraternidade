@@ -15,6 +15,7 @@ class FilaController extends Controller
      */
     public function index(Request $request)
     {
+
         if ($request->nivel) {
             $fila = Fila::where('tipo', $request->nivel)->orderBy('posicao', 'asc')->paginate(50);
             $nivel = $request->nivel;
@@ -22,6 +23,7 @@ class FilaController extends Controller
             $fila = Fila::where('tipo', 1)->orderBy('posicao', 'asc')->paginate(50);
             $nivel = 1;
         }
+        dd($request->nivel);
 
         return view('filas.pages.index')->with(compact('fila', 'nivel'));
     }
