@@ -16,7 +16,7 @@ class FilaController extends Controller
     public function index(Request $request)
     {
         if ($request->nivel) {
-            $fila = Fila::where('tipo', $request->nivel)->orderBy('posicao', 'asc')->paginate(50);
+            $fila = Fila::where('tipo', $request->nivel)->orderBy('posicao', 'asc')->paginate(1);
             $nivel = $request->nivel;
         } else {
             $fila = Fila::where('tipo', 1)->orderBy('posicao', 'asc')->paginate(50);
