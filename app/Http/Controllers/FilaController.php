@@ -21,7 +21,7 @@ class FilaController extends Controller
             $nivel = $request->nivel;
         } else {
             $fila = Fila::where('tipo', '1')->orderBy('posicao', 'asc')->paginate(50);
-            $nivel = 1;
+            $nivel = '1';
         }
    
 
