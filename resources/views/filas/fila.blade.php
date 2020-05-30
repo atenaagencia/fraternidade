@@ -31,7 +31,7 @@
                                                                         
                             <tr>
                             <td>{{$filiado->posicao}}</td>
-                            <td>{{}} <br> <small>{{$filiado->user->status}}<small></td>
+                            <td> <br> <small>{{$filiado->user->status}}<small></td>
                             <td>{{$filiado->user->nome}}</td>
                             <td>{{$filiado->cont_receber}}</td>
                             <td>{{$filiado->contador}}</td>
