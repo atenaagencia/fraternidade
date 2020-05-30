@@ -52,6 +52,8 @@
                     @if(Auth::user()->perfil == 'adm')
                     @if(isset($_GET['nivel']))
                         <a href="/filas?nivel={{$_GET['nivel']}}" class="btn btn-success"><i class="fa fa-arrow-left"></i></a>
+                        <a href="{{route('cadastro.edit',$filiado->user->id)}}?nivel={{$nivel}}" class="btn btn-info"><i
+                                class="fa fa-edit"></i></a>
                     @else
                         <a href="{{route('cadastro.index')}}"  class="btn btn-success"><i class="fa fa-arrow-left"></i></a>
                     @endif
