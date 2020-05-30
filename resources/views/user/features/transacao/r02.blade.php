@@ -4,7 +4,7 @@ $r02_dep = $transacao->where('origem_id', 2)->where('destinatario_id',Auth::user
 
     $espera = count($r02_dep);
     @endphp
-    <div class="container-fluid mt-n10 ">
+    <div class="container-fluid ">
         <div class="col-12">
             <div class="row">
                 <div class="col-md-12">
