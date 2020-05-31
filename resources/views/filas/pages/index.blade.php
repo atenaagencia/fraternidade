@@ -46,7 +46,7 @@
 <div class="container pl-5 pr-5 pb-5" style="">
     <div class="row">
         <div class="col">
-            <a href="{{route('filas.index')}}?nivel=1" class="btn btn-info btn-block">Nivel 01</a>
+            <a href="{{route('filas.index')}}" class="btn btn-info btn-block">Nivel 01</a>
         </div>
         <div class="col">
             <a href="{{route('filas.index')}}?nivel=2" class="btn btn-info btn-block">Nivel 02</a>

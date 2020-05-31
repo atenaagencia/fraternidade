@@ -1,14 +1,15 @@
-
 <div class="container-fluid">
     <div class="col-12">
         <div class="card border-0 mb-4 rounded-0">
             <div class="card-header rounded-0 bg-user-secondary">
-            <h1 class="text-light">Nivel {{$nivel}}</h1>
+                <h1 class="text-light">Nivel {{$nivel}}</h1>
             </div>
             <div class="card-body rounded-0">
                 <div class="mb-3">
-                    <a href="" data-toggle="modal" data-target="#fila" class="btn btn-success"><i class="fa fa-plus"></i></a>
-                    <a href="" data-toggle="modal" data-target="#pesquisa" class="btn btn-info"><i class="fa fa-search"></i></a>
+                    <a href="" data-toggle="modal" data-target="#fila" class="btn btn-success"><i
+                            class="fa fa-plus"></i></a>
+                    <a href="" data-toggle="modal" data-target="#pesquisa" class="btn btn-info"><i
+                            class="fa fa-search"></i></a>
                 </div>
                 <div class="table-responsive">
                     <table class="table table-bordered table-hover text-center" id="dataTable" width="100%"
@@ -21,28 +22,30 @@
                                 <th>Doação Recebidas</th>
                                 <th>Doações Liberadas</th>
                                 @if(Auth::user()->perfil == 'adm')
-                                    <th colspan="2">Ações</th>  
+                                <th colspan="2">Ações</th>
                                 @endif
-                                
+
                             </tr>
                         </thead>
                         <tbody>
                             @foreach ($fila as $filiado)
-                                                                        
+
                             <tr>
-                            <td>{{$filiado->posicao}}</td>
-                            <td>{{$filiado->user->usuario}} <br> <small>{{$filiado->user->status}}<small></td>
-                            <td>{{$filiado->user->nome}}</td>
-                            <td>{{$filiado->cont_receber}}</td>
-                            <td>{{$filiado->contador}}</td>
-                                @if(Auth::user()->perfil == 'adm') 
-                            <td><a href="{{route('cadastro.show',$filiado->user->id)}}?nivel={{$nivel}}" class="btn btn-info"><i class="fa fa-user"></i></a></td>
+                                <td>{{$filiado->posicao}}</td>
+                                <td>{{$filiado->user->usuario}} <br> <small>{{$filiado->user->status}}<small></td>
+                                <td>{{$filiado->user->nome}}</td>
+                                <td>{{$filiado->cont_receber}}</td>
+                                <td>{{$filiado->contador}}</td>
+                                @if(Auth::user()->perfil == 'adm')
+                                <td><a href="{{route('cadastro.show',$filiado->user->id)}}?nivel={{$nivel}}"
+                                        class="btn btn-info"><i class="fa fa-user"></i></a></td>
                                 <td>
-                                <form  action="{{route('filas.destroy',$filiado->id)}}" method="POST">
-                                    @csrf
-                                    @method('DELETE')
-                                <button type="submit" class="btn btn-danger"><i class="fa fa-trash"></i></button>
-                                </form>
+                                    <form action="{{route('filas.destroy',$filiado->id)}}" method="POST">
+                                        @csrf
+                                        @method('DELETE')
+                                        <button type="submit" class="btn btn-danger"><i
+                                                class="fa fa-trash"></i></button>
+                                    </form>
                                 </td>
                                 @endif
                             </tr>
@@ -51,7 +54,11 @@
                     </table>
                 </div>
                 <div class="mx-auto">
+                    @if($nivel > 1)
                     {{$fila->links('vendor.pagination.bootstrap-4',['nivel' => $nivel])}}
+                    @else
+                    {{$fila->links('vendor.pagination.page01')}}
+                    @endif
                 </div>
             </div>
         </div>
