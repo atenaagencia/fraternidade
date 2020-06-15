@@ -33,7 +33,7 @@ $t01_dep = $transacao->where('origem_id', 1)->where('remetente_id',Auth::user()-
                                             <td>
                                                 <button class="btn btn-sm btn-outline-dark" data-toggle="modal"
                                                     data-target="#exampleBanco{{$filiado->id}}"><i
-                                                        class="fas fa-hand-holding-usd mr-3"></i>Depositar</button>
+                                                        class="fas fa-hand-holding-usd mr-3"></i>Dados Bancarios</button>
                                             </td>
                                             <td>
                                                 <div class="btn-toolbar" role="toolbar"
